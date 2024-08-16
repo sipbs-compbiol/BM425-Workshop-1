@@ -46,6 +46,7 @@ book:
       chapters: 
         - webr-example.qmd
     
+    - acknowledgements.qmd
     - references.qmd
 
 # Location of BibTeX format reference file; may not need to be changed
