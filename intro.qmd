@@ -88,6 +88,28 @@ The first SARS-CoV-2 genome was obtained from a sample of human lung in January 
 
 :::
 
-### Data for this workshop
+### SARS-CoV-2 read data for this workshop
 
-For this workshop, we took all 57mn raw sequencing reads from @Wu2020-yx, which are available at NCBI under accession [SRR10971381](https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381), and filtered out all reads that matched the human genome. The remaining reads in the file [`ERR4164769_1.fastq.gz`](assets/data/ERR4164769_1.fastq.gz) are those you will use to assemble the SARS-CoV-2 genome.
+For this workshop, we took all 57mn raw sequencing reads from @Wu2020-yx, which are available at NCBI under accession [SRR10971381](https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381), and filtered out all reads that matched the human genome. The remaining reads in the files below are those you will use to assemble the SARS-CoV-2 genome.
+
+- [Paired-end reads, forward direction](assets/data/trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz)
+- [Paired-end reads, reverse direction](assets/data/trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz)
+
+### SARS-CoV 2003 genome data for this workshop
+
+The first comparator genome in the workshop is that of SARS coronavirus Urbani. This coronavirus emerged in Guangdong, China, in late 2002 and was the subject of a World Health Organisation global alert, which named it SARS (Severe Acute Respiratory Syndrome). This strain of SARS-CoV was sequenced in 2003 (@Rota2003-tu) and has accession [AY278741.1](https://www.ncbi.nlm.nih.gov/nuccore/AY278741) at GenBank/NCBI.
+
+In the workshop, you will use the following files:
+
+- [SARS 2003 genome sequence (`.fasta`)](assets/data/SARS_AY278741.fasta)
+- [SARS 2003 annotation (`.gff3`)](assets/data/SARS_AY278741.gff3)
+- [SARS 2003 combined genome sequence and annotation (`.gbk`)](assets/data/SARS_AY278741.gbk)
+
+### March 2020 Dutch SARS-CoV-2 isolate
+
+The second comparator genome you will use in this workshop is a SARS-CoV-2 variant sequenced in the Netherlands in March 2020, four months after the first known human cases were identified. The sample has accession [SAMEA6847958](https://www.ncbi.nlm.nih.gov/biosample/SAMEA6847958) and was obtained through active surveillance during the COVID-19 pandemic (@Oude_Munnink2020-ry).
+
+The data describes a set of [Oxford Nanopore (ONT) GridION](https://nanoporetech.com/products/sequence/gridion) reads, which are available under accession [ERR4164769](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=ERR4164769&display=metadata) at SRA/NCBI. In the workshop, you will use the following file:
+
+- [GridION reads for March 2020 Dutch isolate](assets/data/ERR4164769_1.fastq.gz)
+
