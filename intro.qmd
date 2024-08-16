@@ -11,13 +11,13 @@ Today you will be:
 
 ## COVID-19
 
-The first cases of a pneumonia of unknown causes began to emerge in Wuhan, China, in December 2019. The novel coronavirus SARS-CoV-2 was isolated by early January, and by the end of January 2020 human-to-human transmission had been confirmed, and cases had been reported in Thailand, Japan, the USA, and several other countries (@Wang2020-yy).
+The first cases of a pneumonia of unknown causes began to emerge in Wuhan, China, in December 2019. The novel coronavirus SARS-CoV-2 was isolated by early January, and by the end of January 2020 human-to-human transmission had been confirmed, and cases had been reported in Thailand, Japan, the USA, and several other countries (@fig-timeline, @Wang2020-yy).
 
-![Early COVID-19 timeline (@Wang2020-yy)](assets/images/early-covid-timeline.jpg){fig-alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea."}
+![Early COVID-19 timeline (reproduced from @Wang2020-yy)](assets/images/early-covid-timeline.jpg){#fig-timeline fig-alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea." width=80%}
 
-By the end of February, cases had been identified across the Northern hemisphere, and a new hotspot was emerging in Italy.
+By the end of February, cases had been identified across the Northern hemisphere, and a new hotspot was emerging in Italy (@fig-spread).
 
-![Early COVID-19 global spread](assets/images/COVID-19-outbreak-timeline-2.gif){fig-alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020."}
+![Early COVID-19 global spread](assets/images/COVID-19-outbreak-timeline-2.gif){#fig-spread fig-alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020." width=80%}
 
 By October 2021, it was estimated that COVID-19 had [caused over 5mn deaths](https://www.reuters.com/world/global-covid-19-deaths-hit-5-million-delta-variant-sweeps-world-2021-10-02/) worldwide, as well as severe social and economic disruption, including the [largest global recession in almost a century](https://www.imf.org/en/Blogs/Articles/2020/04/14/blog-weo-the-great-lockdown-worst-economic-downturn-since-the-great-depression).
 
@@ -32,19 +32,62 @@ The spike (S) protein of SARS-CoV-2 plays a central role in host cell receptor r
 - S1: a receptor-binding domain that recognises and binds ACE2 (angiotensin-converting enzyme 2)
 - S2: a domain that mediates membrane fusion between the virus and the cell by forming a structural bundle
 
-![(a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells. Reproduced from (@Huang2020-uk)](assets/images/spike_protein_cell.webp){fig-alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry."}
-When you assemble, annotate, and visualise the SARS-CoV-2 genome in this workshop you will find the spike protein annotated.
+which interact with the host cell as illustrated in @fig-spike.
 
-![JBrowse rendering of an annotated SARS-CoV-2 genome](assets/images/spike_vis_jbrowse.png){fig-alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome."}
+![(a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells (reproduced from @Huang2020-uk)](assets/images/spike_protein_cell.png){#fig-spike fig-alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry." width=80%}
 
-The spike protein is not the only important surface protein for SARS-CoV-2. The envelope (E), membrane (M) and nucleocapsid proteins are also essential for the virus to interact with the host, and you will identify these in your analysis today, too.
+When you assemble, annotate, and visualise the SARS-CoV-2 genome in this workshop you will find the spike protein annotated as in @fig-jbrowse-1.
 
-![How SARS-CoV-2 interacts with the surface proteins of the target cell ([Marta Palma Rodríguez](https://pdb101.rcsb.org/news/5ed7c17cdab5c9354c274f56))]{fig-alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host."}
+![JBrowse rendering of an annotated SARS-CoV-2 genome](assets/images/spike_vis_jbrowse.png){#fig-jbrowse-1 fig-alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome."}
+
+The spike protein is not the only important surface protein for SARS-CoV-2. The envelope (E), membrane (M) and nucleocapsid proteins are also essential for the virus to interact with the host, as shown in @fig-palma, and you will identify these in your analysis today, too.
+
+![How SARS-CoV-2 interacts with the surface proteins of the target cell [(Marta Palma Rodríguez)](https://pdb101.rcsb.org/news/5ed7c17cdab5c9354c274f56)](assets/images/sars-ace2tmprs2-martapalma.png){#fig-palma fig-alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host." width=80%}
 
 ::: { .callout-tip collapse="true" }
-## Virus structures
+## Other SARS-CoV-2 Structures
 
-You can find an interactive collection of SARS-CoV-2 protein structures at the RCSB/PDB
+You can find an interactive collection of publicly-available SARS-CoV-2 protein structures at [RCSB/PDB](https://www.rcsb.org/), the public repository for biological structural data.
 
 - [SARS-CoV-2 PDB Structures](https://www.rcsb.org/news/feature/5e74d55d2d410731e9944f52)
 :::
+
+## Data Provenance
+
+Modern scientific research, and this workshop, are both made possible due to the dedication of scientists around the globe to [FAIR (Findable, Accessible, Interoperable, and Reproducible) principles for scientific data management](https://www.go-fair.org/fair-principles/).
+
+Throughout the COVID-19 pandemic, SARS-CoV-2 sequence and structural data was released through public repositories including [NCBI](https://www.ncbi.nlm.nih.gov/), [GISAID](https://gisaid.org/), and [RCSB/PDB](https://www.rcsb.org/). The data shared through these resources enabled scientists across the world to conduct research that reduced suffering and hastened the end of the pandemic. These practices were established before COVID-19, and continue to support and empower scientific research globally.
+
+### The first sequenced human COVID-19 case
+
+The first SARS-CoV-2 genome was obtained from a sample of human lung in January 2020. The sample was sequenced and submitted to NCBI as [SAMN13922059](https://www.ncbi.nlm.nih.gov/biosample/?term=SAMN13922059). It is recorded as "human lung metagenome" because the entire material - human, virus, and everything else - was sequenced as a single sample. The work as described in @Wu2020-yx is outlined below.
+
+1. The lung was lavaged (washed/rinsed) and the fluid collected
+2. Total RNA was extracted from the fluid, and an RNA sequencing library constructed (including depletion of ribosomal RNA)
+3. The library was sequenced on an [Illumina MiniSeq](https://www.illumina.com/systems/sequencing-platforms/miniseq.html) machine, to give 150bp paired-end reads
+4. The resulting reads were cleaned and assembled using Megahit (@Li2015-yc) and [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
+5. The longest contig was identified as a coronavirus, and used to design primers for PCR-RACE (Rapid Amplification of cDNA Ends, @Pal2022-tw, @fig-race) to sequence the ends of the virus genome
+6. The cleaned reads were remapped against the full virus sequence
+
+
+![PCR-RACE generates long amplicons from the viral genome, which can be sequenced with long-read sequencing. This results in a "crenellated" assembly of overlapping long genomic sections.](assets/images/race.png){#fig-race fig-alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome." width=80%}
+
+::: { .callout-tip }
+## Questions
+
+1. Why did they extract RNA and not DNA?
+2. Why do you think they depleted the ribosomal RNA?
+
+:::
+
+::: { .callout-important collapse="true" }
+## Answers
+
+1. SARS-CoV-2 is an RNA virus, so we must sequence RNA to recover virus sequence.
+2. There is so much ribosomal RNA in biological material that, if it was left in the sample, it would dominate over the viral material and any human transcripts, making the virus more difficult to detect. Depleting it enhances sensitivity for detecting viral RNA.
+
+:::
+
+### Data for this workshop
+
+For this workshop, we took all 57mn raw sequencing reads from @Wu2020-yx, which are available at NCBI under accession [SRR10971381](https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381), and filtered out all reads that matched the human genome. The remaining reads in the file [`ERR4164769_1.fastq.gz`](assets/data/ERR4164769_1.fastq.gz) are those you will use to assemble the SARS-CoV-2 genome.
