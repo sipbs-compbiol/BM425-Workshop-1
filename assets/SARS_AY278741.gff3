@@ -1,0 +1,19 @@
+##sequence-region AY278741.1 1 29727
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=228330
+AY278741.1	Genbank	region	1	29727	.	+	.	ID=AY278741.1:1..29727;Dbxref=taxon:228330;cell-line=Vero;gbkey=Src;genome=genomic;mol_type=genomic RNA;strain=Urbani
+AY278741.1	Genbank	five_prime_UTR	1	264	.	+	.	ID=id-AY278741.1:1..264;gbkey=5'UTR
+AY278741.1	Genbank	CDS	265	13398	.	+	0	ID=cds-AAP13442.1;Dbxref=NCBI_GP:AAP13442.1;Name=AAP13442.1;exception=ribosomal slippage;gbkey=CDS;product=nonstructural polyprotein pp1ab;protein_id=AAP13442.1
+AY278741.1	Genbank	CDS	13398	21485	.	+	0	ID=cds-AAP13442.1;Dbxref=NCBI_GP:AAP13442.1;Name=AAP13442.1;exception=ribosomal slippage;gbkey=CDS;product=nonstructural polyprotein pp1ab;protein_id=AAP13442.1
+AY278741.1	Genbank	CDS	265	13413	.	+	0	ID=cds-AAP13439.1;Dbxref=NCBI_GP:AAP13439.1;Name=AAP13439.1;gbkey=CDS;product=nonstructural polyprotein pp1a;protein_id=AAP13439.1
+AY278741.1	Genbank	CDS	13398	21485	.	+	0	ID=cds-AAP13440.1;Dbxref=NCBI_GP:AAP13440.1;Name=AAP13440.1;Note=expressed via predicted -1 ribosomal frameshift;gbkey=CDS;partial=true;product=nonstructural polyprotein;protein_id=AAP13440.1;start_range=.,13398
+AY278741.1	Genbank	CDS	21492	25259	.	+	0	ID=cds-AAP13441.1;Dbxref=NCBI_GP:AAP13441.1;Name=AAP13441.1;gbkey=CDS;product=S protein;protein_id=AAP13441.1
+AY278741.1	Genbank	CDS	25268	26092	.	+	0	ID=cds-AAP13446.1;Dbxref=NCBI_GP:AAP13446.1;Name=AAP13446.1;gbkey=CDS;product=protein X1;protein_id=AAP13446.1
+AY278741.1	Genbank	CDS	25689	26153	.	+	0	ID=cds-AAP13447.1;Dbxref=NCBI_GP:AAP13447.1;Name=AAP13447.1;gbkey=CDS;product=protein X2;protein_id=AAP13447.1
+AY278741.1	Genbank	CDS	26117	26347	.	+	0	ID=cds-AAP13443.1;Dbxref=NCBI_GP:AAP13443.1;Name=AAP13443.1;gbkey=CDS;product=E protein;protein_id=AAP13443.1
+AY278741.1	Genbank	CDS	26398	27063	.	+	0	ID=cds-AAP13444.1;Dbxref=NCBI_GP:AAP13444.1;Name=AAP13444.1;gbkey=CDS;product=M protein;protein_id=AAP13444.1
+AY278741.1	Genbank	CDS	27074	27265	.	+	0	ID=cds-AAP13448.1;Dbxref=NCBI_GP:AAP13448.1;Name=AAP13448.1;gbkey=CDS;product=protein X3;protein_id=AAP13448.1
+AY278741.1	Genbank	CDS	27273	27641	.	+	0	ID=cds-AAP13449.1;Dbxref=NCBI_GP:AAP13449.1;Name=AAP13449.1;gbkey=CDS;product=protein X4;protein_id=AAP13449.1
+AY278741.1	Genbank	CDS	27864	28118	.	+	0	ID=cds-AAP13450.1;Dbxref=NCBI_GP:AAP13450.1;Name=AAP13450.1;gbkey=CDS;product=protein X5;protein_id=AAP13450.1
+AY278741.1	Genbank	CDS	28120	29388	.	+	0	ID=cds-AAP13445.1;Dbxref=NCBI_GP:AAP13445.1;Name=AAP13445.1;gbkey=CDS;product=N protein;protein_id=AAP13445.1
+AY278741.1	Genbank	polyA_site	29727	29727	.	+	.	ID=id-AY278741.1:29727..29727;gbkey=polyA_site
+
