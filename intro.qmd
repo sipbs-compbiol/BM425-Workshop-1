@@ -1,21 +1,50 @@
 # Introduction
 
-The Introduction page is intended as a short introduction to the book.
+## Workshop Scope
 
-Like most Quarto books, this is a book created from markdown and executable code. 
+Today you will be:
 
-This kind of book is an example of literate programming - the intertwining of nicely-formatted text and images, and executable code. For example, the `R` code cell below executes and produces output when the book is compiled:
+- assembling, annotating, and visualising the first SARS-CoV-2 genome to be sequenced (from Wuhan, January 2020).
+- comparing the first SARS-CoV-2 genome to an earlier coronavirus (SARS 2003)
+- comparing the first SARS-CoV-2 genome and a SARS-CoV-2 genome that was sequenced later in the pandemic
+- interpreting the biological signifance of differences between the genomes, particularly in the region of the spike (S) protein.
 
-```{r}
-1 + 1
-```
+## COVID-19
 
-But the `R` code cell below does not:
+The first cases of a pneumonia of unknown causes began to emerge in Wuhan, China, in December 2019. The novel coronavirus SARS-CoV-2 was isolated by early January, and by the end of January 2020 human-to-human transmission had been confirmed, and cases had been reported in Thailand, Japan, the USA, and several other countries (@Wang2020-yy).
 
-```{r}
-#| eval: false
+![Early COVID-19 timeline (@Wang2020-yy)](assets/images/early-covid-timeline.jpg){fig-alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea."}
 
-summary(cars)
-```
+By the end of February, cases had been identified across the Northern hemisphere, and a new hotspot was emerging in Italy.
 
-See @knuth84 for additional discussion of literate programming.
+![Early COVID-19 global spread](assets/images/COVID-19-outbreak-timeline-2.gif){fig-alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020."}
+
+By October 2021, it was estimated that COVID-19 had [caused over 5mn deaths](https://www.reuters.com/world/global-covid-19-deaths-hit-5-million-delta-variant-sweeps-world-2021-10-02/) worldwide, as well as severe social and economic disruption, including the [largest global recession in almost a century](https://www.imf.org/en/Blogs/Articles/2020/04/14/blog-weo-the-great-lockdown-worst-economic-downturn-since-the-great-depression).
+
+Despite this huge impact, societal and scientific efforts including lockdowns, mathematical modelling, and novel vaccine development helped avoid even worse outcomes. COVID-19 vaccines are estimated to have prevented an additional 14-20mn deaths worldwide in 2021 (@Watson2022-ec).
+
+In May 2023, the World Health Organisation (WHO) [ended their Public Health Emergency](https://www.reuters.com/business/healthcare-pharmaceuticals/covid-is-no-longer-global-health-emergency-who-2023-05-05/) of International Concern (PHEIC), but the SARS-CoV-2 virus remains in circulation. As we begin this workshop, SARS-CoV-2 has [claimed over 7mn lives](https://ourworldindata.org/coronavirus) (@owidcoronavirus).
+
+## SARS-CoV-2 Spike (S) Protein
+
+The spike (S) protein of SARS-CoV-2 plays a central role in host cell receptor recognition and cell membrane fusion (@Huang2020-uk). The protein comprises two subunits:
+
+- S1: a receptor-binding domain that recognises and binds ACE2 (angiotensin-converting enzyme 2)
+- S2: a domain that mediates membrane fusion between the virus and the cell by forming a structural bundle
+
+![(a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells. Reproduced from (@Huang2020-uk)](assets/images/spike_protein_cell.webp){fig-alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry."}
+When you assemble, annotate, and visualise the SARS-CoV-2 genome in this workshop you will find the spike protein annotated.
+
+![JBrowse rendering of an annotated SARS-CoV-2 genome](assets/images/spike_vis_jbrowse.png){fig-alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome."}
+
+The spike protein is not the only important surface protein for SARS-CoV-2. The envelope (E), membrane (M) and nucleocapsid proteins are also essential for the virus to interact with the host, and you will identify these in your analysis today, too.
+
+![How SARS-CoV-2 interacts with the surface proteins of the target cell ([Marta Palma Rodríguez](https://pdb101.rcsb.org/news/5ed7c17cdab5c9354c274f56))]{fig-alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host."}
+
+::: { .callout-tip collapse="true" }
+## Virus structures
+
+You can find an interactive collection of SARS-CoV-2 protein structures at the RCSB/PDB
+
+- [SARS-CoV-2 PDB Structures](https://www.rcsb.org/news/feature/5e74d55d2d410731e9944f52)
+:::

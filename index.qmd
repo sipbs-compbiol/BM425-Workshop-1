@@ -25,7 +25,7 @@ Please take care to read the text in the expandable callout boxes, as well as th
 
 By the end of this workshop, students will be able to:
 
-- understand and use the [Galaxy scientific workflow system](https://usegalaxy.eu/)
+- understand and use the [Galaxy scientific workflow system](https://usegalaxy.eu/) (@Galaxy_Community2024-zi)
 - recognise and use common sequencing data formats
 - use common bioinformatics tools to:
   - assemble sequenced reads into a genome sequence
