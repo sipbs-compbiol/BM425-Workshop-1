@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Leighton Pritchard">
-<meta name="dcterms.date" content="2026-03-09">
+<meta name="dcterms.date" content="2024-09-27">
 
 <title>BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface to {{&lt; var ay &gt;}} BM425 Workshop 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Preface to 2024-25 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -178,7 +178,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#preface-to-bm425-workshop-1" id="toc-preface-to-bm425-workshop-1" class="nav-link active" data-scroll-target="#preface-to-bm425-workshop-1">Preface to 2024-25 BM425 Workshop 1</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -204,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 9, 2026</p>
+      <p class="date">September 27, 2024</p>
     </div>
   </div>
   
@@ -217,13 +222,71 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="sipbs_compbio_800.png" title="BM425 Workshop 1: SARS-CoV-2 Genome Analysis" class="quarto-cover-image img-fluid"></p>
-<p>This is a Quarto book, generated using the <code>sipbs-compbiol-book-template</code> GitHub template.</p>
-<p>The Preface page is intended as a frontispiece with brief introductory information about the book and, maybe, its authors.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+<section id="preface-to-bm425-workshop-1" class="level1 unnumbered">
+<h1 class="unnumbered">Preface to 2024-25 BM425 Workshop 1</h1><p><img src="sipbs_compbio_800.png" title="BM425 Workshop 1: SARS-CoV-2 Genome Analysis" class="quarto-cover-image img-fluid"></p>
+<p>Welcome to the BM425 (Advanced Microbiology) workshop on genome analysis of SARS-CoV-2, for 2024-25.</p>
+<p>This year is the first presentation of the workshop material in this format, and we would be very grateful to hear feedback <a href="mailto:leighton.pritchard@strath.ac.uk">by email</a> or through the <a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues">GitHub repository Issues page</a>.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This workshop asks you to work through some bioinformatics exercises using the online service <a href="https://usegalaxy.eu/"><code>Galaxy</code></a>, with <a href="data.qmd">data</a> that we provide, to:</p>
+<ul>
+<li>assemble, annotate, and visualise the first SARS-CoV-2 genome isolated in Wuhan, in January 2020</li>
+<li>compare the genome of SARS-CoV-2 to that of an earlier coronavirus (SARS 2003)</li>
+<li>compare the genome of the first SARS-CoV-2 genome to that of an variant from later in the pandemic</li>
+<li>make a biological interpretation of your analysis, particularly of the spike (S) protein</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is new material in this workshop that is not covered in lectures. <strong>This material is examinable.</strong></p>
+<p>Please take care to read the text in the expandable callout boxes, as well as that for the workshop activities, to be sure you have understood the topic and obtain full value from the exercises.</p>
+</div>
+</div>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this workshop, students will be able to:</p>
+<ul>
+<li>understand and use the <a href="https://usegalaxy.eu/">Galaxy scientific workflow system</a></li>
+<li>recognise and use common sequencing data formats</li>
+<li>use common bioinformatics tools to:
+<ul>
+<li>assemble sequenced reads into a genome sequence</li>
+<li>annotate features on an assembled genome sequence</li>
+<li>map sequencing reads onto an assembled genome</li>
+<li>carry out comparative genome analysis</li>
+<li>visualise and interpret the results of genome annotation and analysis</li>
+</ul></li>
+</ul>
+</section>
+<section id="assessment" class="level2">
+<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is a formative assessment on the <a href="https://classes.myplace.strath.ac.uk/course/view.php?id=21676">workshop MyPlace page</a> that you should complete at the end of the workshop, to demonstrate you’ve earned your genomics wings (link below).</p>
+<ul>
+<li><a href="https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456">MyPlace formative quiz</a></li>
+</ul>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

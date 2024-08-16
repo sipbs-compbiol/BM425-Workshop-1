@@ -4,9 +4,39 @@
     "href": "index.html",
     "title": "BM425 Workshop 1: SARS-CoV-2 Genome Analysis",
     "section": "",
-    "text": "Preface\nThis is a Quarto book, generated using the sipbs-compbiol-book-template GitHub template.\nThe Preface page is intended as a frontispiece with brief introductory information about the book and, maybe, its authors.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Preface to 2024-25 BM425 Workshop 1\nWelcome to the BM425 (Advanced Microbiology) workshop on genome analysis of SARS-CoV-2, for 2024-25.\nThis year is the first presentation of the workshop material in this format, and we would be very grateful to hear feedback by email or through the GitHub repository Issues page.",
     "crumbs": [
-      "Preface"
+      "Preface to {{< var ay >}} BM425 Workshop 1"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "BM425 Workshop 1: SARS-CoV-2 Genome Analysis",
+    "section": "Overview",
+    "text": "Overview\nThis workshop asks you to work through some bioinformatics exercises using the online service Galaxy, with data that we provide, to:\n\nassemble, annotate, and visualise the first SARS-CoV-2 genome isolated in Wuhan, in January 2020\ncompare the genome of SARS-CoV-2 to that of an earlier coronavirus (SARS 2003)\ncompare the genome of the first SARS-CoV-2 genome to that of an variant from later in the pandemic\nmake a biological interpretation of your analysis, particularly of the spike (S) protein\n\n\n\n\n\n\n\nImportant Note\n\n\n\nThere is new material in this workshop that is not covered in lectures. This material is examinable.\nPlease take care to read the text in the expandable callout boxes, as well as that for the workshop activities, to be sure you have understood the topic and obtain full value from the exercises.",
+    "crumbs": [
+      "Preface to {{< var ay >}} BM425 Workshop 1"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "BM425 Workshop 1: SARS-CoV-2 Genome Analysis",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this workshop, students will be able to:\n\nunderstand and use the Galaxy scientific workflow system\nrecognise and use common sequencing data formats\nuse common bioinformatics tools to:\n\nassemble sequenced reads into a genome sequence\nannotate features on an assembled genome sequence\nmap sequencing reads onto an assembled genome\ncarry out comparative genome analysis\nvisualise and interpret the results of genome annotation and analysis",
+    "crumbs": [
+      "Preface to {{< var ay >}} BM425 Workshop 1"
+    ]
+  },
+  {
+    "objectID": "index.html#assessment",
+    "href": "index.html#assessment",
+    "title": "BM425 Workshop 1: SARS-CoV-2 Genome Analysis",
+    "section": "Assessment",
+    "text": "Assessment\n\n\n\n\n\n\nImportant\n\n\n\nThere is a formative assessment on the workshop MyPlace page that you should complete at the end of the workshop, to demonstrate you’ve earned your genomics wings (link below).\n\nMyPlace formative quiz",
+    "crumbs": [
+      "Preface to {{< var ay >}} BM425 Workshop 1"
     ]
   },
   {
