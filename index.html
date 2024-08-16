@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -164,6 +184,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -254,7 +280,7 @@ Important Note
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <p>By the end of this workshop, students will be able to:</p>
 <ul>
-<li>understand and use the <a href="https://usegalaxy.eu/">Galaxy scientific workflow system</a></li>
+<li>understand and use the <a href="https://usegalaxy.eu/">Galaxy scientific workflow system</a> (<span class="citation" data-cites="Galaxy_Community2024-zi">Galaxy Community (<a href="references.html#ref-Galaxy_Community2024-zi" role="doc-biblioref">2024</a>)</span>)</li>
 <li>recognise and use common sequencing data formats</li>
 <li>use common bioinformatics tools to:
 <ul>
@@ -286,6 +312,11 @@ Important
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Galaxy_Community2024-zi" class="csl-entry" role="listitem">
+Galaxy Community. 2024. <span>“The Galaxy Platform for Accessible, Reproducible, and Collaborative Data Analyses: 2024 Update.”</span> <em>Nucleic Acids Res.</em> 52 (W1): W83–94.
+</div>
+</div>
 </section>
 </section>
 

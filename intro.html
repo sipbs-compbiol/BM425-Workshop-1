@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -218,6 +184,12 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -227,8 +199,21 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#workshop-scope" id="toc-workshop-scope" class="nav-link active" data-scroll-target="#workshop-scope"><span class="header-section-number">1.1</span> Workshop Scope</a></li>
+  <li><a href="#covid-19" id="toc-covid-19" class="nav-link" data-scroll-target="#covid-19"><span class="header-section-number">1.2</span> COVID-19</a></li>
+  <li><a href="#sars-cov-2-spike-s-protein" id="toc-sars-cov-2-spike-s-protein" class="nav-link" data-scroll-target="#sars-cov-2-spike-s-protein"><span class="header-section-number">1.3</span> SARS-CoV-2 Spike (S) Protein</a></li>
+  <li><a href="#data-provenance" id="toc-data-provenance" class="nav-link" data-scroll-target="#data-provenance"><span class="header-section-number">1.4</span> Data Provenance</a>
+  <ul class="collapse">
+  <li><a href="#the-first-sequenced-human-covid-19-case" id="toc-the-first-sequenced-human-covid-19-case" class="nav-link" data-scroll-target="#the-first-sequenced-human-covid-19-case"><span class="header-section-number">1.4.1</span> The first sequenced human COVID-19 case</a></li>
+  <li><a href="#data-for-this-workshop" id="toc-data-for-this-workshop" class="nav-link" data-scroll-target="#data-for-this-workshop"><span class="header-section-number">1.4.2</span> Data for this workshop</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -252,27 +237,195 @@ div.csl-indent {
 </header>
 
 
-<p>The Introduction page is intended as a short introduction to the book.</p>
-<p>Like most Quarto books, this is a book created from markdown and executable code.</p>
-<p>This kind of book is an example of literate programming - the intertwining of nicely-formatted text and images, and executable code. For example, the <code>R</code> code cell below executes and produces output when the book is compiled:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="workshop-scope" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="workshop-scope"><span class="header-section-number">1.1</span> Workshop Scope</h2>
+<p>Today you will be:</p>
+<ul>
+<li>assembling, annotating, and visualising the first SARS-CoV-2 genome to be sequenced (from Wuhan, January 2020).</li>
+<li>comparing the first SARS-CoV-2 genome to an earlier coronavirus (SARS 2003)</li>
+<li>comparing the first SARS-CoV-2 genome and a SARS-CoV-2 genome that was sequenced later in the pandemic</li>
+<li>interpreting the biological signifance of differences between the genomes, particularly in the region of the spike (S) protein.</li>
+</ul>
+</section>
+<section id="covid-19" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="covid-19"><span class="header-section-number">1.2</span> COVID-19</h2>
+<p>The first cases of a pneumonia of unknown causes began to emerge in Wuhan, China, in December 2019. The novel coronavirus SARS-CoV-2 was isolated by early January, and by the end of January 2020 human-to-human transmission had been confirmed, and cases had been reported in Thailand, Japan, the USA, and several other countries (<a href="#fig-timeline" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>, <span class="citation" data-cites="Wang2020-yy">Wang et al. (<a href="references.html#ref-Wang2020-yy" role="doc-biblioref">2020</a>)</span>).</p>
+<div id="fig-timeline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/early-covid-timeline.jpg" class="img-fluid figure-img" style="width:80.0%" alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Early COVID-19 timeline (reproduced from <span class="citation" data-cites="Wang2020-yy">Wang et al. (<a href="references.html#ref-Wang2020-yy" role="doc-biblioref">2020</a>)</span>)
+</figcaption>
+</figure>
+</div>
+<p>By the end of February, cases had been identified across the Northern hemisphere, and a new hotspot was emerging in Italy (<a href="#fig-spread" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>).</p>
+<div id="fig-spread" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spread-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/COVID-19-outbreak-timeline-2.gif" class="img-fluid figure-img" style="width:80.0%" alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spread-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: Early COVID-19 global spread
+</figcaption>
+</figure>
+</div>
+<p>By October 2021, it was estimated that COVID-19 had <a href="https://www.reuters.com/world/global-covid-19-deaths-hit-5-million-delta-variant-sweeps-world-2021-10-02/">caused over 5mn deaths</a> worldwide, as well as severe social and economic disruption, including the <a href="https://www.imf.org/en/Blogs/Articles/2020/04/14/blog-weo-the-great-lockdown-worst-economic-downturn-since-the-great-depression">largest global recession in almost a century</a>.</p>
+<p>Despite this huge impact, societal and scientific efforts including lockdowns, mathematical modelling, and novel vaccine development helped avoid even worse outcomes. COVID-19 vaccines are estimated to have prevented an additional 14-20mn deaths worldwide in 2021 (<span class="citation" data-cites="Watson2022-ec">Watson et al. (<a href="references.html#ref-Watson2022-ec" role="doc-biblioref">2022</a>)</span>).</p>
+<p>In May 2023, the World Health Organisation (WHO) <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/covid-is-no-longer-global-health-emergency-who-2023-05-05/">ended their Public Health Emergency</a> of International Concern (PHEIC), but the SARS-CoV-2 virus remains in circulation. As we begin this workshop, SARS-CoV-2 has <a href="https://ourworldindata.org/coronavirus">claimed over 7mn lives</a> (<span class="citation" data-cites="owidcoronavirus">Mathieu et al. (<a href="references.html#ref-owidcoronavirus" role="doc-biblioref">2020</a>)</span>).</p>
+</section>
+<section id="sars-cov-2-spike-s-protein" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sars-cov-2-spike-s-protein"><span class="header-section-number">1.3</span> SARS-CoV-2 Spike (S) Protein</h2>
+<p>The spike (S) protein of SARS-CoV-2 plays a central role in host cell receptor recognition and cell membrane fusion (<span class="citation" data-cites="Huang2020-uk">Huang et al. (<a href="references.html#ref-Huang2020-uk" role="doc-biblioref">2020</a>)</span>). The protein comprises two subunits:</p>
+<ul>
+<li>S1: a receptor-binding domain that recognises and binds ACE2 (angiotensin-converting enzyme 2)</li>
+<li>S2: a domain that mediates membrane fusion between the virus and the cell by forming a structural bundle</li>
+</ul>
+<p>which interact with the host cell as illustrated in <a href="#fig-spike" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>.</p>
+<div id="fig-spike" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spike-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/spike_protein_cell.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spike-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3: (a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells (reproduced from <span class="citation" data-cites="Huang2020-uk">Huang et al. (<a href="references.html#ref-Huang2020-uk" role="doc-biblioref">2020</a>)</span>)
+</figcaption>
+</figure>
+</div>
+<p>When you assemble, annotate, and visualise the SARS-CoV-2 genome in this workshop you will find the spike protein annotated as in <a href="#fig-jbrowse-1" class="quarto-xref">Figure&nbsp;<span>1.4</span></a>.</p>
+<div id="fig-jbrowse-1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-jbrowse-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/spike_vis_jbrowse.png" class="img-fluid figure-img" alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jbrowse-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4: JBrowse rendering of an annotated SARS-CoV-2 genome
+</figcaption>
+</figure>
+</div>
+<p>The spike protein is not the only important surface protein for SARS-CoV-2. The envelope (E), membrane (M) and nucleocapsid proteins are also essential for the virus to interact with the host, as shown in <a href="#fig-palma" class="quarto-xref">Figure&nbsp;<span>1.5</span></a>, and you will identify these in your analysis today, too.</p>
+<div id="fig-palma" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-palma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/sars-ace2tmprs2-martapalma.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-palma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.5: How SARS-CoV-2 interacts with the surface proteins of the target cell <a href="https://pdb101.rcsb.org/news/5ed7c17cdab5c9354c274f56">(Marta Palma Rodríguez)</a>
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Other SARS-CoV-2 Structures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You can find an interactive collection of publicly-available SARS-CoV-2 protein structures at <a href="https://www.rcsb.org/">RCSB/PDB</a>, the public repository for biological structural data.</p>
+<ul>
+<li><a href="https://www.rcsb.org/news/feature/5e74d55d2d410731e9944f52">SARS-CoV-2 PDB Structures</a></li>
+</ul>
 </div>
 </div>
-<p>But the <code>R</code> code cell below does not:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+</section>
+<section id="data-provenance" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="data-provenance"><span class="header-section-number">1.4</span> Data Provenance</h2>
+<p>Modern scientific research, and this workshop, are both made possible due to the dedication of scientists around the globe to <a href="https://www.go-fair.org/fair-principles/">FAIR (Findable, Accessible, Interoperable, and Reproducible) principles for scientific data management</a>.</p>
+<p>Throughout the COVID-19 pandemic, SARS-CoV-2 sequence and structural data was released through public repositories including <a href="https://www.ncbi.nlm.nih.gov/">NCBI</a>, <a href="https://gisaid.org/">GISAID</a>, and <a href="https://www.rcsb.org/">RCSB/PDB</a>. The data shared through these resources enabled scientists across the world to conduct research that reduced suffering and hastened the end of the pandemic. These practices were established before COVID-19, and continue to support and empower scientific research globally.</p>
+<section id="the-first-sequenced-human-covid-19-case" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="the-first-sequenced-human-covid-19-case"><span class="header-section-number">1.4.1</span> The first sequenced human COVID-19 case</h3>
+<p>The first SARS-CoV-2 genome was obtained from a sample of human lung in January 2020. The sample was sequenced and submitted to NCBI as <a href="https://www.ncbi.nlm.nih.gov/biosample/?term=SAMN13922059">SAMN13922059</a>. It is recorded as “human lung metagenome” because the entire material - human, virus, and everything else - was sequenced as a single sample. The work as described in <span class="citation" data-cites="Wu2020-yx">Wu et al. (<a href="references.html#ref-Wu2020-yx" role="doc-biblioref">2020</a>)</span> is outlined below.</p>
+<ol type="1">
+<li>The lung was lavaged (washed/rinsed) and the fluid collected</li>
+<li>Total RNA was extracted from the fluid, and an RNA sequencing library constructed (including depletion of ribosomal RNA)</li>
+<li>The library was sequenced on an <a href="https://www.illumina.com/systems/sequencing-platforms/miniseq.html">Illumina MiniSeq</a> machine, to give 150bp paired-end reads</li>
+<li>The resulting reads were cleaned and assembled using Megahit (<span class="citation" data-cites="Li2015-yc">Li et al. (<a href="references.html#ref-Li2015-yc" role="doc-biblioref">2015</a>)</span>) and <a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki">Trinity</a></li>
+<li>The longest contig was identified as a coronavirus, and used to design primers for PCR-RACE (Rapid Amplification of cDNA Ends, <span class="citation" data-cites="Pal2022-tw">Pal (<a href="references.html#ref-Pal2022-tw" role="doc-biblioref">2022</a>)</span>, <a href="#fig-race" class="quarto-xref">Figure&nbsp;<span>1.6</span></a>) to sequence the ends of the virus genome</li>
+<li>The cleaned reads were remapped against the full virus sequence</li>
+</ol>
+<div id="fig-race" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-race-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/race.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-race-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.6: PCR-RACE generates long amplicons from the viral genome, which can be sequenced with long-read sequencing. This results in a “crenellated” assembly of overlapping long genomic sections.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Why did they extract RNA and not DNA?</li>
+<li>Why do you think they depleted the ribosomal RNA?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>SARS-CoV-2 is an RNA virus, so we must sequence RNA to recover virus sequence.</li>
+<li>There is so much ribosomal RNA in biological material that, if it was left in the sample, it would dominate over the viral material and any human transcripts, making the virus more difficult to detect. Depleting it enhances sensitivity for detecting viral RNA.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="data-for-this-workshop" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="data-for-this-workshop"><span class="header-section-number">1.4.2</span> Data for this workshop</h3>
+<p>For this workshop, we took all 57mn raw sequencing reads from <span class="citation" data-cites="Wu2020-yx">Wu et al. (<a href="references.html#ref-Wu2020-yx" role="doc-biblioref">2020</a>)</span>, which are available at NCBI under accession <a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381">SRR10971381</a>, and filtered out all reads that matched the human genome. The remaining reads in the file <a href="assets/data/ERR4164769_1.fastq.gz"><code>ERR4164769_1.fastq.gz</code></a> are those you will use to assemble the SARS-CoV-2 genome.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+<div id="ref-Huang2020-uk" class="csl-entry" role="listitem">
+Huang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020. <span>“Structural and Functional Properties of <span>SARS-CoV-2</span> Spike Protein: Potential Antivirus Drug Development for <span>COVID-19</span>.”</span> <em>Acta Pharmacol. Sin.</em> 41 (9): 1141–49.
+</div>
+<div id="ref-Li2015-yc" class="csl-entry" role="listitem">
+Li, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah Lam. 2015. <span>“<span>MEGAHIT</span>: An Ultra-Fast Single-Node Solution for Large and Complex Metagenomics Assembly via Succinct de Bruijn Graph.”</span> <em>Bioinformatics</em> 31 (10): 1674–76.
+</div>
+<div id="ref-owidcoronavirus" class="csl-entry" role="listitem">
+Mathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel, Charlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020. <span>“Coronavirus Pandemic (COVID-19).”</span> <em>Our World in Data</em>.
+</div>
+<div id="ref-Pal2022-tw" class="csl-entry" role="listitem">
+Pal, Aruna. 2022. <span>“Rapid Amplification of <span class="nocase">cDNA</span> Ends (<span>RACE</span>).”</span> In <em>Springer Protocols Handbooks</em>, 505–35. New York, NY: Springer US.
+</div>
+<div id="ref-Wang2020-yy" class="csl-entry" role="listitem">
+Wang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020. <span>“A Novel Coronavirus Outbreak of Global Health Concern.”</span> <em>Lancet</em> 395 (10223): 470–73.
+</div>
+<div id="ref-Watson2022-ec" class="csl-entry" role="listitem">
+Watson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan, Peter Winskill, and Azra C Ghani. 2022. <span>“Global Impact of the First Year of <span>COVID-19</span> Vaccination: A Mathematical Modelling Study.”</span> <em>Lancet Infect. Dis.</em> 22 (9): 1293–1302.
+</div>
+<div id="ref-Wu2020-yx" class="csl-entry" role="listitem">
+Wu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu, et al. 2020. <span>“A New Coronavirus Associated with Human Respiratory Disease in China.”</span> <em>Nature</em> 579 (7798): 265–69.
 </div>
 </div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -715,7 +868,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
