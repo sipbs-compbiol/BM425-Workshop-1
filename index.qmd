@@ -1,7 +1,44 @@
-# Preface {.unnumbered}
+# Preface to {{< var ay >}} BM425 Workshop 1 {.unnumbered}
 
-This is a Quarto book, generated using the `sipbs-compbiol-book-template` GitHub template.
+Welcome to the BM425 (Advanced Microbiology) workshop on genome analysis of SARS-CoV-2, for {{< var ay >}}.
 
-The Preface page is intended as a frontispiece with brief introductory information about the book and, maybe, its authors.
+This year is the first presentation of the workshop material in this format, and we would be very grateful to hear feedback [by email](mailto:{{< var admin.email >}}) or through the [GitHub repository Issues page]({{< var github.issues >}}).
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+## Overview
+
+This workshop asks you to work through some bioinformatics exercises using the online service [`Galaxy`](https://usegalaxy.eu/), with [data](data.qmd) that we provide, to:
+
+- assemble, annotate, and visualise the first SARS-CoV-2 genome isolated in Wuhan, in January 2020
+- compare the genome of SARS-CoV-2 to that of an earlier coronavirus (SARS 2003)
+- compare the genome of the first SARS-CoV-2 genome to that of an variant from later in the pandemic
+- make a biological interpretation of your analysis, particularly of the spike (S) protein
+
+::: { .callout-warning }
+## Important Note
+
+There is new material in this workshop that is not covered in lectures. **This material is examinable.**
+
+Please take care to read the text in the expandable callout boxes, as well as that for the workshop activities, to be sure you have understood the topic and obtain full value from the exercises.
+:::
+
+## Learning Objectives
+
+By the end of this workshop, students will be able to:
+
+- understand and use the [Galaxy scientific workflow system](https://usegalaxy.eu/)
+- recognise and use common sequencing data formats
+- use common bioinformatics tools to:
+  - assemble sequenced reads into a genome sequence
+  - annotate features on an assembled genome sequence
+  - map sequencing reads onto an assembled genome
+  - carry out comparative genome analysis
+  - visualise and interpret the results of genome annotation and analysis
+  
+## Assessment
+
+::: { .callout-important }
+There is a formative assessment on the [workshop MyPlace page](https://classes.myplace.strath.ac.uk/course/view.php?id=21676) that you should complete at the end of the workshop, to demonstrate you've earned your genomics wings (link below).
+
+- [MyPlace formative quiz](https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456)
+:::
+  
