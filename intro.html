@@ -210,7 +210,9 @@ div.csl-indent {
   <li><a href="#data-provenance" id="toc-data-provenance" class="nav-link" data-scroll-target="#data-provenance"><span class="header-section-number">1.4</span> Data Provenance</a>
   <ul class="collapse">
   <li><a href="#the-first-sequenced-human-covid-19-case" id="toc-the-first-sequenced-human-covid-19-case" class="nav-link" data-scroll-target="#the-first-sequenced-human-covid-19-case"><span class="header-section-number">1.4.1</span> The first sequenced human COVID-19 case</a></li>
-  <li><a href="#data-for-this-workshop" id="toc-data-for-this-workshop" class="nav-link" data-scroll-target="#data-for-this-workshop"><span class="header-section-number">1.4.2</span> Data for this workshop</a></li>
+  <li><a href="#sars-cov-2-read-data-for-this-workshop" id="toc-sars-cov-2-read-data-for-this-workshop" class="nav-link" data-scroll-target="#sars-cov-2-read-data-for-this-workshop"><span class="header-section-number">1.4.2</span> SARS-CoV-2 read data for this workshop</a></li>
+  <li><a href="#sars-cov-2003-genome-data-for-this-workshop" id="toc-sars-cov-2003-genome-data-for-this-workshop" class="nav-link" data-scroll-target="#sars-cov-2003-genome-data-for-this-workshop"><span class="header-section-number">1.4.3</span> SARS-CoV 2003 genome data for this workshop</a></li>
+  <li><a href="#march-2020-dutch-sars-cov-2-isolate" id="toc-march-2020-dutch-sars-cov-2-isolate" class="nav-link" data-scroll-target="#march-2020-dutch-sars-cov-2-isolate"><span class="header-section-number">1.4.4</span> March 2020 Dutch SARS-CoV-2 isolate</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -396,9 +398,31 @@ Answers
 </div>
 </div>
 </section>
-<section id="data-for-this-workshop" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="data-for-this-workshop"><span class="header-section-number">1.4.2</span> Data for this workshop</h3>
-<p>For this workshop, we took all 57mn raw sequencing reads from <span class="citation" data-cites="Wu2020-yx">Wu et al. (<a href="references.html#ref-Wu2020-yx" role="doc-biblioref">2020</a>)</span>, which are available at NCBI under accession <a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381">SRR10971381</a>, and filtered out all reads that matched the human genome. The remaining reads in the file <a href="assets/data/ERR4164769_1.fastq.gz"><code>ERR4164769_1.fastq.gz</code></a> are those you will use to assemble the SARS-CoV-2 genome.</p>
+<section id="sars-cov-2-read-data-for-this-workshop" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="sars-cov-2-read-data-for-this-workshop"><span class="header-section-number">1.4.2</span> SARS-CoV-2 read data for this workshop</h3>
+<p>For this workshop, we took all 57mn raw sequencing reads from <span class="citation" data-cites="Wu2020-yx">Wu et al. (<a href="references.html#ref-Wu2020-yx" role="doc-biblioref">2020</a>)</span>, which are available at NCBI under accession <a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381">SRR10971381</a>, and filtered out all reads that matched the human genome. The remaining reads in the files below are those you will use to assemble the SARS-CoV-2 genome.</p>
+<ul>
+<li><a href="assets/data/trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz">Paired-end reads, forward direction</a></li>
+<li><a href="assets/data/trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz">Paired-end reads, reverse direction</a></li>
+</ul>
+</section>
+<section id="sars-cov-2003-genome-data-for-this-workshop" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="sars-cov-2003-genome-data-for-this-workshop"><span class="header-section-number">1.4.3</span> SARS-CoV 2003 genome data for this workshop</h3>
+<p>The first comparator genome in the workshop is that of SARS coronavirus Urbani. This coronavirus emerged in Guangdong, China, in late 2002 and was the subject of a World Health Organisation global alert, which named it SARS (Severe Acute Respiratory Syndrome). This strain of SARS-CoV was sequenced in 2003 (<span class="citation" data-cites="Rota2003-tu">Rota et al. (<a href="references.html#ref-Rota2003-tu" role="doc-biblioref">2003</a>)</span>) and has accession <a href="https://www.ncbi.nlm.nih.gov/nuccore/AY278741">AY278741.1</a> at GenBank/NCBI.</p>
+<p>In the workshop, you will use the following files:</p>
+<ul>
+<li><a href="assets/data/SARS_AY278741.fasta">SARS 2003 genome sequence (<code>.fasta</code>)</a></li>
+<li><a href="assets/data/SARS_AY278741.gff3">SARS 2003 annotation (<code>.gff3</code>)</a></li>
+<li><a href="assets/data/SARS_AY278741.gbk">SARS 2003 combined genome sequence and annotation (<code>.gbk</code>)</a></li>
+</ul>
+</section>
+<section id="march-2020-dutch-sars-cov-2-isolate" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="march-2020-dutch-sars-cov-2-isolate"><span class="header-section-number">1.4.4</span> March 2020 Dutch SARS-CoV-2 isolate</h3>
+<p>The second comparator genome you will use in this workshop is a SARS-CoV-2 variant sequenced in the Netherlands in March 2020, four months after the first known human cases were identified. The sample has accession <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMEA6847958">SAMEA6847958</a> and was obtained through active surveillance during the COVID-19 pandemic (<span class="citation" data-cites="Oude_Munnink2020-ry">Oude Munnink et al. (<a href="references.html#ref-Oude_Munnink2020-ry" role="doc-biblioref">2020</a>)</span>).</p>
+<p>The data describes a set of <a href="https://nanoporetech.com/products/sequence/gridion">Oxford Nanopore (ONT) GridION</a> reads, which are available under accession <a href="https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&amp;acc=ERR4164769&amp;display=metadata">ERR4164769</a> at SRA/NCBI. In the workshop, you will use the following file:</p>
+<ul>
+<li><a href="assets/data/ERR4164769_1.fastq.gz">GridION reads for March 2020 Dutch isolate</a></li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -411,8 +435,14 @@ Li, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah Lam. 2015.
 <div id="ref-owidcoronavirus" class="csl-entry" role="listitem">
 Mathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel, Charlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020. <span>“Coronavirus Pandemic (COVID-19).”</span> <em>Our World in Data</em>.
 </div>
+<div id="ref-Oude_Munnink2020-ry" class="csl-entry" role="listitem">
+Oude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole, Manon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020. <span>“Rapid <span>SARS-CoV-2</span> Whole-Genome Sequencing and Analysis for Informed Public Health Decision-Making in the Netherlands.”</span> <em>Nat. Med.</em> 26 (9): 1405–10.
+</div>
 <div id="ref-Pal2022-tw" class="csl-entry" role="listitem">
 Pal, Aruna. 2022. <span>“Rapid Amplification of <span class="nocase">cDNA</span> Ends (<span>RACE</span>).”</span> In <em>Springer Protocols Handbooks</em>, 505–35. New York, NY: Springer US.
+</div>
+<div id="ref-Rota2003-tu" class="csl-entry" role="listitem">
+Rota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray Campagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003. <span>“Characterization of a Novel Coronavirus Associated with Severe Acute Respiratory Syndrome.”</span> <em>Science</em> 300 (5624): 1394–99.
 </div>
 <div id="ref-Wang2020-yy" class="csl-entry" role="listitem">
 Wang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020. <span>“A Novel Coronavirus Outbreak of Global Health Concern.”</span> <em>Lancet</em> 395 (10223): 470–73.
