@@ -1,0 +1,48 @@
+# Register An Account with Galaxy {#sec-galaxy-registration}
+
+## Introduction
+
+In this workshop you will be working on Galaxy, an [open source scientific workflow and data integration platform](https://galaxyproject.org/) (@Galaxy_Community2024-zi). Galaxy is a framework for performing reproducible computational biology and bioinformatics, democratising the field so that scientists with no programming or other computing experience can still carry out bioinformatic analyses on their own data, in their web browser.
+
+::: { .callout-note collapse="true" }
+## Galaxy instances
+
+The Galaxy software is open source and can be downloaded and installed freely on any computer that it can run on. Each such installation is called a _Galaxy instance_. The Galaxy instance that you will be working on is the EU Galaxy instance at [https://usegalaxy.eu/](https://usegalaxy.eu/). This is the largest Galaxy instance in Europe and gives access to over 2500 scientific tools. It is free to use, and is maintained by the [Galaxy team at Freiburg](https://usegalaxy-eu.github.io/freiburg/).
+
+There are many other Galaxy instances, some private, and some public and free for anyone to use, such as:
+
+- [https://usegalaxy.org/](https://usegalaxy.org/): The [Galaxy Project](https://galaxyproject.org/galaxy-project/) public server, supporting biomedical research.
+- [https://galaxyproject.org/use/usegalaxy-fr/](https://usegalaxy.fr/): A general-purpose Galaxy server, based in France
+- [https://galaxyproject.org/use/usegalaxy-au/](https://usegalaxy.org.au/): The Australian UseGalaxy server
+
+Galaxy can be thought of as a library of bioinformatics tools and, just as different libraries may contaion differing collections of books, each Galaxy instance may make different sets of tools, or different versions of similar tools, available. If you use Galaxy it is important to be clear when writing up your analysis methods to be clear about which Galaxy instance is used, and which version of each tool. Also, some analyses may be possible on one Galaxy instance, but not another.
+:::
+
+### Workflows
+
+The key concept in Galaxy is the _workflow_. A workflow is a series, or chain, of analysis steps that takes some input data (one or more files or datasets) through a series of actions, to generate one or more result files. Typically, the output of one step will serve as the input to the next step, but more complicated branching workflows can also be created (@fig-galaxy-rxlr).
+
+![Galaxy workflow editor view of a Galaxy workflow that runs the same tool (`RXLR Mofits`) with three different settings, and compares the results using a Venn diagram (reproduced from @Cock2013-nr). The workflow runs from left to right. A single `Input dataset` is fed into the `RXLR Motifs` tool three times, applying a different method each time. Each run of the `RXLR Motifs` tool generates a different set of output sequences, which are passed as input to the `Filter` tool. The output from all three runs of the `Filter` tool is passed to the `Venn Diagram` tool, along with the original input dataset, to generate a Venn Diagram](assets/images/galaxy_workflow_noodles.jpg){#fig-galaxy-rxlr fig-alt="Galaxy workflow editor view of a Galaxy workflow that takes input data and passes it through a series of actions. The links between datasets and actions are shown as noodles on the diagram." width=80%}
+
+Using Galaxy, you will build up a powerful bioinformatic analysis workflow to analyse your data, step-by-step, using a web browser. Galaxy allows you to save and share your workflows, to encourage reuse and reproducibility.
+
+## Registering with Galaxy
+
+::: { .callout-tip }
+## Register with `usegalaxy.eu`
+
+The first action you should take in this workshop, if you have not already created an account at [https://usegalaxy.eu/](https://usegalaxy.eu/), is to **create an account at [https://usegalaxy.eu/](https://usegalaxy.eu/)**.
+:::
+
+1. Go to the Galaxy [login/registration page](https://usegalaxy.eu/login/start?redirect=None)
+2. If you have a `usegalaxy.eu` account already, then log in using your details and move on to the workshop proper.
+3. If you do not already have a `usegalaxy.eu` account, then **click on the `Register here` link**.
+4. Enter your **university email address** in the `Email address` field.
+5. Choose a [secure password](https://passwordsgenerator.net/) and enter it into the `Password` and `Confirm password` fields.
+6. Choose a public name to show (other people will be able to see this) and enter it in the `Public name` field.
+7. Click on the `Create` button.
+
+::: { .callout-important }
+**You will receive a validation email at the account you registered with. You _must_ confirm your email to proceed.**
+:::
+
