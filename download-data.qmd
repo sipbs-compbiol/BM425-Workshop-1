@@ -1,0 +1,24 @@
+# Download Workshop Data {#sec-download-data}
+
+::: { .callout-tip }
+## Download the workshop data
+
+1. Create a new folder on your computer desktop called `BM425_Workshop`
+2. Download the files from the sections below into this new folder:
+:::
+
+## Sequencing reads for SARS-CoV-2 assembly
+
+- [Illumina paired-end reads, forward direction](assets/data/trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz) (`trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz`)
+- [Illumina paired-end reads, reverse direction](assets/data/trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz)(`trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz`)
+
+## SARS 2003 genome for genome comparison
+
+- [SARS 2003 genome sequence (`.fasta`)](assets/data/SARS_AY278741.fasta)(`SARS_AY278741.fasta`)
+- [SARS 2003 annotation (`.gff3`)](assets/data/SARS_AY278741.gff3)(`SARS_AY278741.gff3`)
+- [SARS 2003 combined genome sequence and annotation (`.gbk`)](assets/data/SARS_AY278741.gbk)(`SARS_AY278741.gbk`)
+
+## Dutch SARS-CoV-2 reads for genome comparison
+
+- [GridION reads for March 2020 Dutch isolate](assets/data/ERR4164769_1.fastq.gz)(`ERR4164769_1.fastq.gz`)
+:::

@@ -1,0 +1,7 @@
+# Upload Data to Galaxy {#sec-upload-data}
+
+::: { .callout-caution }
+## Using data in Galaxy
+
+For Galaxy to be able to use your data, that **data must be in your _history_ on the Galaxy server**.
+:::
