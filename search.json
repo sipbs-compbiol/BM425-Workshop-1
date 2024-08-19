@@ -90,47 +90,132 @@
     ]
   },
   {
-    "objectID": "early-section-topic.html",
-    "href": "early-section-topic.html",
-    "title": "2  Early Section Topic",
+    "objectID": "galaxy-registration.html",
+    "href": "galaxy-registration.html",
+    "title": "2  Register An Account with Galaxy",
     "section": "",
-    "text": "This .qmd file represents some topic-related text. We use the {#sec-REFERENCE} option to make it cross-referenceable elsewhere in the text.",
+    "text": "2.1 Introduction\nIn this workshop you will be working on Galaxy, an open source scientific workflow and data integration platform (Galaxy Community (2024)). Galaxy is a framework for performing reproducible computational biology and bioinformatics, democratising the field so that scientists with no programming or other computing experience can still carry out bioinformatic analyses on their own data, in their web browser.",
     "crumbs": [
-      "Early Section",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Early Section Topic</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
+    ]
+  },
+  {
+    "objectID": "galaxy-registration.html#introduction",
+    "href": "galaxy-registration.html#introduction",
+    "title": "2  Register An Account with Galaxy",
+    "section": "",
+    "text": "Galaxy instances\n\n\n\n\n\nThe Galaxy software is open source and can be downloaded and installed freely on any computer that it can run on. Each such installation is called a Galaxy instance. The Galaxy instance that you will be working on is the EU Galaxy instance at https://usegalaxy.eu/. This is the largest Galaxy instance in Europe and gives access to over 2500 scientific tools. It is free to use, and is maintained by the Galaxy team at Freiburg.\nThere are many other Galaxy instances, some private, and some public and free for anyone to use, such as:\n\nhttps://usegalaxy.org/: The Galaxy Project public server, supporting biomedical research.\nhttps://galaxyproject.org/use/usegalaxy-fr/: A general-purpose Galaxy server, based in France\nhttps://galaxyproject.org/use/usegalaxy-au/: The Australian UseGalaxy server\n\nGalaxy can be thought of as a library of bioinformatics tools and, just as different libraries may contaion differing collections of books, each Galaxy instance may make different sets of tools, or different versions of similar tools, available. If you use Galaxy it is important to be clear when writing up your analysis methods to be clear about which Galaxy instance is used, and which version of each tool. Also, some analyses may be possible on one Galaxy instance, but not another.\n\n\n\n\n2.1.1 Workflows\nThe key concept in Galaxy is the workflow. A workflow is a series, or chain, of analysis steps that takes some input data (one or more files or datasets) through a series of actions, to generate one or more result files. Typically, the output of one step will serve as the input to the next step, but more complicated branching workflows can also be created (Figure 2.1).\n\n\n\n\n\n\nFigure 2.1: Galaxy workflow editor view of a Galaxy workflow that runs the same tool (RXLR Mofits) with three different settings, and compares the results using a Venn diagram (reproduced from Cock et al. (2013)). The workflow runs from left to right. A single Input dataset is fed into the RXLR Motifs tool three times, applying a different method each time. Each run of the RXLR Motifs tool generates a different set of output sequences, which are passed as input to the Filter tool. The output from all three runs of the Filter tool is passed to the Venn Diagram tool, along with the original input dataset, to generate a Venn Diagram\n\n\n\nUsing Galaxy, you will build up a powerful bioinformatic analysis workflow to analyse your data, step-by-step, using a web browser. Galaxy allows you to save and share your workflows, to encourage reuse and reproducibility.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
+    ]
+  },
+  {
+    "objectID": "galaxy-registration.html#registering-with-galaxy",
+    "href": "galaxy-registration.html#registering-with-galaxy",
+    "title": "2  Register An Account with Galaxy",
+    "section": "2.2 Registering with Galaxy",
+    "text": "2.2 Registering with Galaxy\n\n\n\n\n\n\nRegister with usegalaxy.eu\n\n\n\nThe first action you should take in this workshop, if you have not already created an account at https://usegalaxy.eu/, is to create an account at https://usegalaxy.eu/.\n\n\n\nGo to the Galaxy login/registration page\nIf you have a usegalaxy.eu account already, then log in using your details and move on to the workshop proper.\nIf you do not already have a usegalaxy.eu account, then click on the Register here link.\nEnter your university email address in the Email address field.\nChoose a secure password and enter it into the Password and Confirm password fields.\nChoose a public name to show (other people will be able to see this) and enter it in the Public name field.\nClick on the Create button.\n\n\n\n\n\n\n\nImportant\n\n\n\nYou will receive a validation email at the account you registered with. You must confirm your email to proceed.\n\n\n\n\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton Pritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis with Applications in Molecular Plant Pathology.” PeerJ 1 (September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible, Reproducible, and Collaborative Data Analyses: 2024 Update.” Nucleic Acids Res. 52 (W1): W83–94.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
+    ]
+  },
+  {
+    "objectID": "join-session.html",
+    "href": "join-session.html",
+    "title": "3  Join the Training Session",
+    "section": "",
+    "text": "Use this link to join the training session\n\n\n\n\nhttps://usegalaxy.eu/join-training/bm425-strath-2023/\n\nWe have deployed a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your usegalaxy.eu account (instructions to set this up can be found in Chapter 2).",
+    "crumbs": [
+      "Workshop",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Join the Training Session</span>"
+    ]
+  },
+  {
+    "objectID": "download-data.html",
+    "href": "download-data.html",
+    "title": "4  Download Workshop Data",
+    "section": "",
+    "text": "4.1 Sequencing reads for SARS-CoV-2 assembly",
+    "crumbs": [
+      "Workshop",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
+    ]
+  },
+  {
+    "objectID": "download-data.html#sequencing-reads-for-sars-cov-2-assembly",
+    "href": "download-data.html#sequencing-reads-for-sars-cov-2-assembly",
+    "title": "4  Download Workshop Data",
+    "section": "",
+    "text": "Illumina paired-end reads, forward direction (trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz)\nIllumina paired-end reads, reverse direction(trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz)",
+    "crumbs": [
+      "Workshop",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
+    ]
+  },
+  {
+    "objectID": "download-data.html#sars-2003-genome-for-genome-comparison",
+    "href": "download-data.html#sars-2003-genome-for-genome-comparison",
+    "title": "4  Download Workshop Data",
+    "section": "4.2 SARS 2003 genome for genome comparison",
+    "text": "4.2 SARS 2003 genome for genome comparison\n\nSARS 2003 genome sequence (.fasta)(SARS_AY278741.fasta)\nSARS 2003 annotation (.gff3)(SARS_AY278741.gff3)\nSARS 2003 combined genome sequence and annotation (.gbk)(SARS_AY278741.gbk)",
+    "crumbs": [
+      "Workshop",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
+    ]
+  },
+  {
+    "objectID": "download-data.html#dutch-sars-cov-2-reads-for-genome-comparison",
+    "href": "download-data.html#dutch-sars-cov-2-reads-for-genome-comparison",
+    "title": "4  Download Workshop Data",
+    "section": "4.3 Dutch SARS-CoV-2 reads for genome comparison",
+    "text": "4.3 Dutch SARS-CoV-2 reads for genome comparison\n\nGridION reads for March 2020 Dutch isolate(ERR4164769_1.fastq.gz) :::",
+    "crumbs": [
+      "Workshop",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
+    ]
+  },
+  {
+    "objectID": "upload-data.html",
+    "href": "upload-data.html",
+    "title": "5  Upload Data to Galaxy",
+    "section": "",
+    "text": "Using data in Galaxy\n\n\n\nFor Galaxy to be able to use your data, that data must be in your history on the Galaxy server.",
+    "crumbs": [
+      "Workshop",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Upload Data to Galaxy</span>"
     ]
   },
   {
     "objectID": "webr-example.html",
     "href": "webr-example.html",
-    "title": "3  R Playground",
+    "title": "6  R Playground",
     "section": "",
-    "text": "3.1 Introduction\nThis page provides a WebR cell for you to use as a playground to experiment with some example datasets. You can use this page to explore data management and visualisation in R.",
+    "text": "6.1 Introduction\nThis page provides a WebR cell for you to use as a playground to experiment with some example datasets. You can use this page to explore data management and visualisation in R.",
     "crumbs": [
       "Late Section",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>`R` Playground</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>`R` Playground</span>"
     ]
   },
   {
     "objectID": "webr-example.html#playground",
     "href": "webr-example.html#playground",
-    "title": "3  R Playground",
-    "section": "3.2 Playground",
-    "text": "3.2 Playground\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "title": "6  R Playground",
+    "section": "6.2 Playground",
+    "text": "6.2 Playground\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Late Section",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>`R` Playground</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>`R` Playground</span>"
     ]
   },
   {
     "objectID": "webr-example.html#things-you-can-do",
     "href": "webr-example.html#things-you-can-do",
-    "title": "3  R Playground",
-    "section": "3.3 Things you can do",
-    "text": "3.3 Things you can do\nThis WebR instance has three packages installed:\n\nggplot2\nGGally\ntidyverse\npalmerpenguins\n\nOpen the callout boxes below to see some examples you can try in the code cell above.\n\n\n\n\n\n\nPlay with data from a GitHub repository\n\n\n\n\n\nOne of our BM214 workshops involves a WebR-supported interactive exercise involving simulated reporter curves. We preload this data in the setup cell (see source code), and you can interact with it below with the code:\ndata &lt;- read.csv(\"reporter_curves.csv\")\nglimpse(data)\n\n\n\n\n\n\n\n\n\nInvestigate Palmer’s Penguins\n\n\n\n\n\nThe penguins dataset contains data about three different species of penguins. Take a look at the format of the dataset:\nglimpse(penguins)\nYou’ll see there are eight variables, including species, weight, sex, etc. - some of these variables are categorical (i.e. a category, like species), and others are continuous (i.e. numerical). You can see a visual overview of how the data is related using the plot() function:\nplot(penguins)\nWe can visualise the number of penguins of each species in a bar chart:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar()\nfig\nAnd break this down in a facet plot, by sex:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar() +\n         facet_wrap(~sex)\nfig\nWe can make a box and whisker plot of penguin body mass by species:\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=species)) +\n         geom_boxplot()\nfig\nAnd plot the body mass for each sex side-by-side\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=sex)) +\n         geom_boxplot()\nfig\nWe can investigate correlations, such as between body mass and flipper length:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm)) +\n         geom_point()\nfig\nWe can colour datapoints by species:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point()\nfig\nAnd fit a linear regression to each species separately:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point() +\n         geom_smooth(method=\"lm\")\nfig\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nR comes with a number of example datasets you can practice with, including:\n\nmtcars: fuel consumption and other statistic for 32 automobiles\nTitanic: information on the fate of passengers on the fatal maiden voyage of the ocean liner Titanic\n\nYou can see a full list by running the command\nlibrary(help = \"datasets\")",
+    "title": "6  R Playground",
+    "section": "6.3 Things you can do",
+    "text": "6.3 Things you can do\nThis WebR instance has three packages installed:\n\nggplot2\nGGally\ntidyverse\npalmerpenguins\n\nOpen the callout boxes below to see some examples you can try in the code cell above.\n\n\n\n\n\n\nPlay with data from a GitHub repository\n\n\n\n\n\nOne of our BM214 workshops involves a WebR-supported interactive exercise involving simulated reporter curves. We preload this data in the setup cell (see source code), and you can interact with it below with the code:\ndata &lt;- read.csv(\"reporter_curves.csv\")\nglimpse(data)\n\n\n\n\n\n\n\n\n\nInvestigate Palmer’s Penguins\n\n\n\n\n\nThe penguins dataset contains data about three different species of penguins. Take a look at the format of the dataset:\nglimpse(penguins)\nYou’ll see there are eight variables, including species, weight, sex, etc. - some of these variables are categorical (i.e. a category, like species), and others are continuous (i.e. numerical). You can see a visual overview of how the data is related using the plot() function:\nplot(penguins)\nWe can visualise the number of penguins of each species in a bar chart:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar()\nfig\nAnd break this down in a facet plot, by sex:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar() +\n         facet_wrap(~sex)\nfig\nWe can make a box and whisker plot of penguin body mass by species:\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=species)) +\n         geom_boxplot()\nfig\nAnd plot the body mass for each sex side-by-side\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=sex)) +\n         geom_boxplot()\nfig\nWe can investigate correlations, such as between body mass and flipper length:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm)) +\n         geom_point()\nfig\nWe can colour datapoints by species:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point()\nfig\nAnd fit a linear regression to each species separately:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point() +\n         geom_smooth(method=\"lm\")\nfig\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nR comes with a number of example datasets you can practice with, including:\n\nmtcars: fuel consumption and other statistic for 32 automobiles\nTitanic: information on the fate of passengers on the fatal maiden voyage of the ocean liner Titanic\n\nYou can see a full list by running the command\nlibrary(help = \"datasets\")",
     "crumbs": [
       "Late Section",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>`R` Playground</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>`R` Playground</span>"
     ]
   },
   {
@@ -148,19 +233,19 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Galaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nHuang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020.\n“Structural and Functional Properties of SARS-CoV-2\nSpike Protein: Potential Antivirus Drug Development for\nCOVID-19.” Acta Pharmacol. Sin. 41 (9):\n1141–49.\n\n\nLi, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah\nLam. 2015. “MEGAHIT: An Ultra-Fast Single-Node\nSolution for Large and Complex Metagenomics Assembly via Succinct de\nBruijn Graph.” Bioinformatics 31 (10): 1674–76.\n\n\nMathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,\nCharlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.\n“Coronavirus Pandemic (COVID-19).” Our World in\nData.\n\n\nOude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,\nManon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.\n“Rapid SARS-CoV-2 Whole-Genome Sequencing and\nAnalysis for Informed Public Health Decision-Making in the\nNetherlands.” Nat. Med. 26 (9): 1405–10.\n\n\nPal, Aruna. 2022. “Rapid Amplification of cDNA Ends (RACE).” In\nSpringer Protocols Handbooks, 505–35. New York, NY: Springer\nUS.\n\n\nRota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray\nCampagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.\n“Characterization of a Novel Coronavirus Associated with Severe\nAcute Respiratory Syndrome.” Science 300 (5624):\n1394–99.\n\n\nWang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.\n“A Novel Coronavirus Outbreak of Global Health Concern.”\nLancet 395 (10223): 470–73.\n\n\nWatson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,\nPeter Winskill, and Azra C Ghani. 2022. “Global Impact of the\nFirst Year of COVID-19 Vaccination: A Mathematical\nModelling Study.” Lancet Infect. Dis. 22 (9): 1293–1302.\n\n\nWu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,\net al. 2020. “A New Coronavirus Associated with Human Respiratory\nDisease in China.” Nature 579 (7798): 265–69.",
+    "text": "Cock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nHuang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020.\n“Structural and Functional Properties of SARS-CoV-2\nSpike Protein: Potential Antivirus Drug Development for\nCOVID-19.” Acta Pharmacol. Sin. 41 (9):\n1141–49.\n\n\nLi, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah\nLam. 2015. “MEGAHIT: An Ultra-Fast Single-Node\nSolution for Large and Complex Metagenomics Assembly via Succinct de\nBruijn Graph.” Bioinformatics 31 (10): 1674–76.\n\n\nMathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,\nCharlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.\n“Coronavirus Pandemic (COVID-19).” Our World in\nData.\n\n\nOude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,\nManon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.\n“Rapid SARS-CoV-2 Whole-Genome Sequencing and\nAnalysis for Informed Public Health Decision-Making in the\nNetherlands.” Nat. Med. 26 (9): 1405–10.\n\n\nPal, Aruna. 2022. “Rapid Amplification of cDNA Ends (RACE).” In\nSpringer Protocols Handbooks, 505–35. New York, NY: Springer\nUS.\n\n\nRota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray\nCampagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.\n“Characterization of a Novel Coronavirus Associated with Severe\nAcute Respiratory Syndrome.” Science 300 (5624):\n1394–99.\n\n\nWang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.\n“A Novel Coronavirus Outbreak of Global Health Concern.”\nLancet 395 (10223): 470–73.\n\n\nWatson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,\nPeter Winskill, and Azra C Ghani. 2022. “Global Impact of the\nFirst Year of COVID-19 Vaccination: A Mathematical\nModelling Study.” Lancet Infect. Dis. 22 (9): 1293–1302.\n\n\nWu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,\net al. 2020. “A New Coronavirus Associated with Human Respiratory\nDisease in China.” Nature 579 (7798): 265–69.",
     "crumbs": [
       "References"
     ]
   },
   {
-    "objectID": "early-section.html",
-    "href": "early-section.html",
-    "title": "Early Section",
+    "objectID": "workshop.html",
+    "href": "workshop.html",
+    "title": "Workshop",
     "section": "",
-    "text": "This .qmd file introduces a Part of the Quarto book. We use the {#sec-REFERENCE} option to make it cross-referenceable elsewhere in the text, and the {.unnumbered} option to avoid giving it a section number.",
+    "text": "The chapters in this section of the site will lead you through the steps of the workshop. Please work through them in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.\n\nJoin the training session at https://usegalaxy.eu/\nDownload the workshop data to your computer\nUpload the workshop data to your Galaxy history\nPrepare your sequencing read data for assembly\nAssemble a genome from your sequencing data\nVisualise your genome assembly\nAnnotate your assembly\nVisualise your annotation\nMap reads from your SARS-CoV-2 isolate to the SARS 2003 genome\nVisualise the mapped reads using JBrowse2\nIdentify sequence variants (SNPs, Single Nucleotide Polymorphisms) between SARS-CoV-2 and SARS 2003\nUse what you’ve learned to identify and interpret changes in the SARS-CoV-2 virus during the COVID-19 pandemic",
     "crumbs": [
-      "Early Section"
+      "Workshop"
     ]
   },
   {

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>3&nbsp; R Playground – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
+<title>6&nbsp; R Playground – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -394,7 +394,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"read-only":"false","editor-word-wrap":"true","dpi":72,"out-width":"700px","results":"markup","autorun":"true","editor-max-height":"","warning":"true","editor-font-scale":"1","message":"true","fig-cap":"","out-height":"","output":"true","editor-quick-suggestions":"false","fig-height":5,"label":"unnamed-chunk-1","comment":"","fig-width":7,"classes":"","context":"setup"},"id":1,"code":"# Download reporter data\ndownload.file('https://raw.githubusercontent.com/sipbs-compbiol/BM214-Workshop-3/main/assets/data/reporter_curves.csv', 'reporter_curves.csv')\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\nlibrary(tidyverse)"},{"options":{"read-only":"false","editor-word-wrap":"true","dpi":72,"out-width":"700px","results":"markup","autorun":"false","editor-max-height":"","warning":"true","editor-font-scale":"1","message":"true","fig-cap":"","out-height":"","output":"true","editor-quick-suggestions":"false","fig-height":5,"label":"unnamed-chunk-2","comment":"","fig-width":7,"classes":"","context":"interactive"},"id":2,"code":"# Use this WebR cell to experiment with some practice biological datasets"}];
+globalThis.qwebrCellDetails = [{"code":"# Download reporter data\ndownload.file('https://raw.githubusercontent.com/sipbs-compbiol/BM214-Workshop-3/main/assets/data/reporter_curves.csv', 'reporter_curves.csv')\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\nlibrary(tidyverse)","id":1,"options":{"results":"markup","editor-font-scale":"1","fig-width":7,"context":"setup","autorun":"true","out-width":"700px","label":"unnamed-chunk-1","message":"true","read-only":"false","editor-word-wrap":"true","warning":"true","dpi":72,"comment":"","out-height":"","editor-quick-suggestions":"false","fig-height":5,"output":"true","classes":"","editor-max-height":"","fig-cap":""}},{"code":"# Use this WebR cell to experiment with some practice biological datasets","id":2,"options":{"results":"markup","editor-font-scale":"1","fig-width":7,"context":"interactive","autorun":"false","out-width":"700px","label":"unnamed-chunk-2","message":"true","read-only":"false","editor-word-wrap":"true","warning":"true","dpi":72,"comment":"","out-height":"","editor-quick-suggestions":"false","fig-height":5,"output":"true","classes":"","editor-max-height":"","fig-cap":""}}];
 
 </script>
 <script type="module">
@@ -1604,7 +1604,7 @@ globalThis.qwebrExecuteCode = async function (
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./late-section.html">Late Section</a></li><li class="breadcrumb-item"><a href="./webr-example.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><code>R</code> Playground</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./late-section.html">Late Section</a></li><li class="breadcrumb-item"><a href="./webr-example.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><code>R</code> Playground</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -1649,10 +1649,16 @@ globalThis.qwebrExecuteCode = async function (
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./galaxy-registration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Register An Account with Galaxy</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./early-section.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Early Section</span></a>
+            <a href="./workshop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -1660,8 +1666,20 @@ globalThis.qwebrExecuteCode = async function (
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./early-section-topic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Early Section Topic</span></span></a>
+  <a href="./join-session.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Join the Training Session</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./download-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Download Workshop Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./upload-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Upload Data to Galaxy</span></span></a>
   </div>
 </li>
       </ul>
@@ -1678,7 +1696,7 @@ globalThis.qwebrExecuteCode = async function (
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./webr-example.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><code>R</code> Playground</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><code>R</code> Playground</span></span></a>
   </div>
 </li>
       </ul>
@@ -1705,9 +1723,9 @@ globalThis.qwebrExecuteCode = async function (
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">3.1</span> Introduction</a></li>
-  <li><a href="#playground" id="toc-playground" class="nav-link" data-scroll-target="#playground"><span class="header-section-number">3.2</span> Playground</a></li>
-  <li><a href="#things-you-can-do" id="toc-things-you-can-do" class="nav-link" data-scroll-target="#things-you-can-do"><span class="header-section-number">3.3</span> Things you can do</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">6.1</span> Introduction</a></li>
+  <li><a href="#playground" id="toc-playground" class="nav-link" data-scroll-target="#playground"><span class="header-section-number">6.2</span> Playground</a></li>
+  <li><a href="#things-you-can-do" id="toc-things-you-can-do" class="nav-link" data-scroll-target="#things-you-can-do"><span class="header-section-number">6.3</span> Things you can do</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/webr-example.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1998,9 +2016,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./late-section.html">Late Section</a></li><li class="breadcrumb-item"><a href="./webr-example.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><code>R</code> Playground</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./late-section.html">Late Section</a></li><li class="breadcrumb-item"><a href="./webr-example.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><code>R</code> Playground</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><code>R</code> Playground</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title"><code>R</code> Playground</span></h1>
 </div>
 
 
@@ -2019,17 +2037,17 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="introduction" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
+<section id="introduction" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">6.1</span> Introduction</h2>
 <p>This page provides a <code>WebR</code> cell for you to use as a playground to experiment with some example datasets. You can use this page to explore data management and visualisation in <code>R</code>.</p>
 </section>
-<section id="playground" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="playground"><span class="header-section-number">3.2</span> Playground</h2>
+<section id="playground" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="playground"><span class="header-section-number">6.2</span> Playground</h2>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="things-you-can-do" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="things-you-can-do"><span class="header-section-number">3.3</span> Things you can do</h2>
+<section id="things-you-can-do" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="things-you-can-do"><span class="header-section-number">6.3</span> Things you can do</h2>
 <p>This <code>WebR</code> instance has three packages installed:</p>
 <ul>
 <li><code>ggplot2</code></li>
