@@ -1,7 +1,23 @@
 # Upload Data to Galaxy {#sec-upload-data}
 
-::: { .callout-caution }
+::: { .callout-important }
 ## Using data in Galaxy
 
-For Galaxy to be able to use your data, that **data must be in your _history_ on the Galaxy server**.
+For Galaxy to be able to use your data, that **data must be in your _history_ on the Galaxy instance**.
 :::
+
+::: { .callout-caution }
+Data is not shared between Galaxy instances. For instance, if you upload data to `usegalaxy.eu` it will _not_ automatically be available on `usegalaxy.org` or `usegalaxy.au`.
+:::
+
+## Uploading your data
+
+There are three main routes to uploading your data onto the Galaxy instance.
+
+### Drag and drop data onto the workspace
+
+
+### Use the `Upload Data` button in the `Tools` sidebar
+
+
+### Use the `Load your own data` link in an empty workflow
