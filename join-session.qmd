@@ -16,14 +16,39 @@ After you join the session, you will meet the Galaxy workspace, which should loo
 
 There are three sections to the workspace: the `Tools` sidebar, the `History/Workflow` sidebar, and the central `Workspace` area. You will become more familiar with these as you move through the workshop.
 
-### The `Tools` sidebar
+::: { .callout-tip collapse="true" }
+## The `Tools` sidebar
 
 The `Tools` sidebar on the left of the window initially presents all the tools available on the Galaxy instance being used. These are grouped into sections by the kind of task they can be used for, such as manipulating text, or genome assembly.
 
 This sidebar also provides useful links, such as for uploading your own data to the Galaxy instance (`Upload Data`), and for importing data from public databases, like [Ensembl](https://www.ensembl.org/index.html). There is also a search field at the top of the sidebar which initially contains the text `search tools`. You can enter the name of a tool or action into this field, and the sidebar will present the matching software on the Galaxy instance.
+:::
 
-### The `History/Workflow` sidebar
+::: { .callout-tip collapse="true" }
+## The `History/Workflow` sidebar
 
 The `History/Workflow` sidebar at the right of the window is initially empty. As you work through the exercises this will become populated with your data, the actions you take on the data, and the results of those actions. Initially though, the `History` will have no name, so you should see the placeholder `Unnamed history`, and the text `This history is empty`.
 
 When you log into a Galaxy instance that you have used before, you may see the last history/workflow that you used, and you may have options for loading previous histories/workflows into the current workspace.
+:::
+
+::: { .callout-tip collapse="true" }
+## The `Workspace`
+
+The largest, central region of the window is the `Workspace`. This is a general area that provides information about the Galaxy instance, presents datasets (or summaries/visualisations of datasets), and ways to interact with the individual tools that you will use.
+
+::: {#fig-workspaces layout-nrow=2 fig-alt="Four images of the Galaxy workspace showing its use in a range of contexts: news and information, inspecting a dataset, interactive visualisation of results, and setting parameters for analysis."}
+
+![News and information](assets/images/workspace_galaxy_info.png){#fig-workspace-news}
+
+![Inspecting data](assets/images/workspace_data.png){#fig-workspace-data}
+
+![Interactive visualisations](assets/images/workspace_data_visualisation.png){#fig-workspace-datavis}
+
+![Setting parameters for software and analyses](assets/images/workspace_tool_settings.png){#fig-workspace-software}
+
+Four uses of the `Workspace` area in Galaxy.
+
+:::
+
+:::
