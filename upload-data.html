@@ -197,8 +197,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#uploading-your-data" id="toc-uploading-your-data" class="nav-link active" data-scroll-target="#uploading-your-data"><span class="header-section-number">5.1</span> Uploading your data</a>
+  <ul class="collapse">
+  <li><a href="#drag-and-drop-data-onto-the-workspace" id="toc-drag-and-drop-data-onto-the-workspace" class="nav-link" data-scroll-target="#drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.1</span> Drag and drop data onto the workspace</a></li>
+  <li><a href="#use-the-upload-data-button-in-the-tools-sidebar" id="toc-use-the-upload-data-button-in-the-tools-sidebar" class="nav-link" data-scroll-target="#use-the-upload-data-button-in-the-tools-sidebar"><span class="header-section-number">5.1.2</span> Use the <code>Upload Data</code> button in the <code>Tools</code> sidebar</a></li>
+  <li><a href="#use-the-load-your-own-data-link-in-an-empty-workflow" id="toc-use-the-load-your-own-data-link-in-an-empty-workflow" class="nav-link" data-scroll-target="#use-the-load-your-own-data-link-in-an-empty-workflow"><span class="header-section-number">5.1.3</span> Use the <code>Load your own data</code> link in an empty workflow</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/upload-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -222,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -232,11 +243,37 @@ Using data in Galaxy
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For Galaxy to be able to use your data, that <strong>data must be in your <em>history</em> on the Galaxy server</strong>.</p>
+<p>For Galaxy to be able to use your data, that <strong>data must be in your <em>history</em> on the Galaxy instance</strong>.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Data is not shared between Galaxy instances. For instance, if you upload data to <code>usegalaxy.eu</code> it will <em>not</em> automatically be available on <code>usegalaxy.org</code> or <code>usegalaxy.au</code>.</p>
+</div>
+</div>
+<section id="uploading-your-data" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="uploading-your-data"><span class="header-section-number">5.1</span> Uploading your data</h2>
+<p>There are three main routes to uploading your data onto the Galaxy instance.</p>
+<section id="drag-and-drop-data-onto-the-workspace" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.1</span> Drag and drop data onto the workspace</h3>
+</section>
+<section id="use-the-upload-data-button-in-the-tools-sidebar" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="use-the-upload-data-button-in-the-tools-sidebar"><span class="header-section-number">5.1.2</span> Use the <code>Upload Data</code> button in the <code>Tools</code> sidebar</h3>
+</section>
+<section id="use-the-load-your-own-data-link-in-an-empty-workflow" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="use-the-load-your-own-data-link-in-an-empty-workflow"><span class="header-section-number">5.1.3</span> Use the <code>Load your own data</code> link in an empty workflow</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -679,7 +716,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/upload-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/upload-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
