@@ -202,11 +202,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-galaxy-workspace-layout" id="toc-the-galaxy-workspace-layout" class="nav-link active" data-scroll-target="#the-galaxy-workspace-layout"><span class="header-section-number">3.1</span> The Galaxy workspace layout</a>
-  <ul class="collapse">
-  <li><a href="#the-tools-sidebar" id="toc-the-tools-sidebar" class="nav-link" data-scroll-target="#the-tools-sidebar"><span class="header-section-number">3.1.1</span> The <code>Tools</code> sidebar</a></li>
-  <li><a href="#the-historyworkflow-sidebar" id="toc-the-historyworkflow-sidebar" class="nav-link" data-scroll-target="#the-historyworkflow-sidebar"><span class="header-section-number">3.1.2</span> The <code>History/Workflow</code> sidebar</a></li>
-  </ul></li>
+  <li><a href="#the-galaxy-workspace-layout" id="toc-the-galaxy-workspace-layout" class="nav-link active" data-scroll-target="#the-galaxy-workspace-layout"><span class="header-section-number">3.1</span> The Galaxy workspace layout</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/join-session.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -262,18 +258,119 @@ Figure&nbsp;3.1: An empty Galaxy workspace. The workspace is divided into three 
 </figure>
 </div>
 <p>There are three sections to the workspace: the <code>Tools</code> sidebar, the <code>History/Workflow</code> sidebar, and the central <code>Workspace</code> area. You will become more familiar with these as you move through the workshop.</p>
-<section id="the-tools-sidebar" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="the-tools-sidebar"><span class="header-section-number">3.1.1</span> The <code>Tools</code> sidebar</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The <code>Tools</code> sidebar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>The <code>Tools</code> sidebar on the left of the window initially presents all the tools available on the Galaxy instance being used. These are grouped into sections by the kind of task they can be used for, such as manipulating text, or genome assembly.</p>
 <p>This sidebar also provides useful links, such as for uploading your own data to the Galaxy instance (<code>Upload Data</code>), and for importing data from public databases, like <a href="https://www.ensembl.org/index.html">Ensembl</a>. There is also a search field at the top of the sidebar which initially contains the text <code>search tools</code>. You can enter the name of a tool or action into this field, and the sidebar will present the matching software on the Galaxy instance.</p>
-</section>
-<section id="the-historyworkflow-sidebar" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="the-historyworkflow-sidebar"><span class="header-section-number">3.1.2</span> The <code>History/Workflow</code> sidebar</h3>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The <code>History/Workflow</code> sidebar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>The <code>History/Workflow</code> sidebar at the right of the window is initially empty. As you work through the exercises this will become populated with your data, the actions you take on the data, and the results of those actions. Initially though, the <code>History</code> will have no name, so you should see the placeholder <code>Unnamed history</code>, and the text <code>This history is empty</code>.</p>
 <p>When you log into a Galaxy instance that you have used before, you may see the last history/workflow that you used, and you may have options for loading previous histories/workflows into the current workspace.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The <code>Workspace</code>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The largest, central region of the window is the <code>Workspace</code>. This is a general area that provides information about the Galaxy instance, presents datasets (or summaries/visualisations of datasets), and ways to interact with the individual tools that you will use.</p>
+<div id="fig-workspaces" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-workspaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-workspaces" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-workspace-news" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-workspace-news-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/workspace_galaxy_info.png" class="img-fluid figure-img" data-ref-parent="fig-workspaces">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-workspace-news-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) News and information
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-workspaces" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-workspace-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-workspace-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/workspace_data.png" class="img-fluid figure-img" data-ref-parent="fig-workspaces">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-workspace-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Inspecting data
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-workspaces" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-workspace-datavis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-workspace-datavis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/workspace_data_visualisation.png" class="img-fluid figure-img" data-ref-parent="fig-workspaces">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-workspace-datavis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Interactive visualisations
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-workspaces" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-workspace-software" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-workspace-software-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/workspace_tool_settings.png" class="img-fluid figure-img" data-ref-parent="fig-workspaces">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-workspace-software-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Setting parameters for software and analyses
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workspaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Four uses of the <code>Workspace</code> area in Galaxy.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
