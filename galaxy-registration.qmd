@@ -15,14 +15,16 @@ There are many other Galaxy instances, some private, and some public and free fo
 - [https://galaxyproject.org/use/usegalaxy-fr/](https://usegalaxy.fr/): A general-purpose Galaxy server, based in France
 - [https://galaxyproject.org/use/usegalaxy-au/](https://usegalaxy.org.au/): The Australian UseGalaxy server
 
-Galaxy can be thought of as a library of bioinformatics tools and, just as different libraries may contaion differing collections of books, each Galaxy instance may make different sets of tools, or different versions of similar tools, available. If you use Galaxy it is important to be clear when writing up your analysis methods to be clear about which Galaxy instance is used, and which version of each tool. Also, some analyses may be possible on one Galaxy instance, but not another.
+Galaxy can be thought of as a library of bioinformatics tools and, just as different libraries may contain differing collections of books, each Galaxy instance may make available different sets of tools, or different versions of similar tools. As a result some analyses may be possible on one Galaxy instance, but not another.
+
+When you use Galaxy it is important to be clear when writing up your analysis methods to be clear about which Galaxy instance is used, and which version of each tool was used in the analysis. 
 :::
 
 ### Workflows
 
 The key concept in Galaxy is the _workflow_. A workflow is a series, or chain, of analysis steps that takes some input data (one or more files or datasets) through a series of actions, to generate one or more result files. Typically, the output of one step will serve as the input to the next step, but more complicated branching workflows can also be created (@fig-galaxy-rxlr).
 
-![Galaxy workflow editor view of a Galaxy workflow that runs the same tool (`RXLR Mofits`) with three different settings, and compares the results using a Venn diagram (reproduced from @Cock2013-nr). The workflow runs from left to right. A single `Input dataset` is fed into the `RXLR Motifs` tool three times, applying a different method each time. Each run of the `RXLR Motifs` tool generates a different set of output sequences, which are passed as input to the `Filter` tool. The output from all three runs of the `Filter` tool is passed to the `Venn Diagram` tool, along with the original input dataset, to generate a Venn Diagram](assets/images/galaxy_workflow_noodles.jpg){#fig-galaxy-rxlr fig-alt="Galaxy workflow editor view of a Galaxy workflow that takes input data and passes it through a series of actions. The links between datasets and actions are shown as noodles on the diagram." width=80%}
+![Galaxy workflow editor view of a Galaxy workflow that runs the same tool (`RXLR Motifs`) with three different settings, and compares the results using a Venn diagram (reproduced from @Cock2013-nr). The workflow runs from left to right. A single `Input dataset` is fed into the `RXLR Motifs` tool three times, applying a different method each time. Each run of the `RXLR Motifs` tool generates a different set of output sequences, which are passed as input to the `Filter` tool. The output from all three runs of the `Filter` tool is passed to the `Venn Diagram` tool, along with the original input dataset, to generate a Venn Diagram](assets/images/galaxy_workflow_noodles.jpg){#fig-galaxy-rxlr fig-alt="Galaxy workflow editor view of a Galaxy workflow that takes input data and passes it through a series of actions. The links between datasets and actions are shown as noodles on the diagram." width=80%}
 
 Using Galaxy, you will build up a powerful bioinformatic analysis workflow to analyse your data, step-by-step, using a web browser. Galaxy allows you to save and share your workflows, to encourage reuse and reproducibility.
 
@@ -31,7 +33,7 @@ Using Galaxy, you will build up a powerful bioinformatic analysis workflow to an
 ::: { .callout-tip }
 ## Register with `usegalaxy.eu`
 
-The first action you should take in this workshop, if you have not already created an account at [https://usegalaxy.eu/](https://usegalaxy.eu/), is to **create an account at [https://usegalaxy.eu/](https://usegalaxy.eu/)**.
+The first action you should take in this workshop, if you do not already have an account at [https://usegalaxy.eu/](https://usegalaxy.eu/), is to **create an account at [https://usegalaxy.eu/](https://usegalaxy.eu/)**.
 :::
 
 1. Go to the Galaxy [login/registration page](https://usegalaxy.eu/login/start?redirect=None)
@@ -43,6 +45,6 @@ The first action you should take in this workshop, if you have not already creat
 7. Click on the `Create` button.
 
 ::: { .callout-important }
-**You will receive a validation email at the account you registered with. You _must_ confirm your email to proceed.**
+**You will receive a validation email at the account you register with. You _must_ confirm your email to proceed.**
 :::
 
