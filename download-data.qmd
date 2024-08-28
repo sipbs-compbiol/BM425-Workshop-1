@@ -4,7 +4,7 @@
 ## Download the workshop data
 
 1. Create a new folder on your computer desktop called `BM425_Workshop`
-2. Download the files from the sections below into this new folder:
+2. Download the files from the sections below into this new folder.
 :::
 
 ## Sequencing reads for SARS-CoV-2 assembly
@@ -21,4 +21,11 @@
 ## Dutch SARS-CoV-2 reads for genome comparison
 
 - [GridION reads for March 2020 Dutch isolate](assets/data/ERR4164769_1.fastq.gz)(`ERR4164769_1.fastq.gz`)
+
+::: { .callout-note }
+## Your Working Directory
+
+When you have downloaded all the files required for the workshop, the contents of the `BM425_Workshop` folder should resemble the image in @fig-working-directory.
+
+![macOS `BM425_Workshop` folder with all files downloaded.](assets/images/working_directory.png){#fig-working-directory fig-alt="macOS folder called BM425_Workshop, containing the downloaded files required for this workshop."}
 :::
