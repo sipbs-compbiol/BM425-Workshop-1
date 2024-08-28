@@ -27,6 +27,11 @@ On your first run through this workshop, you should read each page in turn, and 
 
 As you complete each activity, you can use the arrows at the bottom of the page to move forward and backward. If you need to, you can use the navigation sidebar on the left to jump to a section, and you can use the search field at the top of the sidebar to find specific content.
 
+## Useful Links
+
+- Register an account at the Galaxy instance for training: [link](https://usegalaxy.eu/login/start?redirect=None)
+- Join the workshop training group on Galaxy: [link](https://usegalaxy.eu/join-training/bm425-workshop1-2024)
+
 ## Learning Objectives
 
 By the end of this workshop, students will be able to:
