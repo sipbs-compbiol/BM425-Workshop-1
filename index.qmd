@@ -21,6 +21,12 @@ There is new material in this workshop that is not covered in lectures. **This m
 Please take care to read the text in the expandable callout boxes, as well as that for the workshop activities, to be sure you have understood the topic and obtain full value from the exercises.
 :::
 
+## How To Move Through These Workshop Materials
+
+On your first run through this workshop, you should read each page in turn, and carry out each activity. You can see what activities are involved in the navigation sidebar on the left hand side of this page.
+
+As you complete each activity, you can use the arrows at the bottom of the page to move forward and backward. If you need to, you can use the navigation sidebar on the left to jump to a section, and you can use the search field at the top of the sidebar to find specific content.
+
 ## Learning Objectives
 
 By the end of this workshop, students will be able to:
@@ -41,4 +47,4 @@ There is a formative assessment on the [workshop MyPlace page](https://classes.m
 
 - [MyPlace formative quiz](https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456)
 :::
-  
+
