@@ -50,3 +50,25 @@ Four uses of the `Workspace` area in Galaxy.
 :::
 
 :::
+
+## Give A Name To The History
+
+It is helpful to give the workflow/history that you work with a name. This will help you find it again when you reuse the Galaxy EU instance.
+
+::: { .callout-tip }
+- When you name a workflow, give it a concise title that expresses the purpose of the workflow.
+- You can also add annotation that describes the workflow and provides more information than the name alone conveys.
+- You can rename or re-annotate your workflow at any time.
+:::
+
+To assign a name to your workflow:
+
+1. Click on the pen icon next to `Unnamed history`
+2. Enter a name for the workflow in the top `Unnamed history` field
+3. Enter additional text describing the workflow in the lower `Annotation (optional)` field
+4. Click the `Save` button.
+
+::: { .callout-note }
+## Video: Renaming A Galaxy Workflow
+{{< video assets/movies/rename_history.mp4 title="Renaming your Galaxy history" >}}
+:::
