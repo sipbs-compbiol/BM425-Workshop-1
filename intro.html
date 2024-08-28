@@ -261,10 +261,10 @@ div.csl-indent {
 <h2 data-number="1.1" class="anchored" data-anchor-id="workshop-scope"><span class="header-section-number">1.1</span> Workshop Scope</h2>
 <p>Today you will be:</p>
 <ul>
-<li>assembling, annotating, and visualising the first SARS-CoV-2 genome to be sequenced (from Wuhan, January 2020).</li>
+<li>assembling, annotating, and visualising the first SARS-CoV-2 genome to be sequenced (isolated in Wuhan, China, in January 2020).</li>
 <li>comparing the first SARS-CoV-2 genome to an earlier coronavirus (SARS 2003)</li>
 <li>comparing the first SARS-CoV-2 genome and a SARS-CoV-2 genome that was sequenced later in the pandemic</li>
-<li>interpreting the biological signifance of differences between the genomes, particularly in the region of the spike (S) protein.</li>
+<li>interpreting the biological significance of sequence differences between the genomes, particularly in the region of the spike (S) protein.</li>
 </ul>
 </section>
 <section id="covid-19" class="level2" data-number="1.2">
@@ -292,17 +292,17 @@ Figure&nbsp;1.2: Early COVID-19 global spread
 </figure>
 </div>
 <p>By October 2021, it was estimated that COVID-19 had <a href="https://www.reuters.com/world/global-covid-19-deaths-hit-5-million-delta-variant-sweeps-world-2021-10-02/">caused over 5mn deaths</a> worldwide, as well as severe social and economic disruption, including the <a href="https://www.imf.org/en/Blogs/Articles/2020/04/14/blog-weo-the-great-lockdown-worst-economic-downturn-since-the-great-depression">largest global recession in almost a century</a>.</p>
-<p>Despite this huge impact, societal and scientific efforts including lockdowns, mathematical modelling, and novel vaccine development helped avoid even worse outcomes. COVID-19 vaccines are estimated to have prevented an additional 14-20mn deaths worldwide in 2021 (<span class="citation" data-cites="Watson2022-ec">Watson et al. (<a href="references.html#ref-Watson2022-ec" role="doc-biblioref">2022</a>)</span>).</p>
+<p>Despite this huge impact, societal and scientific efforts including lockdowns, mathematical modelling, and novel vaccine development - much of it supported by widespread genome analysis of the kind you will perform today - helped avoid even worse outcomes. COVID-19 vaccines are estimated to have prevented an additional 14-20mn deaths worldwide in 2021 (<span class="citation" data-cites="Watson2022-ec">Watson et al. (<a href="references.html#ref-Watson2022-ec" role="doc-biblioref">2022</a>)</span>).</p>
 <p>In May 2023, the World Health Organisation (WHO) <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/covid-is-no-longer-global-health-emergency-who-2023-05-05/">ended their Public Health Emergency</a> of International Concern (PHEIC), but the SARS-CoV-2 virus remains in circulation. As we begin this workshop, SARS-CoV-2 has <a href="https://ourworldindata.org/coronavirus">claimed over 7mn lives</a> (<span class="citation" data-cites="owidcoronavirus">Mathieu et al. (<a href="references.html#ref-owidcoronavirus" role="doc-biblioref">2020</a>)</span>).</p>
 </section>
 <section id="sars-cov-2-spike-s-protein" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="sars-cov-2-spike-s-protein"><span class="header-section-number">1.3</span> SARS-CoV-2 Spike (S) Protein</h2>
-<p>The spike (S) protein of SARS-CoV-2 plays a central role in host cell receptor recognition and cell membrane fusion (<span class="citation" data-cites="Huang2020-uk">Huang et al. (<a href="references.html#ref-Huang2020-uk" role="doc-biblioref">2020</a>)</span>). The protein comprises two subunits:</p>
+<p>The spike (S) protein of SARS-CoV-2 plays a key role in host cell receptor recognition and cell membrane fusion (<span class="citation" data-cites="Huang2020-uk">Huang et al. (<a href="references.html#ref-Huang2020-uk" role="doc-biblioref">2020</a>)</span>). The protein comprises two subunits:</p>
 <ul>
 <li>S1: a receptor-binding domain that recognises and binds ACE2 (angiotensin-converting enzyme 2)</li>
 <li>S2: a domain that mediates membrane fusion between the virus and the cell by forming a structural bundle</li>
 </ul>
-<p>which interact with the host cell as illustrated in <a href="#fig-spike" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>.</p>
+<p>These interact with the host cell as illustrated in <a href="#fig-spike" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>.</p>
 <div id="fig-spike" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-spike-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -341,7 +341,7 @@ Figure&nbsp;1.5: How SARS-CoV-2 interacts with the surface proteins of the targe
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Other SARS-CoV-2 Structures
+SARS-CoV-2 Molecular Structures
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -367,7 +367,7 @@ Other SARS-CoV-2 Structures
 <li>Total RNA was extracted from the fluid, and an RNA sequencing library constructed (including depletion of ribosomal RNA)</li>
 <li>The library was sequenced on an <a href="https://www.illumina.com/systems/sequencing-platforms/miniseq.html">Illumina MiniSeq</a> machine, to give 150bp paired-end reads</li>
 <li>The resulting reads were cleaned and assembled using Megahit (<span class="citation" data-cites="Li2015-yc">Li et al. (<a href="references.html#ref-Li2015-yc" role="doc-biblioref">2015</a>)</span>) and <a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki">Trinity</a></li>
-<li>The longest contig was identified as a coronavirus, and used to design primers for PCR-RACE (Rapid Amplification of cDNA Ends, <span class="citation" data-cites="Pal2022-tw">Pal (<a href="references.html#ref-Pal2022-tw" role="doc-biblioref">2022</a>)</span>, <a href="#fig-race" class="quarto-xref">Figure&nbsp;<span>1.6</span></a>) to sequence the ends of the virus genome</li>
+<li>The longest assembled contig was identified as a coronavirus, and used to design primers for PCR-RACE (Rapid Amplification of cDNA Ends, <span class="citation" data-cites="Pal2022-tw">Pal (<a href="references.html#ref-Pal2022-tw" role="doc-biblioref">2022</a>)</span>, <a href="#fig-race" class="quarto-xref">Figure&nbsp;<span>1.6</span></a>) which allowed researchers to sequence the ends of the virus genome</li>
 <li>The cleaned reads were remapped against the full virus sequence</li>
 </ol>
 <div id="fig-race" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome.">
@@ -391,8 +391,8 @@ Questions
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Why did they extract RNA and not DNA?</li>
-<li>Why do you think they depleted the ribosomal RNA?</li>
+<li>Why did the researchers extract RNA and not DNA?</li>
+<li>Why do you think the researchers depleted the ribosomal RNA?</li>
 </ol>
 </div>
 </div>
@@ -409,8 +409,8 @@ Answers
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>SARS-CoV-2 is an RNA virus, so we must sequence RNA to recover virus sequence.</li>
-<li>There is so much ribosomal RNA in biological material that, if it was left in the sample, it would dominate over the viral material and any human transcripts, making the virus more difficult to detect. Depleting it enhances sensitivity for detecting viral RNA.</li>
+<li>SARS-CoV-2 is an RNA virus, so we must sequence RNA in order to recover the virus genome. Sequencing DNA would not include any virus sequence.</li>
+<li>There is so much ribosomal RNA in biological material that, if it was left in the sample, it would dominate over the viral material and any human transcripts. Most of the resulting sequence would describe the ribosome, not the virus or host genome, making the virus more difficult to detect. Depleting ribosomal RNA enhances sensitivity for detecting viral RNA.</li>
 </ol>
 </div>
 </div>
@@ -418,7 +418,7 @@ Answers
 </section>
 <section id="sars-cov-2-read-data-for-this-workshop" class="level3" data-number="1.4.2">
 <h3 data-number="1.4.2" class="anchored" data-anchor-id="sars-cov-2-read-data-for-this-workshop"><span class="header-section-number">1.4.2</span> SARS-CoV-2 read data for this workshop</h3>
-<p>For this workshop, we took all 57mn raw sequencing reads from <span class="citation" data-cites="Wu2020-yx">Wu et al. (<a href="references.html#ref-Wu2020-yx" role="doc-biblioref">2020</a>)</span>, which are available at NCBI under accession <a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381">SRR10971381</a>, and filtered out all reads that matched the human genome. The remaining reads in the files below are those you will use to assemble the SARS-CoV-2 genome.</p>
+<p>For this workshop, we downloaded the 57mn raw sequencing reads from <span class="citation" data-cites="Wu2020-yx">Wu et al. (<a href="references.html#ref-Wu2020-yx" role="doc-biblioref">2020</a>)</span>, which are available at NCBI under accession <a href="https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381">SRR10971381</a>, and filtered out all reads that matched the human genome. The remaining reads in the files below are those you will use to assemble the SARS-CoV-2 genome.</p>
 <ul>
 <li><a href="assets/data/trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz">Paired-end reads, forward direction</a></li>
 <li><a href="assets/data/trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz">Paired-end reads, reverse direction</a></li>
@@ -437,7 +437,7 @@ Answers
 <section id="march-2020-dutch-sars-cov-2-isolate" class="level3" data-number="1.4.4">
 <h3 data-number="1.4.4" class="anchored" data-anchor-id="march-2020-dutch-sars-cov-2-isolate"><span class="header-section-number">1.4.4</span> March 2020 Dutch SARS-CoV-2 isolate</h3>
 <p>The second comparator genome you will use in this workshop is a SARS-CoV-2 variant sequenced in the Netherlands in March 2020, four months after the first known human cases were identified. The sample has accession <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMEA6847958">SAMEA6847958</a> and was obtained through active surveillance during the COVID-19 pandemic (<span class="citation" data-cites="Oude_Munnink2020-ry">Oude Munnink et al. (<a href="references.html#ref-Oude_Munnink2020-ry" role="doc-biblioref">2020</a>)</span>).</p>
-<p>The data describes a set of <a href="https://nanoporetech.com/products/sequence/gridion">Oxford Nanopore (ONT) GridION</a> reads, which are available under accession <a href="https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&amp;acc=ERR4164769&amp;display=metadata">ERR4164769</a> at SRA/NCBI. In the workshop, you will use the following file:</p>
+<p>The data describes a set of <a href="https://nanoporetech.com/products/sequence/gridion">Oxford Nanopore (ONT) GridION</a> reads, which are available under accession <a href="https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&amp;acc=ERR4164769&amp;display=metadata">ERR4164769</a> at SRA/NCBI. In this workshop, you will use the following file:</p>
 <ul>
 <li><a href="assets/data/ERR4164769_1.fastq.gz">GridION reads for March 2020 Dutch isolate</a></li>
 </ul>

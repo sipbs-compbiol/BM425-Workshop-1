@@ -43,6 +43,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -203,6 +205,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#the-galaxy-workspace-layout" id="toc-the-galaxy-workspace-layout" class="nav-link active" data-scroll-target="#the-galaxy-workspace-layout"><span class="header-section-number">3.1</span> The Galaxy workspace layout</a></li>
+  <li><a href="#give-a-name-to-the-history" id="toc-give-a-name-to-the-history" class="nav-link" data-scroll-target="#give-a-name-to-the-history"><span class="header-section-number">3.2</span> Give A Name To The History</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/join-session.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -239,14 +242,14 @@ Use this link to join the training session
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><a href="https://usegalaxy.eu/join-training/bm425-strath-2023/">https://usegalaxy.eu/join-training/bm425-strath-2023/</a></li>
+<li><a href="https://usegalaxy.eu/join-training/bm425-workshop1-2024">https://usegalaxy.eu/join-training/bm425-workshop1-2024</a></li>
 </ul>
-<p>We have deployed a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your <code>usegalaxy.eu</code> account (instructions to set this up can be found in <a href="galaxy-registration.html" class="quarto-xref"><span>Chapter 2</span></a>).</p>
+<p>We have deployed a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your <code>usegalaxy.eu</code> account (instructions to set up this account can be found in <a href="galaxy-registration.html" class="quarto-xref"><span>Chapter 2</span></a>).</p>
 </div>
 </div>
 <section id="the-galaxy-workspace-layout" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="the-galaxy-workspace-layout"><span class="header-section-number">3.1</span> The Galaxy workspace layout</h2>
-<p>After you join the session, you will meet the Galaxy workspace, which should look like <a href="#fig-galaxy-workspace" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>.</p>
+<p>After you join the session, you will see the Galaxy workspace, which should look similar to <a href="#fig-galaxy-workspace" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>. There are three sections to the workspace: the <code>Tools</code> sidebar, the <code>History/Workflow</code> sidebar, and the central <code>Workspace</code> area. You will become more familiar with these as you move through the workshop.</p>
 <div id="fig-galaxy-workspace" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Screen capture of a Galaxy workspace, with the three sections 'Tools,' 'Workspace,' and 'History/Workflow' indicated.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-galaxy-workspace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -257,7 +260,6 @@ Figure&nbsp;3.1: An empty Galaxy workspace. The workspace is divided into three 
 </figcaption>
 </figure>
 </div>
-<p>There are three sections to the workspace: the <code>Tools</code> sidebar, the <code>History/Workflow</code> sidebar, and the central <code>Workspace</code> area. You will become more familiar with these as you move through the workshop.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -270,7 +272,7 @@ The <code>Tools</code> sidebar
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The <code>Tools</code> sidebar on the left of the window initially presents all the tools available on the Galaxy instance being used. These are grouped into sections by the kind of task they can be used for, such as manipulating text, or genome assembly.</p>
+<p>The <code>Tools</code> sidebar on the left of the window initially presents all the tools available on the Galaxy instance being used. These are grouped into sections by the kind of task they can be used for, such as manipulating text, or assembling sequenced reads.</p>
 <p>This sidebar also provides useful links, such as for uploading your own data to the Galaxy instance (<code>Upload Data</code>), and for importing data from public databases, like <a href="https://www.ensembl.org/index.html">Ensembl</a>. There is also a search field at the top of the sidebar which initially contains the text <code>search tools</code>. You can enter the name of a tool or action into this field, and the sidebar will present the matching software on the Galaxy instance.</p>
 </div>
 </div>
@@ -287,8 +289,8 @@ The <code>History/Workflow</code> sidebar
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The <code>History/Workflow</code> sidebar at the right of the window is initially empty. As you work through the exercises this will become populated with your data, the actions you take on the data, and the results of those actions. Initially though, the <code>History</code> will have no name, so you should see the placeholder <code>Unnamed history</code>, and the text <code>This history is empty</code>.</p>
-<p>When you log into a Galaxy instance that you have used before, you may see the last history/workflow that you used, and you may have options for loading previous histories/workflows into the current workspace.</p>
+<p>The <code>History/Workflow</code> sidebar at the right of the window will initially be empty. As you work through the exercises this sidebar will become populated with your data, the actions you take on the data, and the results of those actions. The <code>History</code> will have no name specified, so you should see the placeholder <code>Unnamed history</code>, and the text <code>This history is empty</code>.</p>
+<p>When you log into a Galaxy instance that you have used before, you may see the most recent history/workflow that you used, and you may have options for loading previous histories/workflows into the current workspace.</p>
 </div>
 </div>
 </div>
@@ -304,7 +306,7 @@ The <code>Workspace</code>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The largest, central region of the window is the <code>Workspace</code>. This is a general area that provides information about the Galaxy instance, presents datasets (or summaries/visualisations of datasets), and ways to interact with the individual tools that you will use.</p>
+<p>The largest, central region of the window is the <code>Workspace</code>. This is an area that presents several kinds of information. Depending on context, it may provide information about the Galaxy instance, present datasets (or summaries/visualisations of datasets), or ways to interact with the individual tools that you will use.</p>
 <div id="fig-workspaces" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-workspaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -367,6 +369,47 @@ Figure&nbsp;3.2: Four uses of the <code>Workspace</code> area in Galaxy.
 </figure>
 </div>
 </div>
+</div>
+</div>
+</section>
+<section id="give-a-name-to-the-history" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="give-a-name-to-the-history"><span class="header-section-number">3.2</span> Give A Name To The History</h2>
+<p>It is helpful to give the workflow/history that you work with a name. This will help you find it again when you reuse the Galaxy EU instance.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>When you name a workflow, give it a concise title that expresses the purpose of the workflow.</li>
+<li>You can also add annotation that describes the workflow and provides more information than the name alone conveys.</li>
+<li>You can rename or re-annotate your workflow at any time.</li>
+</ul>
+</div>
+</div>
+<p>To assign a name to your workflow:</p>
+<ol type="1">
+<li>Click on the pen icon next to <code>Unnamed history</code></li>
+<li>Enter a name for the workflow in the top <code>Unnamed history</code> field</li>
+<li>Enter additional text describing the workflow in the lower <code>Annotation (optional)</code> field</li>
+<li>Click the <code>Save</code> button.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Renaming A Galaxy Workflow
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Renaming your Galaxy history"><source src="assets/movies/rename_history.mp4"></video></div>
 </div>
 </div>
 
@@ -820,6 +863,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 
