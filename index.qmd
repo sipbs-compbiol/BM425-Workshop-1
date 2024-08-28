@@ -1,6 +1,6 @@
 # Preface to {{< var ay >}} BM425 Workshop 1 {.unnumbered}
 
-Welcome to the BM425 (Advanced Microbiology) workshop on genome analysis of SARS-CoV-2, for {{< var ay >}}.
+Welcome to the BM425 (Advanced Microbiology) workshop on SARS-CoV-2 genome analysis, for {{< var ay >}}.
 
 This year is the first presentation of the workshop material in this format, and we would be very grateful to hear feedback [by email](mailto:{{< var admin.email >}}) or through the [GitHub repository Issues page]({{< var github.issues >}}).
 
