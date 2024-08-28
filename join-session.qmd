@@ -3,23 +3,21 @@
 ::: { .callout-tip }
 ## Use this link to join the training session
 
-- [https://usegalaxy.eu/join-training/bm425-strath-2023/](https://usegalaxy.eu/join-training/bm425-strath-2023/)
+- [https://usegalaxy.eu/join-training/bm425-workshop1-2024](https://usegalaxy.eu/join-training/bm425-workshop1-2024)
 
-We have deployed a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your `usegalaxy.eu` account (instructions to set this up can be found in @sec-galaxy-registration).
+We have deployed a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your `usegalaxy.eu` account (instructions to set up this account can be found in @sec-galaxy-registration).
 :::
 
 ## The Galaxy workspace layout
 
-After you join the session, you will meet the Galaxy workspace, which should look like @fig-galaxy-workspace.
+After you join the session, you will see the Galaxy workspace, which should look similar to @fig-galaxy-workspace. There are three sections to the workspace: the `Tools` sidebar, the `History/Workflow` sidebar, and the central `Workspace` area. You will become more familiar with these as you move through the workshop.
 
 ![An empty Galaxy workspace. The workspace is divided into three sections. On the left is the `Tools` sidebar, which presents the software tools available on the current Galaxy instance. On the right is the `History` or `Workflow` sidebar, which describes the data and steps being used in the current Galaxy workflow. The largest section, in the centre, shows details of a selected tool including options to set or change parameters, or the contents of the dataset, depending what is selected from the `History` sidebar.](assets/images/galaxy_landing.png){#fig-galaxy-workspace fig-alt="Screen capture of a Galaxy workspace, with the three sections 'Tools,' 'Workspace,' and 'History/Workflow' indicated." width=80%}
-
-There are three sections to the workspace: the `Tools` sidebar, the `History/Workflow` sidebar, and the central `Workspace` area. You will become more familiar with these as you move through the workshop.
 
 ::: { .callout-tip collapse="true" }
 ## The `Tools` sidebar
 
-The `Tools` sidebar on the left of the window initially presents all the tools available on the Galaxy instance being used. These are grouped into sections by the kind of task they can be used for, such as manipulating text, or genome assembly.
+The `Tools` sidebar on the left of the window initially presents all the tools available on the Galaxy instance being used. These are grouped into sections by the kind of task they can be used for, such as manipulating text, or assembling sequenced reads.
 
 This sidebar also provides useful links, such as for uploading your own data to the Galaxy instance (`Upload Data`), and for importing data from public databases, like [Ensembl](https://www.ensembl.org/index.html). There is also a search field at the top of the sidebar which initially contains the text `search tools`. You can enter the name of a tool or action into this field, and the sidebar will present the matching software on the Galaxy instance.
 :::
@@ -27,15 +25,15 @@ This sidebar also provides useful links, such as for uploading your own data to 
 ::: { .callout-tip collapse="true" }
 ## The `History/Workflow` sidebar
 
-The `History/Workflow` sidebar at the right of the window is initially empty. As you work through the exercises this will become populated with your data, the actions you take on the data, and the results of those actions. Initially though, the `History` will have no name, so you should see the placeholder `Unnamed history`, and the text `This history is empty`.
+The `History/Workflow` sidebar at the right of the window will initially be empty. As you work through the exercises this sidebar will become populated with your data, the actions you take on the data, and the results of those actions. The `History` will have no name specified, so you should see the placeholder `Unnamed history`, and the text `This history is empty`.
 
-When you log into a Galaxy instance that you have used before, you may see the last history/workflow that you used, and you may have options for loading previous histories/workflows into the current workspace.
+When you log into a Galaxy instance that you have used before, you may see the most recent history/workflow that you used, and you may have options for loading previous histories/workflows into the current workspace.
 :::
 
 ::: { .callout-tip collapse="true" }
 ## The `Workspace`
 
-The largest, central region of the window is the `Workspace`. This is a general area that provides information about the Galaxy instance, presents datasets (or summaries/visualisations of datasets), and ways to interact with the individual tools that you will use.
+The largest, central region of the window is the `Workspace`. This is an area that presents several kinds of information. Depending on context, it may provide information about the Galaxy instance, present datasets (or summaries/visualisations of datasets), or ways to interact with the individual tools that you will use.
 
 ::: {#fig-workspaces layout-nrow=2 fig-alt="Four images of the Galaxy workspace showing its use in a range of contexts: news and information, inspecting a dataset, interactive visualisation of results, and setting parameters for analysis."}
 
