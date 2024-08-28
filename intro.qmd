@@ -4,10 +4,10 @@
 
 Today you will be:
 
-- assembling, annotating, and visualising the first SARS-CoV-2 genome to be sequenced (from Wuhan, January 2020).
+- assembling, annotating, and visualising the first SARS-CoV-2 genome to be sequenced (isolated in Wuhan, China, in January 2020).
 - comparing the first SARS-CoV-2 genome to an earlier coronavirus (SARS 2003)
 - comparing the first SARS-CoV-2 genome and a SARS-CoV-2 genome that was sequenced later in the pandemic
-- interpreting the biological signifance of differences between the genomes, particularly in the region of the spike (S) protein.
+- interpreting the biological significance of sequence differences between the genomes, particularly in the region of the spike (S) protein.
 
 ## COVID-19
 
@@ -21,18 +21,18 @@ By the end of February, cases had been identified across the Northern hemisphere
 
 By October 2021, it was estimated that COVID-19 had [caused over 5mn deaths](https://www.reuters.com/world/global-covid-19-deaths-hit-5-million-delta-variant-sweeps-world-2021-10-02/) worldwide, as well as severe social and economic disruption, including the [largest global recession in almost a century](https://www.imf.org/en/Blogs/Articles/2020/04/14/blog-weo-the-great-lockdown-worst-economic-downturn-since-the-great-depression).
 
-Despite this huge impact, societal and scientific efforts including lockdowns, mathematical modelling, and novel vaccine development helped avoid even worse outcomes. COVID-19 vaccines are estimated to have prevented an additional 14-20mn deaths worldwide in 2021 (@Watson2022-ec).
+Despite this huge impact, societal and scientific efforts including lockdowns, mathematical modelling, and novel vaccine development - much of it supported by widespread genome analysis of the kind you will perform today - helped avoid even worse outcomes. COVID-19 vaccines are estimated to have prevented an additional 14-20mn deaths worldwide in 2021 (@Watson2022-ec).
 
 In May 2023, the World Health Organisation (WHO) [ended their Public Health Emergency](https://www.reuters.com/business/healthcare-pharmaceuticals/covid-is-no-longer-global-health-emergency-who-2023-05-05/) of International Concern (PHEIC), but the SARS-CoV-2 virus remains in circulation. As we begin this workshop, SARS-CoV-2 has [claimed over 7mn lives](https://ourworldindata.org/coronavirus) (@owidcoronavirus).
 
 ## SARS-CoV-2 Spike (S) Protein
 
-The spike (S) protein of SARS-CoV-2 plays a central role in host cell receptor recognition and cell membrane fusion (@Huang2020-uk). The protein comprises two subunits:
+The spike (S) protein of SARS-CoV-2 plays a key role in host cell receptor recognition and cell membrane fusion (@Huang2020-uk). The protein comprises two subunits:
 
 - S1: a receptor-binding domain that recognises and binds ACE2 (angiotensin-converting enzyme 2)
 - S2: a domain that mediates membrane fusion between the virus and the cell by forming a structural bundle
 
-which interact with the host cell as illustrated in @fig-spike.
+These interact with the host cell as illustrated in @fig-spike.
 
 ![(a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells (reproduced from @Huang2020-uk)](assets/images/spike_protein_cell.png){#fig-spike fig-alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry." width=80%}
 
@@ -45,7 +45,7 @@ The spike protein is not the only important surface protein for SARS-CoV-2. The 
 ![How SARS-CoV-2 interacts with the surface proteins of the target cell [(Marta Palma Rodríguez)](https://pdb101.rcsb.org/news/5ed7c17cdab5c9354c274f56)](assets/images/sars-ace2tmprs2-martapalma.png){#fig-palma fig-alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host." width=80%}
 
 ::: { .callout-tip collapse="true" }
-## Other SARS-CoV-2 Structures
+## SARS-CoV-2 Molecular Structures
 
 You can find an interactive collection of publicly-available SARS-CoV-2 protein structures at [RCSB/PDB](https://www.rcsb.org/), the public repository for biological structural data.
 
@@ -66,7 +66,7 @@ The first SARS-CoV-2 genome was obtained from a sample of human lung in January 
 2. Total RNA was extracted from the fluid, and an RNA sequencing library constructed (including depletion of ribosomal RNA)
 3. The library was sequenced on an [Illumina MiniSeq](https://www.illumina.com/systems/sequencing-platforms/miniseq.html) machine, to give 150bp paired-end reads
 4. The resulting reads were cleaned and assembled using Megahit (@Li2015-yc) and [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
-5. The longest contig was identified as a coronavirus, and used to design primers for PCR-RACE (Rapid Amplification of cDNA Ends, @Pal2022-tw, @fig-race) to sequence the ends of the virus genome
+5. The longest assembled contig was identified as a coronavirus, and used to design primers for PCR-RACE (Rapid Amplification of cDNA Ends, @Pal2022-tw, @fig-race) which allowed researchers to sequence the ends of the virus genome
 6. The cleaned reads were remapped against the full virus sequence
 
 
@@ -75,22 +75,21 @@ The first SARS-CoV-2 genome was obtained from a sample of human lung in January 
 ::: { .callout-tip }
 ## Questions
 
-1. Why did they extract RNA and not DNA?
-2. Why do you think they depleted the ribosomal RNA?
+1. Why did the researchers extract RNA and not DNA?
+2. Why do you think the researchers depleted the ribosomal RNA?
 
 :::
 
 ::: { .callout-important collapse="true" }
 ## Answers
 
-1. SARS-CoV-2 is an RNA virus, so we must sequence RNA to recover virus sequence.
-2. There is so much ribosomal RNA in biological material that, if it was left in the sample, it would dominate over the viral material and any human transcripts, making the virus more difficult to detect. Depleting it enhances sensitivity for detecting viral RNA.
-
+1. SARS-CoV-2 is an RNA virus, so we must sequence RNA in order to recover the virus genome. Sequencing DNA would not include any virus sequence.
+2. There is so much ribosomal RNA in biological material that, if it was left in the sample, it would dominate over the viral material and any human transcripts. Most of the resulting sequence would describe the ribosome, not the virus or host genome, making the virus more difficult to detect. Depleting ribosomal RNA enhances sensitivity for detecting viral RNA.
 :::
 
 ### SARS-CoV-2 read data for this workshop
 
-For this workshop, we took all 57mn raw sequencing reads from @Wu2020-yx, which are available at NCBI under accession [SRR10971381](https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381), and filtered out all reads that matched the human genome. The remaining reads in the files below are those you will use to assemble the SARS-CoV-2 genome.
+For this workshop, we downloaded the 57mn raw sequencing reads from @Wu2020-yx, which are available at NCBI under accession [SRR10971381](https://www.ncbi.nlm.nih.gov/sra/?term=SRR10971381), and filtered out all reads that matched the human genome. The remaining reads in the files below are those you will use to assemble the SARS-CoV-2 genome.
 
 - [Paired-end reads, forward direction](assets/data/trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz)
 - [Paired-end reads, reverse direction](assets/data/trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz)
@@ -109,7 +108,7 @@ In the workshop, you will use the following files:
 
 The second comparator genome you will use in this workshop is a SARS-CoV-2 variant sequenced in the Netherlands in March 2020, four months after the first known human cases were identified. The sample has accession [SAMEA6847958](https://www.ncbi.nlm.nih.gov/biosample/SAMEA6847958) and was obtained through active surveillance during the COVID-19 pandemic (@Oude_Munnink2020-ry).
 
-The data describes a set of [Oxford Nanopore (ONT) GridION](https://nanoporetech.com/products/sequence/gridion) reads, which are available under accession [ERR4164769](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=ERR4164769&display=metadata) at SRA/NCBI. In the workshop, you will use the following file:
+The data describes a set of [Oxford Nanopore (ONT) GridION](https://nanoporetech.com/products/sequence/gridion) reads, which are available under accession [ERR4164769](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=ERR4164769&display=metadata) at SRA/NCBI. In this workshop, you will use the following file:
 
 - [GridION reads for March 2020 Dutch isolate](assets/data/ERR4164769_1.fastq.gz)
 
