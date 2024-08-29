@@ -1,4 +1,4 @@
-# Sequence Read Quality {#sec-fastqc}
+# Inspect Read Quality {#sec-fastqc}
 
 Using good quality input data improves our chance of getting a good quality output assembly.
 
