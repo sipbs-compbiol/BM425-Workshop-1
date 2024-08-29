@@ -82,6 +82,48 @@ You can also drag and drop data files directly into the central workspace window
 ::: { .callout-note }
 ## Video: Uploading files by dragging them into the workspace
 
-{{< video assets/movies/upload-data-3.mp4 title="Uploading data by dragging ti into the workspace" >}}
+{{< video assets/movies/upload-data-3.mp4 title="Uploading data by dragging it into the Workspace" >}}
 :::
 
+## Inspecting Data
+
+You can inspect the data you have uploaded to Galaxy visually in two ways.
+
+### In the `History`
+
+To view the contents of an uploaded data file in the `History`.
+
+1. Click on the file name (e.g. `SARS_AY278741.fasta`). The file descriptor will enlarge.
+  - The descriptor shows the file's datatype (e.g. "format `fasta`")
+  - At the bottom of the descriptor, a preview of the dataset is shown, with the first few lines of the data.
+2. Click on the file name again to close the file descriptor.
+
+### In the `Workspace`
+
+You can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the `eye` icon in the file descriptor.
+
+1. Click on the `eye` icon of one of the file descriptors (e.g. `SARS_AY278741.gff3`). A representation of the data in the file will be shown in the workspace window.
+
+::: { .callout-note }
+## Video: Inspecting a data file in the `History` and the `Workspace`
+
+{{< video assets/movies/inspect-data-1.mp4 title="Inspecting data in the History and Workspace" >}}
+:::
+
+### Using additional tools
+
+The open file descriptor presents several icons, just above the data preview. These allow you to:
+
+1. Download the dataset to your computer
+2. Obtain a direct URL link to the data
+3. View details about the dataset
+4. Visualise the data interactively using an appropriate tool
+5. Show related dataset
+
+View the video below to see some examples of this output.
+
+::: { .callout-note }
+## Video: Using interactive data inspection tools
+
+{{< video assets/movies/inspect-data-2.mp4 title="Using the interactive data inspection tools" >}}
+:::
