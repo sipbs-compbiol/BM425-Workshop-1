@@ -43,6 +43,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -204,9 +206,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#uploading-your-data" id="toc-uploading-your-data" class="nav-link active" data-scroll-target="#uploading-your-data"><span class="header-section-number">5.1</span> Uploading your data</a>
   <ul class="collapse">
-  <li><a href="#drag-and-drop-data-onto-the-workspace" id="toc-drag-and-drop-data-onto-the-workspace" class="nav-link" data-scroll-target="#drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.1</span> Drag and drop data onto the workspace</a></li>
+  <li><a href="#use-the-you-can-load-your-own-data-link-in-an-empty-workflow" id="toc-use-the-you-can-load-your-own-data-link-in-an-empty-workflow" class="nav-link" data-scroll-target="#use-the-you-can-load-your-own-data-link-in-an-empty-workflow"><span class="header-section-number">5.1.1</span> Use the <code>You can load your own data</code> link in an empty workflow</a></li>
   <li><a href="#use-the-upload-data-button-in-the-tools-sidebar" id="toc-use-the-upload-data-button-in-the-tools-sidebar" class="nav-link" data-scroll-target="#use-the-upload-data-button-in-the-tools-sidebar"><span class="header-section-number">5.1.2</span> Use the <code>Upload Data</code> button in the <code>Tools</code> sidebar</a></li>
-  <li><a href="#use-the-load-your-own-data-link-in-an-empty-workflow" id="toc-use-the-load-your-own-data-link-in-an-empty-workflow" class="nav-link" data-scroll-target="#use-the-load-your-own-data-link-in-an-empty-workflow"><span class="header-section-number">5.1.3</span> Use the <code>Load your own data</code> link in an empty workflow</a></li>
+  <li><a href="#drag-and-drop-data-onto-the-workspace" id="toc-drag-and-drop-data-onto-the-workspace" class="nav-link" data-scroll-target="#drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.3</span> Drag and drop data onto the workspace</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/upload-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -262,14 +264,115 @@ Caution
 <section id="uploading-your-data" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="uploading-your-data"><span class="header-section-number">5.1</span> Uploading your data</h2>
 <p>There are three main routes to uploading your data onto the Galaxy instance.</p>
-<section id="drag-and-drop-data-onto-the-workspace" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.1</span> Drag and drop data onto the workspace</h3>
+<section id="use-the-you-can-load-your-own-data-link-in-an-empty-workflow" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="use-the-you-can-load-your-own-data-link-in-an-empty-workflow"><span class="header-section-number">5.1.1</span> Use the <code>You can load your own data</code> link in an empty workflow</h3>
+<p>This option is only visible when you have an empty workflow. Click on the <code>You can load your own data</code> link under <code>This history is empty</code>. This will bring up a dialogue box. You can drag and drop a file or files into the dialogue box, or use the <code>Choose local file</code> button to navigate to the location of your files.</p>
+<ol type="1">
+<li>Click on the <code>You can load your own data</code> link.</li>
+<li>Drag the three workshop data files starting with <code>SARS_AY278741</code> into the dialogue box.</li>
+<li>Click on the <code>Start</code> button.</li>
+<li>The files will appear in the <code>History</code> sidebar.</li>
+<li>Click the <code>Close</code> button in the file dialogue.</li>
+</ol>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data file colours
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>When the data files are first added to the workflow, they have a grey background. This indicates that Galaxy knows about the files, and is preparing to upload them.</p>
+<p>When Galaxy begins to upload the files, the background changes to orange.</p>
+<p>When the upload is complete, the background turns green.</p>
+<p>If there is a problem with uploading, the background turns red (please signal to a demonstrator if this happens for you).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data file types
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You will have noticed the <code>Auto-detect</code> dropdown boxes when you uploaded your files. Galaxy is able to process files that describe many <em>data types</em>, including genome sequence data, transcriptome data, mass spectrometry data, and so on. Each individual file contains a single type of data.</p>
+<p>Galaxy is usually clever enough to determine for itself what data is in a particular file, but sometimes it cannot recognise the contents, and you may have to specify the file type by choosing from the options in this drop-down box.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Uploading files with the <code>You can load your own data</code> link
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Uploading data via the 'You can load your own data' link"><source src="assets/movies/upload-data-1.mp4"></video></div>
+</div>
+</div>
 </section>
 <section id="use-the-upload-data-button-in-the-tools-sidebar" class="level3" data-number="5.1.2">
 <h3 data-number="5.1.2" class="anchored" data-anchor-id="use-the-upload-data-button-in-the-tools-sidebar"><span class="header-section-number">5.1.2</span> Use the <code>Upload Data</code> button in the <code>Tools</code> sidebar</h3>
+<p>There is an <code>Upload</code> button at the top left of the Galaxy window, in the left-most toolbar. It has a green background and an upload icon. At any point in the analysis, you can click on this button to upload data into the workflow.</p>
+<ol type="1">
+<li>Click on the <code>Upload</code> button.</li>
+<li>Drag the <code>trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz</code> file into the dialogue box.</li>
+<li>Click on the <code>Start</code> button.</li>
+<li>The file will appear in the <code>History</code> sidebar.</li>
+<li>Click the <code>Close</code> button in the file dialogue.</li>
+</ol>
+<p>This file is substantially larger than the files you uploaded above, and will take longer to turn orange, and then green, to indicate that it has uploaded correctly.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Uploading files with the <code>Upload</code> button
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Uploading data via the 'Upload' button"><source src="assets/movies/upload-data-2.mp4"></video></div>
+</div>
+</div>
 </section>
-<section id="use-the-load-your-own-data-link-in-an-empty-workflow" class="level3" data-number="5.1.3">
-<h3 data-number="5.1.3" class="anchored" data-anchor-id="use-the-load-your-own-data-link-in-an-empty-workflow"><span class="header-section-number">5.1.3</span> Use the <code>Load your own data</code> link in an empty workflow</h3>
+<section id="drag-and-drop-data-onto-the-workspace" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.3</span> Drag and drop data onto the workspace</h3>
+<p>You can also drag and drop data files directly into the central workspace window of Galaxy. This will trigger the file upload dialogue box.</p>
+<ol type="1">
+<li>Drag the <code>trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz</code> file into the Galaxy workspace.</li>
+<li>A <code>Drag files here to upload</code> overlay will appear.</li>
+<li>Drop the file in the overlay. A file upload dialogue box will appear.</li>
+<li>Click on the <code>Start</code> button.</li>
+<li>The file will appear in the <code>History</code> sidebar.</li>
+<li>Click the <code>Close</code> button in the file dialogue.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Uploading files by dragging them into the workspace
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Uploading data by dragging ti into the workspace"><source src="assets/movies/upload-data-3.mp4"></video></div>
+</div>
+</div>
 
 
 </section>
@@ -722,6 +825,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
+<script>videojs(video_shortcode_videojs_video3);</script>
 
 
 
