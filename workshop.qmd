@@ -1,8 +1,8 @@
 # Workshop {#sec-workshop .unnumbered}
 
-The chapters in this section of the site will lead you through the steps of the workshop. Please work through them in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.
+The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.
 
-1. [Join the training session](join-session.qmd) at [https://usegalaxy.eu/](https://usegalaxy.eu/)
+1. [Join the training session](join-session.qmd) at [https://usegalaxy.eu/join-training/bm425-workshop1-2024](https://usegalaxy.eu/join-training/bm425-workshop1-2024)
 2. [Download the workshop data](download-data.qmd) to your computer
 3. [Upload the workshop data](upload-data.qmd) to your Galaxy history
 4. Prepare your sequencing read data for assembly
