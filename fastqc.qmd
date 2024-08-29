@@ -8,6 +8,11 @@ We call the set of sequenced reads we obtain from the sequencer the _raw reads_.
 ## Good practice
 
 It is good practice always to inspect the quality of your sequencing read data, and remove low-quality reads, before assembly.
+
+When describing your sequencing experiment in a manuscript or dissertation, you should always state:
+
+1. The sequencing technology used, and the sequencing platform
+2. The number of raw reads obtained, and a measure of average read length
 :::
 
 ::: { .callout-tip }
