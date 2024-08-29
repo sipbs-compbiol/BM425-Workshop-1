@@ -210,6 +210,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#use-the-upload-data-button-in-the-tools-sidebar" id="toc-use-the-upload-data-button-in-the-tools-sidebar" class="nav-link" data-scroll-target="#use-the-upload-data-button-in-the-tools-sidebar"><span class="header-section-number">5.1.2</span> Use the <code>Upload Data</code> button in the <code>Tools</code> sidebar</a></li>
   <li><a href="#drag-and-drop-data-onto-the-workspace" id="toc-drag-and-drop-data-onto-the-workspace" class="nav-link" data-scroll-target="#drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.3</span> Drag and drop data onto the workspace</a></li>
   </ul></li>
+  <li><a href="#inspecting-data" id="toc-inspecting-data" class="nav-link" data-scroll-target="#inspecting-data"><span class="header-section-number">5.2</span> Inspecting Data</a>
+  <ul class="collapse">
+  <li><a href="#in-the-history" id="toc-in-the-history" class="nav-link" data-scroll-target="#in-the-history"><span class="header-section-number">5.2.1</span> In the <code>History</code></a></li>
+  <li><a href="#in-the-workspace" id="toc-in-the-workspace" class="nav-link" data-scroll-target="#in-the-workspace"><span class="header-section-number">5.2.2</span> In the <code>Workspace</code></a></li>
+  <li><a href="#using-additional-tools" id="toc-using-additional-tools" class="nav-link" data-scroll-target="#using-additional-tools"><span class="header-section-number">5.2.3</span> Using additional tools</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/upload-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -370,7 +376,70 @@ Video: Uploading files by dragging them into the workspace
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Uploading data by dragging ti into the workspace"><source src="assets/movies/upload-data-3.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Uploading data by dragging it into the Workspace"><source src="assets/movies/upload-data-3.mp4"></video></div>
+</div>
+</div>
+</section>
+</section>
+<section id="inspecting-data" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="inspecting-data"><span class="header-section-number">5.2</span> Inspecting Data</h2>
+<p>You can inspect the data you have uploaded to Galaxy visually in two ways.</p>
+<section id="in-the-history" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="in-the-history"><span class="header-section-number">5.2.1</span> In the <code>History</code></h3>
+<p>To view the contents of an uploaded data file in the <code>History</code>.</p>
+<ol type="1">
+<li>Click on the file name (e.g.&nbsp;<code>SARS_AY278741.fasta</code>). The file descriptor will enlarge.</li>
+</ol>
+<ul>
+<li>The descriptor shows the file’s datatype (e.g.&nbsp;“format <code>fasta</code>”)</li>
+<li>At the bottom of the descriptor, a preview of the dataset is shown, with the first few lines of the data.</li>
+</ul>
+<ol start="2" type="1">
+<li>Click on the file name again to close the file descriptor.</li>
+</ol>
+</section>
+<section id="in-the-workspace" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="in-the-workspace"><span class="header-section-number">5.2.2</span> In the <code>Workspace</code></h3>
+<p>You can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the <code>eye</code> icon in the file descriptor.</p>
+<ol type="1">
+<li>Click on the <code>eye</code> icon of one of the file descriptors (e.g.&nbsp;<code>SARS_AY278741.gff3</code>). A representation of the data in the file will be shown in the workspace window.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Inspecting a data file in the <code>History</code> and the <code>Workspace</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspecting data in the History and Workspace"><source src="assets/movies/inspect-data-1.mp4"></video></div>
+</div>
+</div>
+</section>
+<section id="using-additional-tools" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="using-additional-tools"><span class="header-section-number">5.2.3</span> Using additional tools</h3>
+<p>The open file descriptor presents several icons, just above the data preview. These allow you to:</p>
+<ol type="1">
+<li>Download the dataset to your computer</li>
+<li>Obtain a direct URL link to the data</li>
+<li>View details about the dataset</li>
+<li>Visualise the data interactively using an appropriate tool</li>
+<li>Show related dataset</li>
+</ol>
+<p>View the video below to see some examples of this output.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Using interactive data inspection tools
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Using the interactive data inspection tools"><source src="assets/movies/inspect-data-2.mp4"></video></div>
 </div>
 </div>
 
@@ -828,6 +897,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script>videojs(video_shortcode_videojs_video1);</script>
 <script>videojs(video_shortcode_videojs_video2);</script>
 <script>videojs(video_shortcode_videojs_video3);</script>
+<script>videojs(video_shortcode_videojs_video4);</script>
+<script>videojs(video_shortcode_videojs_video5);</script>
 
 
 

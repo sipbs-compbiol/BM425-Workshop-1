@@ -239,6 +239,17 @@
     ]
   },
   {
+    "objectID": "upload-data.html#inspecting-data",
+    "href": "upload-data.html#inspecting-data",
+    "title": "5  Upload Data to Galaxy",
+    "section": "5.2 Inspecting Data",
+    "text": "5.2 Inspecting Data\nYou can inspect the data you have uploaded to Galaxy visually in two ways.\n\n5.2.1 In the History\nTo view the contents of an uploaded data file in the History.\n\nClick on the file name (e.g. SARS_AY278741.fasta). The file descriptor will enlarge.\n\n\nThe descriptor shows the file’s datatype (e.g. “format fasta”)\nAt the bottom of the descriptor, a preview of the dataset is shown, with the first few lines of the data.\n\n\nClick on the file name again to close the file descriptor.\n\n\n\n5.2.2 In the Workspace\nYou can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the eye icon in the file descriptor.\n\nClick on the eye icon of one of the file descriptors (e.g. SARS_AY278741.gff3). A representation of the data in the file will be shown in the workspace window.\n\n\n\n\n\n\n\nVideo: Inspecting a data file in the History and the Workspace\n\n\n\n\n\n\n\n\n5.2.3 Using additional tools\nThe open file descriptor presents several icons, just above the data preview. These allow you to:\n\nDownload the dataset to your computer\nObtain a direct URL link to the data\nView details about the dataset\nVisualise the data interactively using an appropriate tool\nShow related dataset\n\nView the video below to see some examples of this output.\n\n\n\n\n\n\nVideo: Using interactive data inspection tools",
+    "crumbs": [
+      "Galaxy",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Upload Data to Galaxy</span>"
+    ]
+  },
+  {
     "objectID": "webr-example.html",
     "href": "webr-example.html",
     "title": "6  R Playground",
