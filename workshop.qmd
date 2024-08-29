@@ -2,9 +2,7 @@
 
 The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.
 
-1. [Join the training session](join-session.qmd) at [https://usegalaxy.eu/join-training/bm425-workshop1-2024](https://usegalaxy.eu/join-training/bm425-workshop1-2024)
-2. [Download the workshop data](download-data.qmd) to your computer
-3. [Upload the workshop data](upload-data.qmd) to your Galaxy history
+3. Assessing the quality of sequence read data
 4. Prepare your sequencing read data for assembly
 5. Assemble a genome from your sequencing data
 6. Visualise your genome assembly

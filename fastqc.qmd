@@ -1,0 +1,135 @@
+# Sequence Read Quality {#sec-fastqc}
+
+Using good quality input data improves our chance of getting a good quality output assembly.
+
+We call the set of sequenced reads we obtain from the sequencer the _raw reads_. Modern sequencing technologies usually give us high quality data, but it is still possible for some low-quality read sequences to be produced among the raw reads. So that these do not detrimentally affect the quality of our assembly, we first _assess the quality_ of our read data, and then _remove low-quality reads and low-quality parts of read sequences_. The resulting dataset is often called the _cleaned reads_ or _processed reads_.
+
+::: { .callout-important }
+## Good practice
+
+It is good practice always to inspect the quality of your sequencing read data, and remove low-quality reads, before assembly.
+:::
+
+::: { .callout-tip }
+The main kind of low-quality data we might have in our raw reads are:
+
+1. Contamination: reads that derive from an organism we didn't intend to sequence; these are usually identified by querying against a database and removed
+2. Low-confidence basecalls: reads containing base calls that the basecaller is unsure about; these are usually found towards the end of the read sequence and are removed by _trimming_ the read
+3. Low-confidence reads: reads where a large proportion of the base calls are low quality; these are usually removed
+4. Adapter sequence: these are sections of sequence left over from library preparation and do not derive from the sequenced organism; they are removed by trimming
+:::
+
+This part of the workshop will cover the use of `FastQC` to inspect the quality of your sequence reads.
+
+## Using `FastQC`
+
+1. Navigate to the `FastQC` tool using the `Tools` sidebar in `Galaxy`
+  - You can use the `search tools` field to find `FastQC`
+  - Alternatively, you will find it under `GENOMIC FILE MANIPULATION`/`FASTA/FASTQ` in the sidebar
+2. Select the `FastQC` tool
+3. Run the `FASTQC` tool on each of your `FASTQ` input files
+  - These are the `trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz` and `trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz` files.
+  - With the `FastQC` tool options in the main `Workspace` window, select the file you want to run `FastQC` on.
+  - Click on the `Run Tool` button.
+
+::: { .callout-important }
+**Make sure you run `FastQC` on both the forward and reverse read sets.**
+:::
+
+::: { .callout-note }
+## Video: Using `FastQC` to assess the quality of your sequencing reads
+
+{{< video assets/movies/fastqc-1.mp4 title="Assessing sequencing read quality with `FastQC`" >}}
+:::
+
+::: { .callout-important }
+`FastQC` takes a few moments to run.
+
+When the run is complete, click on the `eye` icon of the `Webpage` result to inspect the `FastQC` output.
+
+::: { .callout-tip }
+You can press and hold **CTRL** (on a PC) or **CMD ⌘** (macOS) when clicking the `eye` icon to open the result in its own window.
+:::
+:::
+
+
+## `FastQC` output
+
+The output of `FastQC` tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:
+
+- [Official `FastQC` documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- [Michigan State University (MSU) `FastQC` tutorial](https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx)
+
+::: { .callout-note }
+## Video: Inspecting `FastQC` output in Galaxy
+
+{{< video assets/movies/fastqc-2.mp4 title="Inspecting `FastQC` output in Galaxy" >}}
+:::
+
+### `FastQC` Summary
+
+The `FastQC` summary (@fig-fastqc-summary) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a _pass_ (green, with a tick), a _warning_ (amber, with exclamation mark), or a _fail_ (red, with a cross) mark.
+
+::: { .column-margin }
+![Example `FastQC` summary showing passes for most sections of the report including "Basic Statistics," warnings for some sections including "Overrepresented sequences," and a fail for "Sequence Duplication Levels"](assets/images/fastqc_summary.png){#fig-fastqc-summary fig-alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section." width="80%"}
+:::
+
+### Per base sequence quality
+
+The _per base sequence quality_ plot (@fig-fastqc-perbase) presents the ranges of individual base quality calls across the lengths of the input sequence reads. Higher scores (near 40) indicate better quality.
+
+::: { .callout-tip }
+For good-quality sequence read data, we are looking for a graph where the mean quality (see @fig-fastqc-perbase) is always in the green area, with a score greater than 29.
+:::
+
+![Per base sequence quality score plot from `FastQC` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot, with the mean drawn as a line connecting each boxplot.](assets/images/fastqc_perbase.png){#fig-fastqc-perbase width=80%}
+
+::: { .callout-caution }
+It is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.
+
+It is also typical for the quality score to be slightly lower in the first 5-7 bases of the read.
+
+If mean quality per base falls below 29, there may be a problem with the sequencing data.
+:::
+
+### Per sequence quality scores
+
+The _per sequence quality_ score (@fig-fastqc-perseq) summarises the distribution of high quality (higher scores, near 40) and lower quality reads in the complete dataset.
+
+::: { .callout-tip }
+In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.
+:::
+
+![Per sequence quality score plot from `FastQC` indicating overall high quality sequencing reads.](assets/images/fastqc_perseq.png){#fig-fastqc-perseq width=80%}
+
+::: { .callout-caution }
+If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.
+:::
+
+::: { .callout-tip }
+## Question
+
+1. The `FastQC` Sequence Duplication Levels section is marked as a fail in one of the output result files. Why do you think this is?
+:::
+
+::: { .callout-caution collapse="true" }
+## Hint
+
+- Read the description of the Sequence Duplication Levels result section in the [MSU Tutorial](https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx).
+- Read the description of the provenance of your read data in @sec-introduction 
+:::
+
+
+::: { .callout-important collapse="true" }
+## Answers
+
+Your sequence reads were obtained using RNA sequencing, and very deeply sequenced the virus genome. The high abundance of virus sequence reads (and the low abundance of any reads that do not derive from the virus) looks unusual compared to the results of a standard DNA genome sequencing experiment, so is marked as "fail" by `FastQC`.
+:::
+
+## What do we do about sequencing data problems?
+
+`FastQC` does a great job of alerting us to problems with our sequencing data sets. But, by itself, it cannot remedy these problems.
+
+Modern sequencing methods produce so much read data that the usual approach to excluding poor data is either to exclude (or _drop_) the read itself, or to _trim_ (throw away) the section of the read sequence that is low quality.
+
+A popular tool for removing poor quality read data is `trimmomatic` and you will meet this in @sec-trimmomatic.

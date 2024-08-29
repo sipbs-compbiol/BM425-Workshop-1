@@ -45,9 +45,9 @@ book:
         - download-data.qmd
         - upload-data.qmd
     
-    - part: late-section.qmd
+    - part: workshop.qmd
       chapters: 
-        - webr-example.qmd
+        - fastqc.qmd
     
     - acknowledgements.qmd
     - references.qmd
