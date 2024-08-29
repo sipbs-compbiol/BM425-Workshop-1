@@ -1,0 +1,67 @@
+# Clean Raw Read Data {#sec-trimmomatic}
+
+As you have seen in @sec-fastqc sequence read data can be of variable quality. The usual approach to improving the overall quality of a dataset is to discard low quality reads, and low-quality sections of reads. This is referred to as _cleaning_ raw read data.
+
+`Trimmomatic` is a commonly-used software tool for cleaning raw read data that
+
+1. identifies and excludes (_drops_) low-quality reads
+2. trims (_deletes_) any remaining Illumina adapter sequences
+3. trims (_deletes_) any low-quality read ends
+
+::: { .callout-important }
+## Good practice
+
+It is good practice always to use a tool like `trimmomatic` to clean your raw sequencing data.
+
+When reporting how you cleaned your sequence data in a manuscript or dissertation, you should always state:
+
+1. The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)
+2. The parameters used when running the tool (if default parameters were used, state this)
+3. The number of reads that remained after cleaning
+:::
+
+::: { .callout-tip }
+Tools like `trimmomatic` return two kinds of cleaned read data:
+
+1. R1-paired, R2-paired: these are high quality paired-end reads
+2. R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality
+:::
+
+This part of the workshop will guide you through using `trimmomatic` to clear your sequence read data.
+
+## Using `trimmomatic`
+
+1. Navigate to the `trimmomatic` tool using the `Tools` sidebar in `Galaxy`
+  - You can use the `search tools` field to find `trimmomatic`, or look under the `FASTA/FASTQ` section in the sidebar
+2. Select the `trimmomatic` tool
+3. Make sure that `Paired-end (two separate input files)` is chosen
+4. Select the forward and reverse raw read sets (`trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz` `trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz`) as the `Input FASTQ file`s
+5. Set `Perform initial ILLUMINACLIP` to `Yes`; this will trim any remaining Illumina adapters from the read sequences
+6. Under `Adapter sequences to use` select `TruSeq3 (paired-ended for MiSeq and HiSeq)`
+7. Click `Run Tool`
+
+::: { .callout-note }
+## Video: Using `trimmomatic` to clean raw sequencing reads
+
+{{< video assets/movies/trimmomatic-1.mp4 title="Cleaning raw sequencing reads with `trimmomatic`" >}}
+:::
+
+## `trimmomatic` Output
+
+Cleaning your data with `trimmomatic` generates four output files (@fig-trimmomatic-output-list).
+
+::: { .column-margin }
+![`FastQC` output files in Galaxy. From the top: unpaired reverse (R2) reads, unpaired forward (R1) reads, paired reverse (R2) reads, and paired forward (R1) reads.](assets/images/trimmomatic_output_list.png){#fig-trimmomatic-output-list}
+:::
+
+You can inspect the contents of these files by clicking on the filename in the `History` sidebar, and also by clicking on the corresponding `eye` icon to view the trimmed reads in the workspace.
+
+::: { .callout-note }
+## Video: Inspecting `trimmomatic` output files
+
+{{< video assets/movies/trimmomatic-2.mp4 title="Inspeccting reads cleaned with `trimmomatic`" >}}
+:::
+
+## Next steps
+
+Now that we have clean, high-quality sequencing reads, we can move on to assembling the SARS-CoV-2 genome, in @sec-shovill.

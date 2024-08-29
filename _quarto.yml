@@ -48,6 +48,7 @@ book:
     - part: workshop.qmd
       chapters: 
         - fastqc.qmd
+        - trimmomatic.qmd
     
     - acknowledgements.qmd
     - references.qmd
