@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>6&nbsp; Sequence Read Quality – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
+<title>6&nbsp; Inspect Read Quality – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./acknowledgements.html" rel="next">
+<link href="./trimmomatic.html" rel="next">
 <link href="./workshop.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop.html">Workshop</a></li><li class="breadcrumb-item"><a href="./fastqc.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequence Read Quality</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop.html">Workshop</a></li><li class="breadcrumb-item"><a href="./fastqc.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,7 +177,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fastqc.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequence Read Quality</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trimmomatic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Clean Raw Read Data</span></span></a>
   </div>
 </li>
       </ul>
@@ -218,9 +224,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop.html">Workshop</a></li><li class="breadcrumb-item"><a href="./fastqc.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequence Read Quality</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop.html">Workshop</a></li><li class="breadcrumb-item"><a href="./fastqc.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-fastqc" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequence Read Quality</span></span></h1>
+<h1 class="title"><span id="sec-fastqc" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></span></h1>
 </div>
 
 
@@ -250,6 +256,11 @@ Good practice
 </div>
 <div class="callout-body-container callout-body">
 <p>It is good practice always to inspect the quality of your sequencing read data, and remove low-quality reads, before assembly.</p>
+<p>When describing your sequencing experiment in a manuscript or dissertation, you should always state:</p>
+<ol type="1">
+<li>The sequencing technology used, and the sequencing platform</li>
+<li>The number of raw reads obtained, and a measure of average read length</li>
+</ol>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -517,7 +528,7 @@ Answers
 <h2 data-number="6.3" class="anchored" data-anchor-id="what-do-we-do-about-sequencing-data-problems"><span class="header-section-number">6.3</span> What do we do about sequencing data problems?</h2>
 <p><code>FastQC</code> does a great job of alerting us to problems with our sequencing data sets. But, by itself, it cannot remedy these problems.</p>
 <p>Modern sequencing methods produce so much read data that the usual approach to excluding poor data is either to exclude (or <em>drop</em>) the read itself, or to <em>trim</em> (throw away) the section of the read sequence that is low quality.</p>
-<p>A popular tool for removing poor quality read data is <code>trimmomatic</code> and you will meet this in <span class="quarto-unresolved-ref">?sec-trimmomatic</span>.</p>
+<p>A popular tool for removing poor quality read data is <code>trimmomatic</code> and you will meet this in <a href="trimmomatic.html" class="quarto-xref"><span>Chapter 7</span></a>.</p>
 
 
 </section>
@@ -950,8 +961,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./acknowledgements.html" class="pagination-link" aria-label="Acknowledgements">
-        <span class="nav-page-text">Acknowledgements</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./trimmomatic.html" class="pagination-link" aria-label="Clean Raw Read Data">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Clean Raw Read Data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
