@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>Workshop – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
+<title>Galaxy – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop.html">Workshop</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./galaxy.html">Galaxy</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -136,8 +136,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./workshop.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Workshop</span></a>
+            <a href="./galaxy.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Galaxy</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -205,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-workshop" class="quarto-section-identifier">Workshop</span></h1>
+<h1 class="title"><span id="sec-galaxy" class="quarto-section-identifier">Galaxy</span></h1>
 </div>
 
 
@@ -222,21 +222,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.</p>
-<ol type="1">
-<li><a href="./join-session.html">Join the training session</a> at <a href="https://usegalaxy.eu/join-training/bm425-workshop1-2024">https://usegalaxy.eu/join-training/bm425-workshop1-2024</a></li>
-<li><a href="./download-data.html">Download the workshop data</a> to your computer</li>
-<li><a href="./upload-data.html">Upload the workshop data</a> to your Galaxy history</li>
-<li>Prepare your sequencing read data for assembly</li>
-<li>Assemble a genome from your sequencing data</li>
-<li>Visualise your genome assembly</li>
-<li>Annotate your assembly</li>
-<li>Visualise your annotation</li>
-<li>Map reads from your SARS-CoV-2 isolate to the SARS 2003 genome</li>
-<li>Visualise the mapped reads using <code>JBrowse2</code></li>
-<li>Identify sequence variants (SNPs, Single Nucleotide Polymorphisms) between SARS-CoV-2 and SARS 2003</li>
-<li>Use what you’ve learned to identify and interpret changes in the SARS-CoV-2 virus during the COVID-19 pandemic</li>
-</ol>
+<p>The chapters in this section of the workshop will guide you through registering an account with <a href="https://usegalaxy.eu">Galaxy EU</a>, and uploading workshop data to the Galaxy instance.</p>
+<ul>
+<li><a href="join-session.html" class="quarto-xref"><span>3&nbsp; Join the Training Session</span></a> at <a href="https://usegalaxy.eu/join-training/bm425-workshop1-2024">https://usegalaxy.eu/join-training/bm425-workshop1-2024</a></li>
+<li><a href="download-data.html" class="quarto-xref"><span>4&nbsp; Download Workshop Data</span></a> to your computer</li>
+<li><a href="upload-data.html" class="quarto-xref"><span>5&nbsp; Upload Data to Galaxy</span></a> to your Galaxy history</li>
+</ul>
+<div id="fig-tiaas-logo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Galaxy TIaaS (Teaching Infrastructure as a Service) logo">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tiaas-logo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/tiaas-logo.png" class="img-fluid figure-img" style="width:80.0%" alt="Galaxy TIaaS (Teaching Infrastructure as a Service) logo">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tiaas-logo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Today’s workshop is enabled by Galaxy EU Teaching Infrastructure as a Service.
+</figcaption>
+</figure>
+</div>
 
 
 
@@ -681,7 +682,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/workshop.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/galaxy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
