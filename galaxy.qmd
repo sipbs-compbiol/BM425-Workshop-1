@@ -1,0 +1,9 @@
+# Galaxy {#sec-galaxy .unnumbered}
+
+The chapters in this section of the workshop will guide you through registering an account with [Galaxy EU](https://usegalaxy.eu), and uploading workshop data to the Galaxy instance.
+
+- @sec-join-session at [https://usegalaxy.eu/join-training/bm425-workshop1-2024](https://usegalaxy.eu/join-training/bm425-workshop1-2024)
+- @sec-download-data to your computer
+- @sec-upload-data to your Galaxy history
+
+![Today's workshop is enabled by Galaxy EU Teaching Infrastructure as a Service.](assets/images/tiaas-logo.png){#fig-tiaas-logo fig-alt="Galaxy TIaaS (Teaching Infrastructure as a Service) logo" width="80%"}

@@ -2,6 +2,6 @@
 
 We are greatly indebted to the [European Galaxy TIaaS (Teaching Infrastructure as a Service)](https://usegalaxy.org/tiaas/) scheme for providing dedicated server time for your workshop today.
 
-![](assets/images/tiaas-logo.png){fig-alt="Galaxy TIaaS (Teaching Infrastructure as a Service) logo"}
+![Galaxy Teaching Infrastructure as a Service logo](assets/images/tiaas-logo.png){fig-alt="Galaxy TIaaS (Teaching Infrastructure as a Service) logo" width="80%"}
 
 We gratefully acknowledge the support of the Freiburg Galaxy Team: Prof. Björn Grüning and Prof. Rolf Backofen, Bioinformatics, University of Freiburg (Germany) funded by the [Collaborative Research Centre 992 Medical Epigenetics](http://www.sfb992.uni-freiburg.de/) ([DFG](http://www.dfg.de/) grant SFB 992/1 2012) and the German Federal Ministry of Education and Research [BMBF](http://www.bmbf.de/) grant 031 A538A [de.NBI](https://www.denbi.de/)-RBC.

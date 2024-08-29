@@ -39,7 +39,7 @@ book:
     - intro.qmd
     - galaxy-registration.qmd
 
-    - part: workshop.qmd
+    - part: galaxy.qmd
       chapters: 
         - join-session.qmd
         - download-data.qmd
