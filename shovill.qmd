@@ -117,6 +117,10 @@ To use `Bandage` to visualise your genome assembly
 {{< video assets/movies/bandage-1.mp4 title="Visualising the genome assembly with `Bandage Image`" >}}
 :::
 
+::: { .callout-tip }
+**Inspect the assembly graph by clicking on the `eye` icon for the Assembly Graph Image output.**
+:::
+
 ## Next steps
 
 With a complete genome assembly, we can begin to annotate genomic features such as gene sequences, and you will do this using `Prokka` in @sec-prokka.
