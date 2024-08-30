@@ -60,7 +60,7 @@ When reporting how you assembled your sequence data in a manuscript or dissertat
 ::: { .callout-note }
 ## Video: Assembling the SARS-CoV-2 genome using `Shovill`
 
-{{< video assets/movies/shovill-1.mp4 title="Genome assembly using `Shovill`" >}}
+{{< video assets/movies/shovill-1_full.mp4 title="Genome assembly using `Shovill`" >}}
 :::
 
 ::: { .callout-caution }
@@ -114,7 +114,7 @@ To use `Bandage` to visualise your genome assembly
 ::: { .callout-note }
 ## Video: Visualising the SARS-CoV-2 assembly using `Bandage Image`
 
-{{< video assets/movies/bandage-1.mp4 title="Visualising the genome assembly with `Bandage Image`" >}}
+{{< video assets/movies/bandage-1_full.mp4 title="Visualising the genome assembly with `Bandage Image`" >}}
 :::
 
 ::: { .callout-tip }

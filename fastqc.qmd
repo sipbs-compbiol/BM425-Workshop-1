@@ -44,7 +44,7 @@ This part of the workshop will cover the use of `FastQC` to inspect the quality 
 ::: { .callout-note }
 ## Video: Using `FastQC` to assess the quality of your sequencing reads
 
-{{< video assets/movies/fastqc-1.mp4 title="Assessing sequencing read quality with `FastQC`" >}}
+{{< video assets/movies/fastqc-1_full.mp4 title="Assessing sequencing read quality with `FastQC`" >}}
 :::
 
 ::: { .callout-important }
@@ -68,7 +68,7 @@ The output of `FastQC` tells us a lot about the quality of our sequencing data, 
 ::: { .callout-note }
 ## Video: Inspecting `FastQC` output in Galaxy
 
-{{< video assets/movies/fastqc-2.mp4 title="Inspecting `FastQC` output in Galaxy" >}}
+{{< video assets/movies/fastqc-2_full.mp4 title="Inspecting `FastQC` output in Galaxy" >}}
 :::
 
 ### `FastQC` Summary

@@ -43,7 +43,7 @@ This part of the workshop will guide you through using `trimmomatic` to clear yo
 ::: { .callout-note }
 ## Video: Using `trimmomatic` to clean raw sequencing reads
 
-{{< video assets/movies/trimmomatic-1.mp4 title="Cleaning raw sequencing reads with `trimmomatic`" >}}
+{{< video assets/movies/trimmomatic-1_full.mp4 title="Cleaning raw sequencing reads with `trimmomatic`" >}}
 :::
 
 ## `trimmomatic` Output
@@ -59,7 +59,7 @@ You can inspect the contents of these files by clicking on the filename in the `
 ::: { .callout-note }
 ## Video: Inspecting `trimmomatic` output files
 
-{{< video assets/movies/trimmomatic-2.mp4 title="Inspeccting reads cleaned with `trimmomatic`" >}}
+{{< video assets/movies/trimmomatic-2_full.mp4 title="Inspeccting reads cleaned with `trimmomatic`" >}}
 :::
 
 ## Next steps

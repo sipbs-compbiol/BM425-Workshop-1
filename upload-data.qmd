@@ -47,7 +47,7 @@ Galaxy is usually clever enough to determine for itself what data is in a partic
 ::: { .callout-note }
 ## Video: Uploading files with the `You can load your own data` link
 
-{{< video assets/movies/upload-data-1.mp4 title="Uploading data via the 'You can load your own data' link" >}}
+{{< video assets/movies/upload-data-1_full.mp4 title="Uploading data via the 'You can load your own data' link" >}}
 :::
 
 ### Use the `Upload Data` button in the `Tools` sidebar
@@ -65,7 +65,7 @@ This file is substantially larger than the files you uploaded above, and will ta
 ::: { .callout-note }
 ## Video: Uploading files with the `Upload` button
 
-{{< video assets/movies/upload-data-2.mp4 title="Uploading data via the 'Upload' button" >}}
+{{< video assets/movies/upload-data-2_full.mp4 title="Uploading data via the 'Upload' button" >}}
 :::
 
 ### Drag and drop data onto the workspace
@@ -82,7 +82,7 @@ You can also drag and drop data files directly into the central workspace window
 ::: { .callout-note }
 ## Video: Uploading files by dragging them into the workspace
 
-{{< video assets/movies/upload-data-3.mp4 title="Uploading data by dragging it into the Workspace" >}}
+{{< video assets/movies/upload-data-3_full.mp4 title="Uploading data by dragging it into the Workspace" >}}
 :::
 
 ## Inspecting Data
@@ -107,7 +107,7 @@ You can view the complete file contents (or at least a large preview of up to 1M
 ::: { .callout-note }
 ## Video: Inspecting a data file in the `History` and the `Workspace`
 
-{{< video assets/movies/inspect-data-1.mp4 title="Inspecting data in the History and Workspace" >}}
+{{< video assets/movies/inspect-data-1_full.mp4 title="Inspecting data in the History and Workspace" >}}
 :::
 
 ### Using additional tools
@@ -125,5 +125,5 @@ View the video below to see some examples of this output.
 ::: { .callout-note }
 ## Video: Using interactive data inspection tools
 
-{{< video assets/movies/inspect-data-2.mp4 title="Using the interactive data inspection tools" >}}
+{{< video assets/movies/inspect-data-2_full.mp4 title="Using the interactive data inspection tools" >}}
 :::

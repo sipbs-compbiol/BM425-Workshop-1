@@ -50,7 +50,7 @@ Prokka can use a core set of reference databases for the specified genus being a
 ::: { .callout-note }
 ## Video: Identifying the SARS-CoV-2 lineage at NCBI Taxonomy
 
-{{< video assets/movies/ncbi_taxonomy_720.mp4 title="Using NCBI Taxonomy to determine the SARS-CoV-2 lineage." >}}
+{{< video assets/movies/ncbi_taxonomy_full.mp4 title="Using NCBI Taxonomy to determine the SARS-CoV-2 lineage." >}}
 :::
 
 ## Annotate the Genome
@@ -73,7 +73,7 @@ Now that we know the appropriate genus for our assembly, we can use `Prokka` to 
 ::: { .callout-note }
 ## Video: Annotating the SARS-CoV-2 genome using `Prokka`
 
-{{< video assets/movies/prokka-1.mp4 title="Annotating the virus genome using `Prokka`." >}}
+{{< video assets/movies/prokka-1_full.mp4 title="Annotating the virus genome using `Prokka`." >}}
 :::
 
 ::: { .callout-caution }
@@ -103,7 +103,7 @@ It can be worth spending a little time inspecting these output files to see what
 ::: { .callout-note }
 ## Video: Inspecting `Prokka` output
 
-{{< video assets/movies/prokka-2_x264.mp4 title="Inspecting the virus genome `Prokka` annotation." >}}
+{{< video assets/movies/prokka-2_full.mp4 title="Inspecting the virus genome `Prokka` annotation." >}}
 :::
 :::
 

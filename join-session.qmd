@@ -70,5 +70,5 @@ To assign a name to your workflow:
 
 ::: { .callout-note }
 ## Video: Renaming A Galaxy Workflow
-{{< video assets/movies/rename_history.mp4 title="Renaming your Galaxy history" >}}
+{{< video assets/movies/rename_history_full.mp4 title="Renaming your Galaxy history" >}}
 :::
