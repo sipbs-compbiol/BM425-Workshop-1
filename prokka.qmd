@@ -1,0 +1,144 @@
+# Annotate the Genome {#sec-prokka}
+
+The `Prokka` tool (@Seemann2014-uh) is an annotation pipeline designed specifically for prokaryotes (hence the name…), but it will also work very well on virus genomes.
+
+- [`Prokka` documentation](https://github.com/tseemann/prokka)
+
+::: { .callout-note }
+`Prokka` produces a set of output files corresponding to accepted community standards, intended to be ready for submission of the annotated genome to a public repository.
+
+In practice, submissions to the NCBI repository often use NCBI's own Prokaryotic Genome Annotation Pipeline (PGAP) tool, which runs when the genome is sent to NCBI. _This typically produces different annotation results to `Prokka`._
+:::
+
+::: { .callout-important }
+## Good practice
+
+When reporting how you annotated your genome in a manuscript or dissertation, you should always state:
+
+1. The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)
+2. The parameters used when running the tool (if default parameters were used, state this)
+3. The number of features that were annotated; if there is space, providing a table of feature types (e.g. genes, coding sequences (CDS), RNA sequences, etc.) and their corresponding counts can be helpful.
+:::
+
+## Determine Genome Taxonomy
+
+Prokka can use a core set of reference databases for the specified genus being annotated, to improve annotation accuracy. To make the best use of `Prokka` we should provide the sequenced organism's genus. To find out what this is, we will use the NCBI Taxonomy service.
+
+- [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy)
+
+1. Click on the NCBI Taxonomy [link](https://www.ncbi.nlm.nih.gov/taxonomy) to reach the NCBI Taxonomy service
+2. Enter `SARS-CoV-2` into the search field and click `Search`
+3. Click on the search result
+4. Mouseover the `Lineage` information to identify the genus of SARS-CoV-2
+
+::: { .callout-tip }
+## Questions
+
+1. What is the genus of SARS-CoV-2
+2. How many SARS-CoV-2 genome _assemblies_ can be found at NCBI?
+3. How many SARS-CoV-2 _nucleotide sequences_ can be found at NCBI?
+:::
+
+::: { .callout-important collapse="true" }
+## Answers
+
+1. SARS-CoV-2 is a _Betacoronovirus_
+2. There are 116 SARS-CoV-2 assemblies at NCBI (as of 2024-08-30)
+3. There are 8,850,155 SARS-CoV-2 nucleotide assemblies at NCBI (as of 2024-08-30)
+:::
+
+::: { .callout-note }
+## Video: Identifying the SARS-CoV-2 lineage at NCBI Taxonomy
+
+{{< video assets/movies/ncbi_taxonomy_720.mp4 title="Using NCBI Taxonomy to determine the SARS-CoV-2 lineage." >}}
+:::
+
+## Annotate the Genome
+
+Now that we know the appropriate genus for our assembly, we can use `Prokka` to annotate it.
+
+1. Navigate to the `prokka` tool using the `Tools` sidebar in Galaxy
+2. Select the `prokka` tool
+3. Make sure that the `Shovill` output for `Contigs` is selected as `Contigs to annotate`
+4. Set the `Locus tag prefix` to `SARSCoV2`
+  - _this will be used to help give each annotated feature a recognisable name_
+5. Select `Yes` for `Force GenBank/ENA/DDJB compliance`
+6. Enter `Betacoronavirus` under `Genus name`
+7. Enter `SARS-CoV-2` under `Species name`
+8. Enter `Wuhan 1` under `Strain name`
+9. Select `Viruses` from the drop-down box under `Kingdom`
+10. Select `Yes` for `Use genus-specific BLAST database`
+11. Click on `Run Tool`
+
+::: { .callout-note }
+## Video: Annotating the SARS-CoV-2 genome using `Prokka`
+
+{{< video assets/movies/prokka-1.mp4 title="Annotating the virus genome using `Prokka`." >}}
+:::
+
+::: { .callout-caution }
+**`Prokka` can take a few minutes to run to completion.**
+:::
+
+## `Prokka` output
+
+`Prokka` produces several annotation output files, in standard bioinformatics data formats. These formats are designed to be processed unambiguously by bioinformatics software tools. The output includes
+
+::: { .column-margin }
+![`Prokka` output files in Galaxy.](assets/images/prokka_output_list.png){#fig-prokka-output-list}
+:::
+
+- `.log`: a log file of what `Prokka` did while annotating the genome
+- `.gff`: a table of annotated features
+- `.tsv`: a summary table of annotated features
+- `.ffn`: FASTA format nucleotide sequences of annotated features
+- `.faa`: FASTA format amino acid sequences of annotated features
+- `.gbk`: GenBank format file combining the genome sequence and its annotations
+
+::: { .callout-note collapse="true" }
+## Data file formats
+
+It can be worth spending a little time inspecting these output files to see what kinds of data they do and do not contain.
+
+::: { .callout-note }
+## Video: Inspecting `Prokka` output
+
+{{< video assets/movies/prokka-2.mp4 title="Inspeciting the virus genome `Prokka` annotation." >}}
+:::
+:::
+
+::: { .callout-tip }
+## Questions
+
+1. How many genes were annotated by `Prokka`?
+2. How many coding sequences (CDS) were annotated by `Prokka`?
+3. How many genes were identified on the reverse strand?
+4. What is the product of the longest annotated gene?
+5. How long is the shortest annotated gene that is not a "hypothetical protein"?
+6. What version of `Prokka` was used to annotate the genome?
+7. What are the start and end base positions of the spike protein?
+:::
+
+::: { .callout-warning collapse="true" }
+## Hints
+
+1. Look in the `.gff` file
+2. Look in the `.gff` file
+3. Look in the `.gff` file
+4. Look in the `.tsv` file
+5. Look in the `.tsv` file
+6. Look in the `.gbk` file
+7. Look in the `.gff` file
+:::
+
+::: { .callout-important collapse="true" }
+## Answers
+
+1. Nine (9) genes were annotated
+2. Nine (9) CDS were annotated
+3. No genes are identified on the reverse strand (there is no reverse strand to an RNA virus)
+4. Replicase polyprotein 1a is the longest gene (13218 bases)
+5. The shortest non-hypothetical gene is protein 7a (366 bases)
+6. `Prokka` v1.14.6
+7. 21568..25389
+:::
