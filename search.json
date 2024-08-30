@@ -386,10 +386,54 @@
     "href": "shovill.html#next-steps",
     "title": "8  Assemble the Genome",
     "section": "8.4 Next steps",
-    "text": "8.4 Next steps\nWith a complete genome assembly, we can begin to annotate genomic features such as gene sequences, and you will do this using Prokka in ?sec-prokka.\n\n\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and Anton Korobeynikov. 2020. “Using SPAdes DE Novo Assembler.” Curr. Protoc. Bioinformatics 70 (1): e102.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015. “Bandage: Interactive Visualization of de Novo Genome Assemblies.” Bioinformatics 31 (20): 3350–52.",
+    "text": "8.4 Next steps\nWith a complete genome assembly, we can begin to annotate genomic features such as gene sequences, and you will do this using Prokka in Chapter 9.\n\n\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and Anton Korobeynikov. 2020. “Using SPAdes DE Novo Assembler.” Curr. Protoc. Bioinformatics 70 (1): e102.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015. “Bandage: Interactive Visualization of de Novo Genome Assemblies.” Bioinformatics 31 (20): 3350–52.",
     "crumbs": [
       "Genome Assembly",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Assemble the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "prokka.html",
+    "href": "prokka.html",
+    "title": "9  Annotate the Genome",
+    "section": "",
+    "text": "9.1 Determine Genome Taxonomy\nProkka can use a core set of reference databases for the specified genus being annotated, to improve annotation accuracy. To make the best use of Prokka we should provide the sequenced organism’s genus. To find out what this is, we will use the NCBI Taxonomy service.",
+    "crumbs": [
+      "Genome Annotation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Annotate the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "prokka.html#determine-genome-taxonomy",
+    "href": "prokka.html#determine-genome-taxonomy",
+    "title": "9  Annotate the Genome",
+    "section": "",
+    "text": "NCBI Taxonomy\n\n\nClick on the NCBI Taxonomy link to reach the NCBI Taxonomy service\nEnter SARS-CoV-2 into the search field and click Search\nClick on the search result\nMouseover the Lineage information to identify the genus of SARS-CoV-2\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat is the genus of SARS-CoV-2\nHow many SARS-CoV-2 genome assemblies can be found at NCBI?\nHow many SARS-CoV-2 nucleotide sequences can be found at NCBI?\n\n\n\n\n\n\n\n\n\nAnswers\n\n\n\n\n\n\nSARS-CoV-2 is a Betacoronovirus\nThere are 116 SARS-CoV-2 assemblies at NCBI (as of 2024-08-30)\nThere are 8,850,155 SARS-CoV-2 nucleotide assemblies at NCBI (as of 2024-08-30)\n\n\n\n\n\n\n\n\n\n\nVideo: Identifying the SARS-CoV-2 lineage at NCBI Taxonomy",
+    "crumbs": [
+      "Genome Annotation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Annotate the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "prokka.html#annotate-the-genome",
+    "href": "prokka.html#annotate-the-genome",
+    "title": "9  Annotate the Genome",
+    "section": "9.2 Annotate the Genome",
+    "text": "9.2 Annotate the Genome\nNow that we know the appropriate genus for our assembly, we can use Prokka to annotate it.\n\nNavigate to the prokka tool using the Tools sidebar in Galaxy\nSelect the prokka tool\nMake sure that the Shovill output for Contigs is selected as Contigs to annotate\nSet the Locus tag prefix to SARSCoV2\n\n\nthis will be used to help give each annotated feature a recognisable name\n\n\nSelect Yes for Force GenBank/ENA/DDJB compliance\nEnter Betacoronavirus under Genus name\nEnter SARS-CoV-2 under Species name\nEnter Wuhan 1 under Strain name\nSelect Viruses from the drop-down box under Kingdom\nSelect Yes for Use genus-specific BLAST database\nClick on Run Tool\n\n\n\n\n\n\n\nVideo: Annotating the SARS-CoV-2 genome using Prokka\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nProkka can take a few minutes to run to completion.",
+    "crumbs": [
+      "Genome Annotation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Annotate the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "prokka.html#prokka-output",
+    "href": "prokka.html#prokka-output",
+    "title": "9  Annotate the Genome",
+    "section": "9.3 Prokka output",
+    "text": "9.3 Prokka output\nProkka produces several annotation output files, in standard bioinformatics data formats. These formats are designed to be processed unambiguously by bioinformatics software tools. The output includes\n\n\n\n\n\n\n\n\nFigure 9.1: Prokka output files in Galaxy.\n\n\n\n\n.log: a log file of what Prokka did while annotating the genome\n.gff: a table of annotated features\n.tsv: a summary table of annotated features\n.ffn: FASTA format nucleotide sequences of annotated features\n.faa: FASTA format amino acid sequences of annotated features\n.gbk: GenBank format file combining the genome sequence and its annotations\n\n\n\n\n\n\n\nData file formats\n\n\n\n\n\nIt can be worth spending a little time inspecting these output files to see what kinds of data they do and do not contain.\n\n\n\n\n\n\nVideo: Inspecting Prokka output\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nHow many genes were annotated by Prokka?\nHow many coding sequences (CDS) were annotated by Prokka?\nHow many genes were identified on the reverse strand?\nWhat is the product of the longest annotated gene?\nHow long is the shortest annotated gene that is not a “hypothetical protein”?\nWhat version of Prokka was used to annotate the genome?\nWhat are the start and end base positions of the spike protein?\n\n\n\n\n\n\n\n\n\nHints\n\n\n\n\n\n\nLook in the .gff file\nLook in the .gff file\nLook in the .gff file\nLook in the .tsv file\nLook in the .tsv file\nLook in the .gbk file\nLook in the .gff file\n\n\n\n\n\n\n\n\n\n\nAnswers\n\n\n\n\n\n\nNine (9) genes were annotated\nNine (9) CDS were annotated\nNo genes are identified on the reverse strand (there is no reverse strand to an RNA virus)\nReplicase polyprotein 1a is the longest gene (13218 bases)\nThe shortest non-hypothetical gene is protein 7a (366 bases)\nProkka v1.14.6\n21568..25389\n\n\n\n\n\n\n\n\nSeemann, Torsten. 2014. “Prokka: Rapid Prokaryotic Genome Annotation.” Bioinformatics 30 (14): 2068–69.",
+    "crumbs": [
+      "Genome Annotation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Annotate the Genome</span>"
     ]
   },
   {
@@ -407,7 +451,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Cock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nHuang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020.\n“Structural and Functional Properties of SARS-CoV-2\nSpike Protein: Potential Antivirus Drug Development for\nCOVID-19.” Acta Pharmacol. Sin. 41 (9):\n1141–49.\n\n\nLi, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah\nLam. 2015. “MEGAHIT: An Ultra-Fast Single-Node\nSolution for Large and Complex Metagenomics Assembly via Succinct de\nBruijn Graph.” Bioinformatics 31 (10): 1674–76.\n\n\nMathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,\nCharlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.\n“Coronavirus Pandemic (COVID-19).” Our World in\nData.\n\n\nOude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,\nManon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.\n“Rapid SARS-CoV-2 Whole-Genome Sequencing and\nAnalysis for Informed Public Health Decision-Making in the\nNetherlands.” Nat. Med. 26 (9): 1405–10.\n\n\nPal, Aruna. 2022. “Rapid Amplification of cDNA Ends (RACE).” In\nSpringer Protocols Handbooks, 505–35. New York, NY: Springer\nUS.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and\nAnton Korobeynikov. 2020. “Using SPAdes\nDE Novo Assembler.” Curr. Protoc.\nBioinformatics 70 (1): e102.\n\n\nRota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray\nCampagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.\n“Characterization of a Novel Coronavirus Associated with Severe\nAcute Respiratory Syndrome.” Science 300 (5624):\n1394–99.\n\n\nWang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.\n“A Novel Coronavirus Outbreak of Global Health Concern.”\nLancet 395 (10223): 470–73.\n\n\nWatson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,\nPeter Winskill, and Azra C Ghani. 2022. “Global Impact of the\nFirst Year of COVID-19 Vaccination: A Mathematical\nModelling Study.” Lancet Infect. Dis. 22 (9): 1293–1302.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015.\n“Bandage: Interactive Visualization of de Novo Genome\nAssemblies.” Bioinformatics 31 (20): 3350–52.\n\n\nWu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,\net al. 2020. “A New Coronavirus Associated with Human Respiratory\nDisease in China.” Nature 579 (7798): 265–69.",
+    "text": "Cock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nHuang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020.\n“Structural and Functional Properties of SARS-CoV-2\nSpike Protein: Potential Antivirus Drug Development for\nCOVID-19.” Acta Pharmacol. Sin. 41 (9):\n1141–49.\n\n\nLi, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah\nLam. 2015. “MEGAHIT: An Ultra-Fast Single-Node\nSolution for Large and Complex Metagenomics Assembly via Succinct de\nBruijn Graph.” Bioinformatics 31 (10): 1674–76.\n\n\nMathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,\nCharlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.\n“Coronavirus Pandemic (COVID-19).” Our World in\nData.\n\n\nOude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,\nManon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.\n“Rapid SARS-CoV-2 Whole-Genome Sequencing and\nAnalysis for Informed Public Health Decision-Making in the\nNetherlands.” Nat. Med. 26 (9): 1405–10.\n\n\nPal, Aruna. 2022. “Rapid Amplification of cDNA Ends (RACE).” In\nSpringer Protocols Handbooks, 505–35. New York, NY: Springer\nUS.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and\nAnton Korobeynikov. 2020. “Using SPAdes\nDE Novo Assembler.” Curr. Protoc.\nBioinformatics 70 (1): e102.\n\n\nRota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray\nCampagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.\n“Characterization of a Novel Coronavirus Associated with Severe\nAcute Respiratory Syndrome.” Science 300 (5624):\n1394–99.\n\n\nSeemann, Torsten. 2014. “Prokka: Rapid Prokaryotic Genome\nAnnotation.” Bioinformatics 30 (14): 2068–69.\n\n\nWang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.\n“A Novel Coronavirus Outbreak of Global Health Concern.”\nLancet 395 (10223): 470–73.\n\n\nWatson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,\nPeter Winskill, and Azra C Ghani. 2022. “Global Impact of the\nFirst Year of COVID-19 Vaccination: A Mathematical\nModelling Study.” Lancet Infect. Dis. 22 (9): 1293–1302.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015.\n“Bandage: Interactive Visualization of de Novo Genome\nAssemblies.” Bioinformatics 31 (20): 3350–52.\n\n\nWu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,\net al. 2020. “A New Coronavirus Associated with Human Respiratory\nDisease in China.” Nature 579 (7798): 265–69.",
     "crumbs": [
       "References"
     ]
@@ -440,6 +484,16 @@
     "text": "When we have a cleaned input dataset of sequenced reads, we can begin to assemble the virus genome.",
     "crumbs": [
       "Genome Assembly"
+    ]
+  },
+  {
+    "objectID": "annotation.html",
+    "href": "annotation.html",
+    "title": "Genome Annotation",
+    "section": "",
+    "text": "Once we have assembled our sequence, we can use what we know about the features of other genomes to predict what features are present on this genome.",
+    "crumbs": [
+      "Genome Annotation"
     ]
   }
 ]
