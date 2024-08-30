@@ -331,10 +331,65 @@
     "href": "trimmomatic.html#next-steps",
     "title": "7  Clean Raw Read Data",
     "section": "7.3 Next steps",
-    "text": "7.3 Next steps\nNow that we have clean, high-quality sequencing reads, we can move on to assembling the SARS-CoV-2 genome, in ?sec-shovill.",
+    "text": "7.3 Next steps\nNow that we have clean, high-quality sequencing reads, we can move on to assembling the SARS-CoV-2 genome, in Chapter 8.",
     "crumbs": [
       "Workshop",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Clean Raw Read Data</span>"
+    ]
+  },
+  {
+    "objectID": "shovill.html",
+    "href": "shovill.html",
+    "title": "8  Assemble the Genome",
+    "section": "",
+    "text": "8.1 Using Shovill",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Assemble the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "shovill.html#using-shovill",
+    "href": "shovill.html#using-shovill",
+    "title": "8  Assemble the Genome",
+    "section": "",
+    "text": "Navigate to the shovill tool using the Tools sidebar in Galaxy\nSelect the shovill tool\nMake sure that you have selected Paired End as the Input reads type\nChoose the (R1 paired) output from trimmomatic as Forward reads (R1)\nChoose the (R2 paired) output from trimmomatic as Reverse reads (R2)\nSelect No for Trim reads (we already did this in Chapter 7)\nMake sure Spades is selected in Assembler to use\nClick Run Tool\n\n\n\n\n\n\n\nVideo: Assembling the SARS-CoV-2 genome using Shovill\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nShovill can take a few minutes to run to completion.",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Assemble the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "shovill.html#shovill-output",
+    "href": "shovill.html#shovill-output",
+    "title": "8  Assemble the Genome",
+    "section": "8.2 Shovill Output",
+    "text": "8.2 Shovill Output\nShovill produces three output files.\n\nA contig file, containing the genome assembly as one or more contig sequences\nA contig graph file, describing the assembly as a graph, with assembled contigs as nodes, and edges linking them in the way the assembler thinks they might be connected\nA log file, describing the progress of the assembly run\n\n\n\n\n\n\n\n\n\nFigure 8.1: Shovill output files in Galaxy. From the top: the contig graph file, contig file, and the log file.\n\n\n\nAs with other Galaxy tools, you can inspect the contents of these files by clicking on the filename in the History sidebar, and also by clicking on the corresponding eye icon to view the trimmed reads in the workspace.\n\n\n\n\n\n\nQuestions\n\n\n\nOpen the contig file output from Shovill and inspect the data.\n\nHow many contigs (sequences) were assembled?\nHow long are the assembled sequences?\n\n\n\n\n\n\n\n\n\nAnswers\n\n\n\n\n\n\nA single contig sequence is assembled.\nThe length of the contig is 29878 bases.",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Assemble the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "shovill.html#visualising-the-assembly",
+    "href": "shovill.html#visualising-the-assembly",
+    "title": "8  Assemble the Genome",
+    "section": "8.3 Visualising the Assembly",
+    "text": "8.3 Visualising the Assembly\nThe Bandage software package (Wick et al. (2015)) can take assembly output from tools such as SPAdes and Shovill, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and potential sequencing of co-cultures of related strains, rather than an axenic isolate.\n\nBandage documentation\nBandage website\n\nTo use Bandage to visualise your genome assembly\n\nNavigate to the Bandage Image tool using the Tools sidebar in Galaxy\nSelect the Bandage Image tool\nMake sure that you have selected the Contig Graph file as the Graphical Fragment Assembly input\nClick Run Tool\n\n\n\n\n\n\n\nVideo: Visualising the SARS-CoV-2 assembly using Bandage Image",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Assemble the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "shovill.html#next-steps",
+    "href": "shovill.html#next-steps",
+    "title": "8  Assemble the Genome",
+    "section": "8.4 Next steps",
+    "text": "8.4 Next steps\nWith a complete genome assembly, we can begin to annotate genomic features such as gene sequences, and you will do this using Prokka in ?sec-prokka.\n\n\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and Anton Korobeynikov. 2020. “Using SPAdes DE Novo Assembler.” Curr. Protoc. Bioinformatics 70 (1): e102.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015. “Bandage: Interactive Visualization of de Novo Genome Assemblies.” Bioinformatics 31 (20): 3350–52.",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Assemble the Genome</span>"
     ]
   },
   {
@@ -352,7 +407,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Cock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nHuang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020.\n“Structural and Functional Properties of SARS-CoV-2\nSpike Protein: Potential Antivirus Drug Development for\nCOVID-19.” Acta Pharmacol. Sin. 41 (9):\n1141–49.\n\n\nLi, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah\nLam. 2015. “MEGAHIT: An Ultra-Fast Single-Node\nSolution for Large and Complex Metagenomics Assembly via Succinct de\nBruijn Graph.” Bioinformatics 31 (10): 1674–76.\n\n\nMathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,\nCharlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.\n“Coronavirus Pandemic (COVID-19).” Our World in\nData.\n\n\nOude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,\nManon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.\n“Rapid SARS-CoV-2 Whole-Genome Sequencing and\nAnalysis for Informed Public Health Decision-Making in the\nNetherlands.” Nat. Med. 26 (9): 1405–10.\n\n\nPal, Aruna. 2022. “Rapid Amplification of cDNA Ends (RACE).” In\nSpringer Protocols Handbooks, 505–35. New York, NY: Springer\nUS.\n\n\nRota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray\nCampagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.\n“Characterization of a Novel Coronavirus Associated with Severe\nAcute Respiratory Syndrome.” Science 300 (5624):\n1394–99.\n\n\nWang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.\n“A Novel Coronavirus Outbreak of Global Health Concern.”\nLancet 395 (10223): 470–73.\n\n\nWatson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,\nPeter Winskill, and Azra C Ghani. 2022. “Global Impact of the\nFirst Year of COVID-19 Vaccination: A Mathematical\nModelling Study.” Lancet Infect. Dis. 22 (9): 1293–1302.\n\n\nWu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,\net al. 2020. “A New Coronavirus Associated with Human Respiratory\nDisease in China.” Nature 579 (7798): 265–69.",
+    "text": "Cock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nHuang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020.\n“Structural and Functional Properties of SARS-CoV-2\nSpike Protein: Potential Antivirus Drug Development for\nCOVID-19.” Acta Pharmacol. Sin. 41 (9):\n1141–49.\n\n\nLi, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah\nLam. 2015. “MEGAHIT: An Ultra-Fast Single-Node\nSolution for Large and Complex Metagenomics Assembly via Succinct de\nBruijn Graph.” Bioinformatics 31 (10): 1674–76.\n\n\nMathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,\nCharlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.\n“Coronavirus Pandemic (COVID-19).” Our World in\nData.\n\n\nOude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,\nManon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.\n“Rapid SARS-CoV-2 Whole-Genome Sequencing and\nAnalysis for Informed Public Health Decision-Making in the\nNetherlands.” Nat. Med. 26 (9): 1405–10.\n\n\nPal, Aruna. 2022. “Rapid Amplification of cDNA Ends (RACE).” In\nSpringer Protocols Handbooks, 505–35. New York, NY: Springer\nUS.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and\nAnton Korobeynikov. 2020. “Using SPAdes\nDE Novo Assembler.” Curr. Protoc.\nBioinformatics 70 (1): e102.\n\n\nRota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray\nCampagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.\n“Characterization of a Novel Coronavirus Associated with Severe\nAcute Respiratory Syndrome.” Science 300 (5624):\n1394–99.\n\n\nWang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.\n“A Novel Coronavirus Outbreak of Global Health Concern.”\nLancet 395 (10223): 470–73.\n\n\nWatson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,\nPeter Winskill, and Azra C Ghani. 2022. “Global Impact of the\nFirst Year of COVID-19 Vaccination: A Mathematical\nModelling Study.” Lancet Infect. Dis. 22 (9): 1293–1302.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015.\n“Bandage: Interactive Visualization of de Novo Genome\nAssemblies.” Bioinformatics 31 (20): 3350–52.\n\n\nWu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,\net al. 2020. “A New Coronavirus Associated with Human Respiratory\nDisease in China.” Nature 579 (7798): 265–69.",
     "crumbs": [
       "References"
     ]
@@ -375,6 +430,16 @@
     "text": "The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.\n\nAssessing the quality of sequence read data\nPrepare your sequencing read data for assembly\nAssemble a genome from your sequencing data\nVisualise your genome assembly\nAnnotate your assembly\nVisualise your annotation\nMap reads from your SARS-CoV-2 isolate to the SARS 2003 genome\nVisualise the mapped reads using JBrowse2\nIdentify sequence variants (SNPs, Single Nucleotide Polymorphisms) between SARS-CoV-2 and SARS 2003\nUse what you’ve learned to identify and interpret changes in the SARS-CoV-2 virus during the COVID-19 pandemic",
     "crumbs": [
       "Workshop"
+    ]
+  },
+  {
+    "objectID": "assembly.html",
+    "href": "assembly.html",
+    "title": "Genome Assembly",
+    "section": "",
+    "text": "When we have a cleaned input dataset of sequenced reads, we can begin to assemble the virus genome.",
+    "crumbs": [
+      "Genome Assembly"
     ]
   }
 ]
