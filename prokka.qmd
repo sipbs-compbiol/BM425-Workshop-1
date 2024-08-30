@@ -103,7 +103,7 @@ It can be worth spending a little time inspecting these output files to see what
 ::: { .callout-note }
 ## Video: Inspecting `Prokka` output
 
-{{< video assets/movies/prokka-2.mp4 title="Inspeciting the virus genome `Prokka` annotation." >}}
+{{< video assets/movies/prokka-2_x264.mp4 title="Inspecting the virus genome `Prokka` annotation." >}}
 :::
 :::
 
