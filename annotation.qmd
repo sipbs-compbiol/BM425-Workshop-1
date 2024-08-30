@@ -1,0 +1,3 @@
+# Genome Annotation {#sec-annotation .unnumbered}
+
+Once we have assembled our sequence, we can use what we know about the features of other genomes to predict what features are present on this genome.
