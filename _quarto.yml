@@ -64,9 +64,9 @@ book:
         - bwamem.qmd
         - snippy.qmd
         
-#    - part: exercise.qmd
-#      chapters: 
-#        - instructions.qmd
+    - part: exercise.qmd
+      chapters: 
+        - instructions.qmd
     
     - acknowledgements.qmd
     - references.qmd

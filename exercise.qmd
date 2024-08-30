@@ -1,0 +1,5 @@
+# Be Your Own Bioinformatician {#sec-exercise}
+
+It's time for you to earn your bioinformatics wings, and apply what you've learned today in a whole new analysis, by yourself.
+
+To receive your instructions, go to @sec-instructions.
