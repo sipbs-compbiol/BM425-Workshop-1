@@ -1,0 +1,56 @@
+# Find Sequence Variants {#sec-snippy}
+
+[`snippy`](https://github.com/tseemann/snippy) is a sequence variant finding pipeline, designed for haploid genomes such as prokaryotes and viruses.
+
+- [`snippy` documentation](https://github.com/tseemann/snippy)
+
+As with most kinds of bioinformatics data, there is a data format designed specifically to capture the important elements of the data, and `snippy` outputs its results in this format.
+
+::: { .callout-important }
+## Good practice
+
+When reporting how you identified variants for your manuscript or dissertation, you should always state:
+
+1. The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)
+2. The parameters used when running the tool (if default parameters were used, state this)
+:::
+
+## Using `snippy`
+
+1. Navigate to the `snippy` tool
+2. Select `snippy`
+3. Select `Use a genome from history and build index` from `Will you select a reference genome…`
+4. Choose the `SARS_AY278741.gbk` file in `Use the following dataset as the reference sequence`
+5. Select `Paired` under `Single or Paired-end reads`
+6. Choose the cleaned post-`trimmomatic` `(R1 paired)` data for the forward reads
+7. Choose the cleaned post-`trimmomatic` `(R2 paired)` data for the reverse reads
+8. Click `Run Tool`
+
+::: { .callout-note }
+## Video: Identifying sequence variants using `snippy`
+
+{{< video assets/movies/snippy-1_full.mp4 title="Identifying sequence variants using `snippy`" >}}
+:::
+
+::: { .callout-caution }
+**`snippy` can take a few minutes to run to completion.**
+:::
+
+## `snippy` Output
+
+`snippy` provides output in `.vcf` format, which is designed to be processed by bioinformatics software and is not the most understandable form for humans. To see the `snippy` output in a more human-readable form, click on the `eye` icon for the `snps table` output (@fig-snippy-output).
+
+![The `snippy` `snps table` output. Key columns in the output are: column 2, indicating the position of the variant; column 3, indicating the variant type; column 7, indicating the feature affected by the variant; and column 11, summarising the effect of the variation](assets/images/snippy_table.png){#fig-snippy-output width="80%"}
+
+::: { .callout-note }
+## Video: Inspecting `snippy` output
+
+{{< video assets/movies/snippy-2_full.mp4 title="Inspecting `snippy` output" >}}
+:::
+
+::: { .callout-tip }
+## Questions
+
+1. Can you find these SNPs manually using JBrowse?
+2. Are any SNPs different or inconsistent between the `JBrowse` and `snippy` outputs?
+:::
