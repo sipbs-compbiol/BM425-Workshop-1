@@ -59,9 +59,9 @@ book:
         - prokka.qmd
         - jbrowse.qmd
         
-#    - part: mapping.qmd
-#      chapters:
-#        - bwamem.qmd
+    - part: mapping.qmd
+      chapters:
+        - bwamem.qmd
     
     - acknowledgements.qmd
     - references.qmd

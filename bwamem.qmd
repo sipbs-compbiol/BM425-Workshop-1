@@ -1,0 +1,111 @@
+# Map Reads to the Genome {#sec-bwamem}
+
+Read mapping is a common bioinformatics technique that aligns sequencing reads to a reference genome. It is often used as part of RNA-seq, or _transcriptomic_, analyses, where the number of sequencing reads aligned to a part of the genome indicates the level to which a gene in that region is transcribed. It is also central to technologies such as ChIP-seq (chromatin immunoprecipitation and sequencing), which enables the locations of regulatory promoter binding sites to be found.
+
+Today, you will use the same approach to compare the Wuhan 1 strain of SARS-CoV-2 that you have assembled to a reference genome from a 2003 SARS virus strain (`AY278741`). To do this you will use the [`BWA-MEM2`](https://github.com/bwa-mem2/bwa-mem2) read mapping software (@Vasimuddin2019-dj) to align the cleaned forward and reverse reads from Wuhan 1 to the `AY278741` genome assembly and annotation.
+
+- [`BWA-MEM2` documentation](https://github.com/bwa-mem2/bwa-mem2)
+
+::: { .callout-important }
+## Good practice
+
+When reporting read mapping in a manuscript or dissertation, you should always state:
+
+1. The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)
+2. The parameters used when running the tool (if default parameters were used, state this)
+3. The accession numbers of the reference genome and read data (if available)
+:::
+
+## Using `BWA-MEM2`
+
+1. Navigate to the `BWA-MEM2` tool
+2. Select the `BWA-MEM2` tool
+3. Choose `Use a genome from history and build index` under `Will you select a reference genome…`
+4. Choose the `SARS_AY278741.fasta` sequence under `Use the following dataset as the reference sequence`
+5. Choose `Paired` under `Single of Paired-end reads`
+6. Select the `(R1 paired)` and `(R2 paired)` `trimmomatic` output reads
+7. Click `Run Tool`
+
+::: { .callout-note }
+## Video: Mapping SARS-CoV-2 reads to the 2003 SARS genome using `BWA-MEM2`
+
+{{< video assets/movies/bwamem-1_full.mp4 title="Mapping SARS-CoV-2 reads to the 2003 SARS genome using `BWA-MEM2`" >}}
+:::
+
+::: { .callout-caution }
+**`BWA-MEM2` can take a few minutes to run to completion.**
+:::
+
+## `BWA-MEM2` Output
+
+Unlike many of the other tools you will use today, `BWA-MEM` produces _binary file_ output, which is not human-readable. However, Galaxy can read it and generate a human-friendly translation. The output format of `BWA-MEM2` is `.bam`, and this can be used as an annotation track in `JBrowse`.
+
+::: { .callout-note }
+## Video: Visualising the `BWA-MEM2` `.bam` output as text
+
+{{< video assets/movies/bwamem-2_full.mp4 title="Visualising the `BWA-MEM2` `.bam` output as text" >}}
+:::
+
+## Visualising the mapping in `JBrowse`
+
+We can use the `.bam` file in `JBrowse`, but we need to set up another visualisation like that in @sec-jbrowse.
+
+1. Navigate to the `JBrowse` tool in the `Tools` sidebar
+2. Select the `JBrowse` tool
+3. Under `Reference genome to display`, select the `Use a genome from history` option
+4. Select the `SARS_AY27874.fasta` genome file in `Select the reference genome`
+5. Click on `+ Insert Track Group` to add a new _track group_
+6. In the new track group, enter `Annotation` into the `Track Category` field
+7. Click on `+ Insert Annotation Track` to add a new track to hold the annotation
+8. Make sure that the `Track Type` of the new annotation track is `GFF/GFF3/BED Features`
+9. In `GFF/GFF3/BED Track Data`, select the `SARS_AY27874.gff3` annotation file for the SARS 2003 isolate
+10. Click on `+ Insert Track Group` to add a new _track group_
+11. In the new track group, enter `Mapping` into the `Track Category` field
+12. Click on `+ Insert Annotation Track` to add a new track to hold the mapping data
+13. Make sure that the `Track Type` of the new annotation track is `BAM Pileups`
+14. In `BAM Track Data`, select the `BWA-MEM2` `.bam` output file
+15. Select `Yes` under `Autogenerate SNP Track`
+15. Click `Run Tool`
+
+::: { .callout-note }
+## Video: Configuring `JBrowse` to visualise `BWA-MEM2` mapping data
+
+{{< video assets/movies/bwamem-3_full.mp4 title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data" >}}
+:::
+
+Click on the `eye` icon for the new `JBrowse` output, and select the following tracks to be shown:
+
+1. Reference sequence
+2. Annotation (`SARS_AY278741.gff3`)
+3. Mapping (`SNPs/Coverage`)
+
+to obtain a visualisation of reads that map to the spike (S) protein of SARS 2003, like that shown in @fig-bwamem-1.
+
+![`JBrowse` visualisation of a `BWA-MEM2` mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).](assets/images/bwamem_mapping.png){#fig-bwamem-1 width="80%"}
+
+
+While the spike (S) protein is being visualised, select the `(mapped reads in BAM format track)` to obtain a visualisation similar to the one in @fig-bwamem-2.
+
+![`JBrowse` visualisation of a `BWA-MEM2` mapping of SARS-CoV-2 reads against a SARS 2003 reference genome in the regions of the spike (S) protein.](assets/images/bwamem_snps.png){#fig-bwamem-2 width="80%"}
+
+You can click on the header of the SNP track in `JBrowse` and select `Pin to top`, so that you can zoom in and see individual SNPs, as in the video below.
+
+::: { .callout-note }
+## Video: Visualising SNPs in `JBrowse`
+
+{{< video assets/movies/bwamem-4_full.mp4 title="Visualising SNPs in `JBrowse`" >}}
+:::
+
+::: { .callout-tip }
+## Questions
+
+1. Do SARS-CoV-2 reads map uniformly to the SARS (2003) genome
+2. Where do SARS-CoV-2 and SARS (2003) genomes appear to differ?
+3. When SARS-CoV-2 reads do map to the SARS (2003) genome, how many SNPs are there?
+4. What is the biological significance of the pattern of reads not matching the spike (S) protein?
+5. What implications does this have for vaccine development?
+:::
+
+## Next Steps
+
+We can find SNPs by visual inspection in a tool like `JBrowse`, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in @sec-snippy.
