@@ -57,6 +57,11 @@ book:
     - part: annotation.qmd
       chapters: 
         - prokka.qmd
+        - jbrowse.qmd
+        
+#    - part: mapping.qmd
+#      chapters:
+#        - bwamem.qmd
     
     - acknowledgements.qmd
     - references.qmd

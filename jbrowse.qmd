@@ -1,0 +1,60 @@
+# Visualise the Annotation {#sec-jbrowse}
+
+The GenBank and other files generated in @sec-prokka contain most of the information we need to understand the genome. However, being plain-text files and often quite large, they are not easy to read and process intuitively.
+
+To get the most benefit out of genome annotations, we usually visualise them using an appropriate software tool. The choice of tool depends on the reason for visualisation. The [`Artemis`](https://www.sanger.ac.uk/tool/artemis/) software (@Carver2012-ja) is useful for interactive manual annotation; [`Tablet`](https://ics.hutton.ac.uk/tablet/) is an excellent tool for investigating genome assembly and sequence variation (@Milne2013-vp); and [`Proksee`](https://proksee.ca/) is an online service (@Grant2023-zr) often used to obtain representative images of genome assembly annotations.
+
+- [`Artemis` documentation](https://sanger-pathogens.github.io/Artemis/Artemis/)
+- [`Tablet` documentation](https://ics.hutton.ac.uk/tablet/)
+- [`Proksee` service](https://proksee.ca/)
+
+In this section, you will use [`JBrowse`](https://jbrowse.org/jb2/) (@Diesh2023-go) to visualise your assembly and annotation interactively. `JBrowse` is a lightweight genome browser written in JavaScript that can run as a standalone application, or embedded as a web tool, as it is in Galaxy.
+
+## Visualising the Genome Annotation
+
+To use `JBrowse` to investigate your annotation you need to tell it both what to display, and how to display it.
+
+::: { .callout-warning }
+There are a number of new concepts being introduced here, and they may not make sense until you have tried to visualise your genome annotation.
+
+If you follow the instructions below, and watch the video, you should find that everything works, and the meaning of unfamiliar terms like _track group_ will become apparent.
+:::
+
+1. Navigate to the `JBrowse` tool in the `Tools` sidebar
+2. Select the `JBrowse` tool
+3. Under `Reference genome to display`, select the `Use a genome from history` option
+4. Select the `.fna` output from `Prokka` - this is the complete virus genome - in `Select the reference genome`
+5. Click on `+ Insert Track Group` to add a new _track group_ - this is a collection of annotations
+6. In the new track group, enter `Annotation` into the `Track Category` field
+7. Click on `+ Insert Annotation Track` to add a new track to hold the annotation you made
+8. Make sure that the `Track Type` of the new annotation track is `GFF/GFF3/BED Features`
+9. In `GFF/GFF3/BED Track Data`, select the `Prokka` output `.gff` file from your annotation
+10. Click `Run Tool`
+
+::: { .callout-note }
+## Video: Configuring `JBrowse` for visualisation
+
+{{< video assets/movies/jbrowse-1_full.mp4 title="Configuring `JBrowse` for visualisation." >}}
+:::
+
+When the `JBrowse` output in the `History` sidebar is complete, click on the `eye` icon to bring the visualisation to the main `Workspace` area. Watch the video below to see some of the features of the visualisation in action.
+
+::: { .callout-note }
+## Video: Exploring the `JBrowse` interface
+
+{{< video assets/movies/jbrowse-2_full.mp4 title="Exploring the `JBrowse` interface." >}}
+:::
+
+Using the `JBrowse` interface, you can select whether to show the reference sequence and/or the annotation (@fig-jbrowse-1). By clicking on the annotated features, you can bring up a window with more detail about their annotations (@fig-jbrowse-2). You can zoom into and out of the assembled and annotated genome to see individual bases and amino acids represented on the sequence (@fig-jbrowse-3). 
+
+![A zoomed-out `JBrowse` view of the annotated SARS-CoV-2 assembly. The magnifying glass icons can be used to zoom in and out of the assembly. The check boxes to the left of the window can be used to control whether the reference genome and/or the annotation are visible. Each annotated feature is represented as a bar below the reference genome; clicking on one of these glyphs will open a window with annotation details (@fig-jbrowse-2).](assets/images/jbrowse_zoom-1.png){#fig-jbrowse-1 width="80%"}
+
+::: { .column-margin }
+![Annotation detail pop-up window for the spike (S) protein. The pop-up windows for annotation features include functional annotation detail, the underlying sequence, and other useful information.](assets/images/jbrowse_details.png){#fig-jbrowse-2 width="80%"}
+:::
+
+![A zoomed-in `JBrowse` view of the annotated SARS-CoV-2 assembly. The forward strand is the topmost of the two nucleotide sequence tracks. The lower nucleotide sequence is the reverse strand (here, because SARS-CoV-2 is a single-strand RNA virus, the reverse strand does not really exist). The three tracks above and below the nucleotide sequences are the conceptual translations of the nucleotide sequence in all three frames. Potential start codons are highlighted in green, and stop codons are highlighted in red.](assets/images/jbrowse_zoom-2.png){#fig-jbrowse-3 width="80%"}
+
+## Next Steps
+
+This kind of interactive genome visualisation is especially powerful when there is additional information and data to interpret in the context of the genome, such as mapped sequence reads. You will explore this in @sec-bwamem.
