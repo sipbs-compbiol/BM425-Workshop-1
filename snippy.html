@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>Acknowledgements – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
+<title>12&nbsp; Find Sequence Variants – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./snippy.html" rel="prev">
+<link href="./acknowledgements.html" rel="next">
+<link href="./bwamem.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -43,6 +43,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -83,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./acknowledgements.html">Acknowledgements</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mapping.html">Read Mapping</a></li><li class="breadcrumb-item"><a href="./snippy.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Find Sequence Variants</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -243,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./snippy.html" class="sidebar-item-text sidebar-link">
+  <a href="./snippy.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Find Sequence Variants</span></span></a>
   </div>
 </li>
@@ -251,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link active">
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgements</span></a>
   </div>
 </li>
@@ -266,15 +268,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#using-snippy" id="toc-using-snippy" class="nav-link active" data-scroll-target="#using-snippy"><span class="header-section-number">12.1</span> Using <code>snippy</code></a></li>
+  <li><a href="#snippy-output" id="toc-snippy-output" class="nav-link" data-scroll-target="#snippy-output"><span class="header-section-number">12.2</span> <code>snippy</code> Output</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/snippy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mapping.html">Read Mapping</a></li><li class="breadcrumb-item"><a href="./snippy.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Find Sequence Variants</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Acknowledgements</h1>
+<h1 class="title"><span id="sec-snippy" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Find Sequence Variants</span></span></h1>
 </div>
 
 
@@ -291,16 +300,112 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We are greatly indebted to the <a href="https://usegalaxy.org/tiaas/">European Galaxy TIaaS (Teaching Infrastructure as a Service)</a> scheme for providing dedicated server time for your workshop today.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="assets/images/tiaas-logo.png" class="img-fluid figure-img" style="width:80.0%" alt="Galaxy TIaaS (Teaching Infrastructure as a Service) logo"></p>
-<figcaption>Galaxy Teaching Infrastructure as a Service logo</figcaption>
+<p><a href="https://github.com/tseemann/snippy"><code>snippy</code></a> is a sequence variant finding pipeline, designed for haploid genomes such as prokaryotes and viruses.</p>
+<ul>
+<li><a href="https://github.com/tseemann/snippy"><code>snippy</code> documentation</a></li>
+</ul>
+<p>As with most kinds of bioinformatics data, there is a data format designed specifically to capture the important elements of the data, and <code>snippy</code> outputs its results in this format.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Good practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When reporting how you identified variants for your manuscript or dissertation, you should always state:</p>
+<ol type="1">
+<li>The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)</li>
+<li>The parameters used when running the tool (if default parameters were used, state this)</li>
+</ol>
+</div>
+</div>
+<section id="using-snippy" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="using-snippy"><span class="header-section-number">12.1</span> Using <code>snippy</code></h2>
+<ol type="1">
+<li>Navigate to the <code>snippy</code> tool</li>
+<li>Select <code>snippy</code></li>
+<li>Select <code>Use a genome from history and build index</code> from <code>Will you select a reference genome…</code></li>
+<li>Choose the <code>SARS_AY278741.gbk</code> file in <code>Use the following dataset as the reference sequence</code></li>
+<li>Select <code>Paired</code> under <code>Single or Paired-end reads</code></li>
+<li>Choose the cleaned post-<code>trimmomatic</code> <code>(R1 paired)</code> data for the forward reads</li>
+<li>Choose the cleaned post-<code>trimmomatic</code> <code>(R2 paired)</code> data for the reverse reads</li>
+<li>Click <code>Run Tool</code></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Identifying sequence variants using <code>snippy</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Identifying sequence variants using `snippy`"><source src="assets/movies/snippy-1_full.mp4"></video></div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><code>snippy</code> can take a few minutes to run to completion.</strong></p>
+</div>
+</div>
+</section>
+<section id="snippy-output" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="snippy-output"><span class="header-section-number">12.2</span> <code>snippy</code> Output</h2>
+<p><code>snippy</code> provides output in <code>.vcf</code> format, which is designed to be processed by bioinformatics software and is not the most understandable form for humans. To see the <code>snippy</code> output in a more human-readable form, click on the <code>eye</code> icon for the <code>snps table</code> output (<a href="#fig-snippy-output" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>).</p>
+<div id="fig-snippy-output" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-snippy-output-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/snippy_table.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-snippy-output-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: The <code>snippy</code> <code>snps table</code> output. Key columns in the output are: column 2, indicating the position of the variant; column 3, indicating the variant type; column 7, indicating the feature affected by the variant; and column 11, summarising the effect of the variation
+</figcaption>
 </figure>
 </div>
-<p>We gratefully acknowledge the support of the Freiburg Galaxy Team: Prof.&nbsp;Björn Grüning and Prof.&nbsp;Rolf Backofen, Bioinformatics, University of Freiburg (Germany) funded by the <a href="http://www.sfb992.uni-freiburg.de/">Collaborative Research Centre 992 Medical Epigenetics</a> (<a href="http://www.dfg.de/">DFG</a> grant SFB 992/1 2012) and the German Federal Ministry of Education and Research <a href="http://www.bmbf.de/">BMBF</a> grant 031 A538A <a href="https://www.denbi.de/">de.NBI</a>-RBC.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Inspecting <code>snippy</code> output
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspecting `snippy` output"><source src="assets/movies/snippy-2_full.mp4"></video></div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Can you find these SNPs manually using JBrowse?</li>
+<li>Are any SNPs different or inconsistent between the <code>JBrowse</code> and <code>snippy</code> outputs?</li>
+</ol>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -725,13 +830,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./snippy.html" class="pagination-link" aria-label="Find Sequence Variants">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Find Sequence Variants</span></span>
+      <a href="./bwamem.html" class="pagination-link" aria-label="Map Reads to the Genome">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Map Reads to the Genome</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./acknowledgements.html" class="pagination-link" aria-label="Acknowledgements">
+        <span class="nav-page-text">Acknowledgements</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -743,12 +848,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/acknowledgements.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/edit/main/snippy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
 
 
 

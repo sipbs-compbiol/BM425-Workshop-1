@@ -518,10 +518,43 @@
     "href": "bwamem.html#next-steps",
     "title": "11  Map Reads to the Genome",
     "section": "11.4 Next Steps",
-    "text": "11.4 Next Steps\nWe can find SNPs by visual inspection in a tool like JBrowse, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in ?sec-snippy.\n\n\n\n\nVasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019. “Efficient Architecture-Aware Acceleration of BWA-MEM for Multicore Systems.” In 2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS). Rio de Janeiro, Brazil: IEEE.",
+    "text": "11.4 Next Steps\nWe can find SNPs by visual inspection in a tool like JBrowse, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in Chapter 12.\n\n\n\n\nVasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019. “Efficient Architecture-Aware Acceleration of BWA-MEM for Multicore Systems.” In 2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS). Rio de Janeiro, Brazil: IEEE.",
     "crumbs": [
       "Read Mapping",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "snippy.html",
+    "href": "snippy.html",
+    "title": "12  Find Sequence Variants",
+    "section": "",
+    "text": "12.1 Using snippy",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Find Sequence Variants</span>"
+    ]
+  },
+  {
+    "objectID": "snippy.html#using-snippy",
+    "href": "snippy.html#using-snippy",
+    "title": "12  Find Sequence Variants",
+    "section": "",
+    "text": "Navigate to the snippy tool\nSelect snippy\nSelect Use a genome from history and build index from Will you select a reference genome…\nChoose the SARS_AY278741.gbk file in Use the following dataset as the reference sequence\nSelect Paired under Single or Paired-end reads\nChoose the cleaned post-trimmomatic (R1 paired) data for the forward reads\nChoose the cleaned post-trimmomatic (R2 paired) data for the reverse reads\nClick Run Tool\n\n\n\n\n\n\n\nVideo: Identifying sequence variants using snippy\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nsnippy can take a few minutes to run to completion.",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Find Sequence Variants</span>"
+    ]
+  },
+  {
+    "objectID": "snippy.html#snippy-output",
+    "href": "snippy.html#snippy-output",
+    "title": "12  Find Sequence Variants",
+    "section": "12.2 snippy Output",
+    "text": "12.2 snippy Output\nsnippy provides output in .vcf format, which is designed to be processed by bioinformatics software and is not the most understandable form for humans. To see the snippy output in a more human-readable form, click on the eye icon for the snps table output (Figure 12.1).\n\n\n\n\n\n\nFigure 12.1: The snippy snps table output. Key columns in the output are: column 2, indicating the position of the variant; column 3, indicating the variant type; column 7, indicating the feature affected by the variant; and column 11, summarising the effect of the variation\n\n\n\n\n\n\n\n\n\nVideo: Inspecting snippy output\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nCan you find these SNPs manually using JBrowse?\nAre any SNPs different or inconsistent between the JBrowse and snippy outputs?",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Find Sequence Variants</span>"
     ]
   },
   {
