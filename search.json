@@ -463,10 +463,65 @@
     "href": "jbrowse.html#next-steps",
     "title": "10  Visualise the Annotation",
     "section": "10.2 Next Steps",
-    "text": "10.2 Next Steps\nThis kind of interactive genome visualisation is especially powerful when there is additional information and data to interpret in the context of the genome, such as mapped sequence reads. You will explore this in ?sec-bwamem.\n\n\n\n\nCarver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and Jacqueline A McQuillan. 2012. “Artemis: An Integrated Platform for Visualization and Analysis of High-Throughput Sequence-Based Experimental Data.” Bioinformatics 28 (4): 464–69.\n\n\nDiesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez, Elliot A Hershberg, Angel Leung, Emma Guo, et al. 2023. “JBrowse 2: A Modular Genome Browser with Views of Synteny and Structural Variation.” Genome Biol. 24 (1): 74.\n\n\nGrant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman, Chih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023. “Proksee: In-Depth Characterization and Visualization of Bacterial Genomes.” Nucleic Acids Res. 51 (W1): W484–92.\n\n\nMilne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton Pritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013. “Using Tablet for Visual Exploration of Second-Generation Sequencing Data.” Brief. Bioinform. 14 (2): 193–202.",
+    "text": "10.2 Next Steps\nThis kind of interactive genome visualisation is especially powerful when there is additional information and data to interpret in the context of the genome, such as mapped sequence reads. You will explore this in Chapter 11.\n\n\n\n\nCarver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and Jacqueline A McQuillan. 2012. “Artemis: An Integrated Platform for Visualization and Analysis of High-Throughput Sequence-Based Experimental Data.” Bioinformatics 28 (4): 464–69.\n\n\nDiesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez, Elliot A Hershberg, Angel Leung, Emma Guo, et al. 2023. “JBrowse 2: A Modular Genome Browser with Views of Synteny and Structural Variation.” Genome Biol. 24 (1): 74.\n\n\nGrant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman, Chih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023. “Proksee: In-Depth Characterization and Visualization of Bacterial Genomes.” Nucleic Acids Res. 51 (W1): W484–92.\n\n\nMilne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton Pritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013. “Using Tablet for Visual Exploration of Second-Generation Sequencing Data.” Brief. Bioinform. 14 (2): 193–202.",
     "crumbs": [
       "Genome Annotation",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Visualise the Annotation</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html",
+    "href": "bwamem.html",
+    "title": "11  Map Reads to the Genome",
+    "section": "",
+    "text": "11.1 Using BWA-MEM2",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html#using-bwa-mem2",
+    "href": "bwamem.html#using-bwa-mem2",
+    "title": "11  Map Reads to the Genome",
+    "section": "",
+    "text": "Navigate to the BWA-MEM2 tool\nSelect the BWA-MEM2 tool\nChoose Use a genome from history and build index under Will you select a reference genome…\nChoose the SARS_AY278741.fasta sequence under Use the following dataset as the reference sequence\nChoose Paired under Single of Paired-end reads\nSelect the (R1 paired) and (R2 paired) trimmomatic output reads\nClick Run Tool\n\n\n\n\n\n\n\nVideo: Mapping SARS-CoV-2 reads to the 2003 SARS genome using BWA-MEM2\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nBWA-MEM2 can take a few minutes to run to completion.",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html#bwa-mem2-output",
+    "href": "bwamem.html#bwa-mem2-output",
+    "title": "11  Map Reads to the Genome",
+    "section": "11.2 BWA-MEM2 Output",
+    "text": "11.2 BWA-MEM2 Output\nUnlike many of the other tools you will use today, BWA-MEM produces binary file output, which is not human-readable. However, Galaxy can read it and generate a human-friendly translation. The output format of BWA-MEM2 is .bam, and this can be used as an annotation track in JBrowse.\n\n\n\n\n\n\nVideo: Visualising the BWA-MEM2 .bam output as text",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html#visualising-the-mapping-in-jbrowse",
+    "href": "bwamem.html#visualising-the-mapping-in-jbrowse",
+    "title": "11  Map Reads to the Genome",
+    "section": "11.3 Visualising the mapping in JBrowse",
+    "text": "11.3 Visualising the mapping in JBrowse\nWe can use the .bam file in JBrowse, but we need to set up another visualisation like that in Chapter 10.\n\nNavigate to the JBrowse tool in the Tools sidebar\nSelect the JBrowse tool\nUnder Reference genome to display, select the Use a genome from history option\nSelect the SARS_AY27874.fasta genome file in Select the reference genome\nClick on + Insert Track Group to add a new track group\nIn the new track group, enter Annotation into the Track Category field\nClick on + Insert Annotation Track to add a new track to hold the annotation\nMake sure that the Track Type of the new annotation track is GFF/GFF3/BED Features\nIn GFF/GFF3/BED Track Data, select the SARS_AY27874.gff3 annotation file for the SARS 2003 isolate\nClick on + Insert Track Group to add a new track group\nIn the new track group, enter Mapping into the Track Category field\nClick on + Insert Annotation Track to add a new track to hold the mapping data\nMake sure that the Track Type of the new annotation track is BAM Pileups\nIn BAM Track Data, select the BWA-MEM2 .bam output file\nSelect Yes under Autogenerate SNP Track\nClick Run Tool\n\n\n\n\n\n\n\nVideo: Configuring JBrowse to visualise BWA-MEM2 mapping data\n\n\n\n\n\n\nClick on the eye icon for the new JBrowse output, and select the following tracks to be shown:\n\nReference sequence\nAnnotation (SARS_AY278741.gff3)\nMapping (SNPs/Coverage)\n\nto obtain a visualisation of reads that map to the spike (S) protein of SARS 2003, like that shown in Figure 11.1.\n\n\n\n\n\n\nFigure 11.1: JBrowse visualisation of a BWA-MEM2 mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).\n\n\n\nWhile the spike (S) protein is being visualised, select the (mapped reads in BAM format track) to obtain a visualisation similar to the one in Figure 11.2.\n\n\n\n\n\n\nFigure 11.2: JBrowse visualisation of a BWA-MEM2 mapping of SARS-CoV-2 reads against a SARS 2003 reference genome in the regions of the spike (S) protein.\n\n\n\nYou can click on the header of the SNP track in JBrowse and select Pin to top, so that you can zoom in and see individual SNPs, as in the video below.\n\n\n\n\n\n\nVideo: Visualising SNPs in JBrowse\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nDo SARS-CoV-2 reads map uniformly to the SARS (2003) genome\nWhere do SARS-CoV-2 and SARS (2003) genomes appear to differ?\nWhen SARS-CoV-2 reads do map to the SARS (2003) genome, how many SNPs are there?\nWhat is the biological significance of the pattern of reads not matching the spike (S) protein?\nWhat implications does this have for vaccine development?",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html#next-steps",
+    "href": "bwamem.html#next-steps",
+    "title": "11  Map Reads to the Genome",
+    "section": "11.4 Next Steps",
+    "text": "11.4 Next Steps\nWe can find SNPs by visual inspection in a tool like JBrowse, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in ?sec-snippy.\n\n\n\n\nVasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019. “Efficient Architecture-Aware Acceleration of BWA-MEM for Multicore Systems.” In 2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS). Rio de Janeiro, Brazil: IEEE.",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
     ]
   },
   {
@@ -484,7 +539,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Carver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and\nJacqueline A McQuillan. 2012. “Artemis: An Integrated Platform for\nVisualization and Analysis of High-Throughput Sequence-Based\nExperimental Data.” Bioinformatics 28 (4): 464–69.\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nDiesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez,\nElliot A Hershberg, Angel Leung, Emma Guo, et al. 2023.\n“JBrowse 2: A Modular Genome Browser with Views of\nSynteny and Structural Variation.” Genome Biol. 24 (1):\n74.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nGrant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman,\nChih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023.\n“Proksee: In-Depth Characterization and Visualization of Bacterial\nGenomes.” Nucleic Acids Res. 51 (W1): W484–92.\n\n\nHuang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020.\n“Structural and Functional Properties of SARS-CoV-2\nSpike Protein: Potential Antivirus Drug Development for\nCOVID-19.” Acta Pharmacol. Sin. 41 (9):\n1141–49.\n\n\nLi, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah\nLam. 2015. “MEGAHIT: An Ultra-Fast Single-Node\nSolution for Large and Complex Metagenomics Assembly via Succinct de\nBruijn Graph.” Bioinformatics 31 (10): 1674–76.\n\n\nMathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,\nCharlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.\n“Coronavirus Pandemic (COVID-19).” Our World in\nData.\n\n\nMilne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton\nPritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013.\n“Using Tablet for Visual Exploration of Second-Generation\nSequencing Data.” Brief. Bioinform. 14 (2): 193–202.\n\n\nOude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,\nManon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.\n“Rapid SARS-CoV-2 Whole-Genome Sequencing and\nAnalysis for Informed Public Health Decision-Making in the\nNetherlands.” Nat. Med. 26 (9): 1405–10.\n\n\nPal, Aruna. 2022. “Rapid Amplification of cDNA Ends (RACE).” In\nSpringer Protocols Handbooks, 505–35. New York, NY: Springer\nUS.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and\nAnton Korobeynikov. 2020. “Using SPAdes\nDE Novo Assembler.” Curr. Protoc.\nBioinformatics 70 (1): e102.\n\n\nRota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray\nCampagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.\n“Characterization of a Novel Coronavirus Associated with Severe\nAcute Respiratory Syndrome.” Science 300 (5624):\n1394–99.\n\n\nSeemann, Torsten. 2014. “Prokka: Rapid Prokaryotic Genome\nAnnotation.” Bioinformatics 30 (14): 2068–69.\n\n\nWang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.\n“A Novel Coronavirus Outbreak of Global Health Concern.”\nLancet 395 (10223): 470–73.\n\n\nWatson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,\nPeter Winskill, and Azra C Ghani. 2022. “Global Impact of the\nFirst Year of COVID-19 Vaccination: A Mathematical\nModelling Study.” Lancet Infect. Dis. 22 (9): 1293–1302.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015.\n“Bandage: Interactive Visualization of de Novo Genome\nAssemblies.” Bioinformatics 31 (20): 3350–52.\n\n\nWu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,\net al. 2020. “A New Coronavirus Associated with Human Respiratory\nDisease in China.” Nature 579 (7798): 265–69.",
+    "text": "Carver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and\nJacqueline A McQuillan. 2012. “Artemis: An Integrated Platform for\nVisualization and Analysis of High-Throughput Sequence-Based\nExperimental Data.” Bioinformatics 28 (4): 464–69.\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nDiesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez,\nElliot A Hershberg, Angel Leung, Emma Guo, et al. 2023.\n“JBrowse 2: A Modular Genome Browser with Views of\nSynteny and Structural Variation.” Genome Biol. 24 (1):\n74.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nGrant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman,\nChih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023.\n“Proksee: In-Depth Characterization and Visualization of Bacterial\nGenomes.” Nucleic Acids Res. 51 (W1): W484–92.\n\n\nHuang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020.\n“Structural and Functional Properties of SARS-CoV-2\nSpike Protein: Potential Antivirus Drug Development for\nCOVID-19.” Acta Pharmacol. Sin. 41 (9):\n1141–49.\n\n\nLi, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah\nLam. 2015. “MEGAHIT: An Ultra-Fast Single-Node\nSolution for Large and Complex Metagenomics Assembly via Succinct de\nBruijn Graph.” Bioinformatics 31 (10): 1674–76.\n\n\nMathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,\nCharlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.\n“Coronavirus Pandemic (COVID-19).” Our World in\nData.\n\n\nMilne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton\nPritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013.\n“Using Tablet for Visual Exploration of Second-Generation\nSequencing Data.” Brief. Bioinform. 14 (2): 193–202.\n\n\nOude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,\nManon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.\n“Rapid SARS-CoV-2 Whole-Genome Sequencing and\nAnalysis for Informed Public Health Decision-Making in the\nNetherlands.” Nat. Med. 26 (9): 1405–10.\n\n\nPal, Aruna. 2022. “Rapid Amplification of cDNA Ends (RACE).” In\nSpringer Protocols Handbooks, 505–35. New York, NY: Springer\nUS.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and\nAnton Korobeynikov. 2020. “Using SPAdes\nDE Novo Assembler.” Curr. Protoc.\nBioinformatics 70 (1): e102.\n\n\nRota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray\nCampagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.\n“Characterization of a Novel Coronavirus Associated with Severe\nAcute Respiratory Syndrome.” Science 300 (5624):\n1394–99.\n\n\nSeemann, Torsten. 2014. “Prokka: Rapid Prokaryotic Genome\nAnnotation.” Bioinformatics 30 (14): 2068–69.\n\n\nVasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019.\n“Efficient Architecture-Aware Acceleration of BWA-MEM\nfor Multicore Systems.” In 2019 IEEE\nInternational Parallel and Distributed Processing Symposium\n(IPDPS). Rio de Janeiro, Brazil: IEEE.\n\n\nWang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.\n“A Novel Coronavirus Outbreak of Global Health Concern.”\nLancet 395 (10223): 470–73.\n\n\nWatson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,\nPeter Winskill, and Azra C Ghani. 2022. “Global Impact of the\nFirst Year of COVID-19 Vaccination: A Mathematical\nModelling Study.” Lancet Infect. Dis. 22 (9): 1293–1302.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015.\n“Bandage: Interactive Visualization of de Novo Genome\nAssemblies.” Bioinformatics 31 (20): 3350–52.\n\n\nWu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,\net al. 2020. “A New Coronavirus Associated with Human Respiratory\nDisease in China.” Nature 579 (7798): 265–69.",
     "crumbs": [
       "References"
     ]
@@ -527,6 +582,16 @@
     "text": "Once we have assembled our sequence, we can use what we know about the features of other genomes to predict what features are present on this genome.",
     "crumbs": [
       "Genome Annotation"
+    ]
+  },
+  {
+    "objectID": "mapping.html",
+    "href": "mapping.html",
+    "title": "Read Mapping",
+    "section": "",
+    "text": "There are several approaches to comparison of genome sequences. One method is to align (or map) the sequenced reads from one genome to a different, reference genome. Reads will only map to (align with) sequence-similar regions, so it is possible to inspect the alignments and see which parts of the two genomes are similar or dissimilar.",
+    "crumbs": [
+      "Read Mapping"
     ]
   }
 ]
