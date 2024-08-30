@@ -49,6 +49,9 @@ book:
       chapters: 
         - fastqc.qmd
         - trimmomatic.qmd
+    - part: assembly.qmd
+      chapters: 
+        - shovill.qmd
     
     - acknowledgements.qmd
     - references.qmd

@@ -1,0 +1,122 @@
+# Assemble the Genome {#sec-shovill}
+
+The `SPAdes` software (@Prjibelski2020-iq) is an excellent, multipurpose sequence assembly package.
+
+- [`SPAdes` documentation](https://ablab.github.io/spades/)
+- [Protocols for `SPAdes`](https://currentprotocols.onlinelibrary.wiley.com/doi/abs/10.1002/cpbi.102)
+
+It performs well in assembling large and small genomes, using short-read, long-read, or hybrid (both short- and long-read) inputs. `SPAdes` can handle single- or paired-end reads and, although specialised tools may perform better, it can also carry out metagenome assembly.
+
+::: { .callout-warning }
+The generality of `SPAdes` is an advantage, but this also means that, to get the best performance in any particular situation - such as assembling a eukaryote genome from long read data - careful attention should be paid to parameter choices.
+:::
+
+`Shovill` is an assembly pipeline that uses `SPAdes` as the assembler tool. It is optimised for assembly of small genomes using paired-end, short-read data.
+
+- [`Shovill` documentation](https://github.com/tseemann/shovill)
+
+::: { .callout-note collapse="true" }
+## The `Shovill` pipeline
+
+`Shovill` does not simply use `SPAdes` with a couple of changes to the settings. There is a more involved set of steps that we would otherwise need to perform ourselves to obtain a high-quality genome assembly.
+
+
+1. Estimate genome size and read length from reads (unless --gsize provided)
+2. Reduce FASTQ files to a sensible depth (default --depth 100)
+  - _These two steps are needed because there is an optimal read coverage level for accurate assembly_
+3. Trim adapters from reads (with --trim only)
+  - _We have already done this with `trimmomatic` (@sec-trimmomatic) so will skip the step_
+4. Conservatively correct sequencing errors in reads
+5. Pre-overlap ("stitch") paired-end reads
+6. Assemble with SPAdes/SKESA/Megahit with modified kmer range and PE + long SE reads
+7. Correct minor assembly errors by mapping reads back to contigs
+8. Remove contigs that are too short, too low coverage, or pure homopolymers
+  - _This avoids including some obviously poorly-assembled sequence in our final output_
+9. Produce final FASTA with nicer names and parseable annotations
+  - _This is a convenience but, if you are working with the output computationally, it's a very helpful thing_
+:::
+
+::: { .callout-important }
+## Good practice
+
+When reporting how you assembled your sequence data in a manuscript or dissertation, you should always state:
+
+1. The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)
+2. The parameters used when running the tool (if default parameters were used, state this)
+3. The number of contigs or scaffolds that were assembled, a measure of the average length (such as N50), and the G+C% content
+:::
+
+## Using `Shovill`
+
+1. Navigate to the `shovill` tool using the `Tools` sidebar in Galaxy
+2. Select the `shovill` tool
+3. Make sure that you have selected `Paired End` as the `Input reads type`
+4. Choose the `(R1 paired)` output from `trimmomatic` as `Forward reads (R1)`
+5. Choose the `(R2 paired)` output from `trimmomatic` as `Reverse reads (R2)`
+6. Select `No` for `Trim reads` (we already did this in @sec-trimmomatic)
+7. Make sure `Spades` is selected in `Assembler to use`
+8. Click `Run Tool`
+
+::: { .callout-note }
+## Video: Assembling the SARS-CoV-2 genome using `Shovill`
+
+{{< video assets/movies/shovill-1.mp4 title="Genome assembly using `Shovill`" >}}
+:::
+
+::: { .callout-caution }
+**`Shovill` can take a few minutes to run to completion.**
+:::
+
+## `Shovill` Output
+
+`Shovill` produces three output files.
+
+- A _contig file_, containing the genome assembly as one or more _contig_ sequences
+- A _contig graph file_, describing the assembly as a graph, with assembled contigs as nodes, and edges linking them in the way the assembler thinks they might be connected
+- A _log file_, describing the progress of the assembly run
+
+::: { .column-margin }
+![`Shovill` output files in Galaxy. From the top: the contig graph file, contig file, and the log file.](assets/images/shovill_output_list.png){#fig-shovill-output-list}
+:::
+
+As with other Galaxy tools, you can inspect the contents of these files by clicking on the filename in the `History` sidebar, and also by clicking on the corresponding `eye` icon to view the trimmed reads in the workspace.
+
+::: { .callout-tip }
+## Questions
+
+Open the contig file output from `Shovill` and inspect the data.
+
+1. How many contigs (sequences) were assembled?
+2. How long are the assembled sequences?
+:::
+
+::: { .callout-important collapse="true" }
+## Answers
+
+1. A single contig sequence is assembled.
+2. The length of the contig is 29878 bases.
+:::
+
+## Visualising the Assembly
+
+The `Bandage` software package (@Wick2015-vm) can take assembly output from tools such as `SPAdes` and `Shovill`, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and potential sequencing of co-cultures of related strains, rather than an axenic isolate.
+
+- [`Bandage` documentation](https://github.com/rrwick/Bandage/wiki)
+- [`Bandage` website](https://rrwick.github.io/Bandage/)
+
+To use `Bandage` to visualise your genome assembly
+
+1. Navigate to the `Bandage Image` tool using the `Tools` sidebar in Galaxy
+2. Select the `Bandage Image` tool
+3. Make sure that you have selected the `Contig Graph` file as the `Graphical Fragment Assembly` input
+4. Click `Run Tool`
+
+::: { .callout-note }
+## Video: Visualising the SARS-CoV-2 assembly using `Bandage Image`
+
+{{< video assets/movies/bandage-1.mp4 title="Visualising the genome assembly with `Bandage Image`" >}}
+:::
+
+## Next steps
+
+With a complete genome assembly, we can begin to annotate genomic features such as gene sequences, and you will do this using `Prokka` in @sec-prokka.

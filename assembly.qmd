@@ -1,0 +1,3 @@
+# Genome Assembly {#sec-assembly .unnumbered}
+
+When we have a cleaned input dataset of sequenced reads, we can begin to assemble the virus genome.
