@@ -136,7 +136,7 @@ It can be worth spending a little time inspecting these output files to see what
 2. Nine (9) CDS were annotated
 3. No genes are identified on the reverse strand (there is no reverse strand to an RNA virus)
 4. Replicase polyprotein 1a is the product of the longest gene (13218 bases)
-5. The shortest non-hypothetical gene is protein 7a (366 bases)
+5. The product of the shortest non-hypothetical gene is protein 7a (366 bases)
 6. `Prokka` v1.14.6
 7. 21568..25389
 :::
