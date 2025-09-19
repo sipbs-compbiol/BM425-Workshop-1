@@ -29,7 +29,7 @@ As you complete each activity, you can use the arrows at the bottom of the page 
 
 Please work through the workshop steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.
 
-1. [Join the training session](join-session.qmd) at [https://usegalaxy.eu/join-training/bm425-workshop1-2024](https://usegalaxy.eu/join-training/bm425-workshop1-2024)
+1. [Log in to Galaxy](join-session.qmd) at [https://usegalaxy.eu](https://usegalaxy.eu/)
 2. [Download the workshop data](download-data.qmd) to your computer
 3. [Upload the workshop data](upload-data.qmd) to your Galaxy history
 4. Prepare your sequencing read data for assembly
