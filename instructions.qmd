@@ -40,6 +40,6 @@ We need you to:
 
 Please complete the formative quiz on MyPlace to earn your bioinformatics wings!
 
-- [BM425 link]()
+- [BM425 link](https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456)
 - [BM932 link]()
 :::
