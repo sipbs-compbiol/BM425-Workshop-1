@@ -21,7 +21,7 @@ When reporting how you identified variants for your manuscript or dissertation, 
 2. Select `snippy`
 3. Select `Use a genome from history and build index` from `Will you select a reference genome…`
 4. Choose the `SARS_AY278741.gbk` file in `Use the following dataset as the reference sequence`
-5. Select `Paired` under `Single or Paired-end reads`
+5. Select `Paired end reads` under `Single or Paired-end reads`
 6. Choose the cleaned post-`trimmomatic` `(R1 paired)` data for the forward reads
 7. Choose the cleaned post-`trimmomatic` `(R2 paired)` data for the reverse reads
 8. Click `Run Tool`

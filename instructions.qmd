@@ -20,7 +20,7 @@ We need you to:
 2. Carry out quality control on the reads
 3. Call sequence variants between the Dutch isolate and your Wuhan 1 assembly
 4. Report on the SNPs you find
-5. Map the ONT reads to your Wuhan 1 assembly and visualilse them
+5. Map the ONT reads to your Wuhan 1 assembly and visualise them
 
 ::: { .callout-caution }
 ## Hints
@@ -40,6 +40,6 @@ We need you to:
 
 Please complete the formative quiz on MyPlace to earn your bioinformatics wings!
 
-- [BM425 link]()
-- [BM932 link]()
+- [BM425 link](https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456)
+- [BM932 link](https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1896407)
 :::
