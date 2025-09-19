@@ -44,8 +44,7 @@ Please work through the workshop steps in order and, if you get stuck, please as
 
 ## Useful Links
 
-- Register an account at the Galaxy instance for training: [link](https://usegalaxy.eu/login/start?redirect=None)
-- Join the workshop training group on Galaxy: [link](https://usegalaxy.eu/join-training/bm425-workshop1-2024)
+- Register an account at the Galaxy instance: [link](https://usegalaxy.eu/login/start?redirect=None)
 
 ## Learning Objectives
 
