@@ -22,7 +22,7 @@ When reporting read mapping in a manuscript or dissertation, you should always s
 2. Select the `BWA-MEM2` tool
 3. Choose `Use a reference from history and build index if necessary` under `Will you select a reference genome…`
 4. Choose the `SARS_AY278741.fasta` sequence under `Use the following dataset as the reference sequence`
-5. Choose `Paired` under `Single of Paired-end reads`
+5. Choose `Paired` under `Single or Paired-end reads`
 6. Select the `(R1 paired)` and `(R2 paired)` `trimmomatic` output reads
 7. Click `Run Tool`
 
