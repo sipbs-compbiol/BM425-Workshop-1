@@ -30,7 +30,7 @@ book:
   # Sets author information and publication/presentation date
   # [D] AUTHOR INFORMATION AND PUBLICATION/PRESENTATION DATE
   author: "Leighton Pritchard and Morgan Feeney"
-  date: "2024-09-27"
+  date: "2025-09-26"
 
   # Define chapters and sections here
   # [E] CHAPTERS AND SECTIONS
@@ -68,7 +68,7 @@ book:
       chapters: 
         - instructions.qmd
     
-    - acknowledgements.qmd
+#    - acknowledgements.qmd
     - references.qmd
 
 # Location of BibTeX format reference file; may not need to be changed

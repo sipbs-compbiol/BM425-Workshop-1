@@ -35,16 +35,14 @@ Prokka can use a core set of reference databases for the specified genus being a
 ## Questions
 
 1. What is the genus of SARS-CoV-2
-2. How many SARS-CoV-2 genome _assemblies_ can be found at NCBI?
-3. How many SARS-CoV-2 _nucleotide sequences_ can be found at NCBI?
+2. How many SARS-CoV-2 _nucleotide sequences_ can be found at NCBI?
 :::
 
 ::: { .callout-important collapse="true" }
 ## Answers
 
 1. SARS-CoV-2 is a _Betacoronovirus_
-2. There are 116 SARS-CoV-2 assemblies at NCBI (as of 2024-08-30)
-3. There are 8,850,155 SARS-CoV-2 nucleotide assemblies at NCBI (as of 2024-08-30)
+2. There are 9,158,699 SARS-CoV-2 nucleotide assemblies at NCBI (as of 2025-09-19)
 :::
 
 ::: { .callout-note }
