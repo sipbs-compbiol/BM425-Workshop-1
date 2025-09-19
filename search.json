@@ -84,7 +84,7 @@
     "href": "intro.html#covid-19",
     "title": "1  Introduction",
     "section": "1.2 COVID-19",
-    "text": "1.2 COVID-19\nThe first cases of a pneumonia of unknown causes began to emerge in Wuhan, China, in December 2019. The novel coronavirus SARS-CoV-2 was isolated by early January, and by the end of January 2020 human-to-human transmission had been confirmed, and cases had been reported in Thailand, Japan, the USA, and several other countries (Figure 1.1, Wang et al. (2020)).\n\n\n\n\n\n\nFigure 1.1: Early COVID-19 timeline (reproduced from Wang et al. (2020))\n\n\n\nBy the end of February, cases had been identified across the Northern hemisphere, and a new hotspot was emerging in Italy (Figure 1.2).\n\n\n\n\n\n\nFigure 1.2: Early COVID-19 global spread\n\n\n\nBy October 2021, it was estimated that COVID-19 had caused over 5mn deaths worldwide, as well as severe social and economic disruption, including the largest global recession in almost a century.\nDespite this huge impact, societal and scientific efforts including lockdowns, mathematical modelling, and novel vaccine development - much of it supported by widespread genome analysis of the kind you will perform today - helped avoid even worse outcomes. COVID-19 vaccines are estimated to have prevented an additional 14-20mn deaths worldwide in 2021 (Watson et al. (2022)).\nIn May 2023, the World Health Organisation (WHO) ended their Public Health Emergency of International Concern (PHEIC), but the SARS-CoV-2 virus remains in circulation. As we begin this workshop, SARS-CoV-2 has claimed over 7mn lives (Mathieu et al. (2020)).",
+    "text": "1.2 COVID-19\nThe first cases of a pneumonia of unknown causes began to emerge in Wuhan, China, in December 2019. The novel coronavirus SARS-CoV-2 was isolated by early January, and by the end of January 2020 human-to-human transmission had been confirmed, and cases had been reported in Thailand, Japan, the USA, and several other countries (Figure 1.1, Wang et al. (2020)).\n\n\n\n\n\n\nFigure 1.1: Early COVID-19 timeline (reproduced from Wang et al. (2020))\n\n\n\nBy the end of February, cases had been identified across the Northern hemisphere, and a new hotspot was emerging in Italy (Figure 13.1).\n\n\n\n\n\n\nFigure 1.2: Early COVID-19 global spread\n\n\n\nBy October 2021, it was estimated that COVID-19 had caused over 5mn deaths worldwide, as well as severe social and economic disruption, including the largest global recession in almost a century.\nDespite this huge impact, societal and scientific efforts including lockdowns, mathematical modelling, and novel vaccine development - much of it supported by widespread genome analysis of the kind you will perform today - helped avoid even worse outcomes. COVID-19 vaccines are estimated to have prevented an additional 14-20mn deaths worldwide in 2021 (Watson et al. (2022)).\nIn May 2023, the World Health Organisation (WHO) ended their Public Health Emergency of International Concern (PHEIC), but the SARS-CoV-2 virus remains in circulation. As we begin this workshop, SARS-CoV-2 has claimed over 7mn lives (Mathieu et al. (2020)).",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -605,6 +605,38 @@
     "crumbs": [
       "Read Mapping",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Find Sequence Variants</span>"
+    ]
+  },
+  {
+    "objectID": "exercise.html",
+    "href": "exercise.html",
+    "title": "Be Your Own Bioinformatician",
+    "section": "",
+    "text": "It’s time for you to earn your bioinformatics wings, and apply what you’ve learned today in a whole new analysis, by yourself.\nTo receive your instructions, go to 13  Did SARS-CoV-2 Change During the COVID-19 Pandemic?.",
+    "crumbs": [
+      "Be Your Own Bioinformatician"
+    ]
+  },
+  {
+    "objectID": "instructions.html",
+    "href": "instructions.html",
+    "title": "13  Did SARS-CoV-2 Change During the COVID-19 Pandemic?",
+    "section": "",
+    "text": "13.1 Your challenge\nAs the pandemic raged around the world (Figure 13.1), increasing numbers of people became infected.\nMore infections meant more virus, which implies more viral replication and individual virus particles. This in turn implies more opportunities for mistakes during reproduction: more opportunities for mutation to occur. There was both a larger population of virus, and a larger effective population of the virus.\nAny of the resulting sequence variants might have an important effect, maybe changing the clinical profile of the virus - its virulence, its residence time, ease of shedding, or some other characteristic. The variants might also provide a way to track transmission geographically, and over time.\nWe need you to:",
+    "crumbs": [
+      "Be Your Own Bioinformatician",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Did SARS-CoV-2 Change During the COVID-19 Pandemic?</span>"
+    ]
+  },
+  {
+    "objectID": "instructions.html#your-challenge",
+    "href": "instructions.html#your-challenge",
+    "title": "13  Did SARS-CoV-2 Change During the COVID-19 Pandemic?",
+    "section": "",
+    "text": "Use the Oxford Nanopore (ONT) reads from the Sutch SARS-CoV-2 isolate ERR4164769\nCarry out quality control on the reads\nCall sequence variants between the Dutch isolate and your Wuhan 1 assembly\nReport on the SNPs you find\nMap the ONT reads to your Wuhan 1 assembly and visualilse them\n\n\n\n\n\n\n\nCautionHints\n\n\n\n\nBe sure to visualise read quality with FastQC and note any differences from the Wuhan 1 isolate reads\nRemember - ONT reads are single-ended\nWhen considering SNPs\n\nHow many are there?\nDo any lie within feature boundaries?\nWhat are the biological implications of changes to that feature’s product?\n\nYou will need to increase the maximum size of bam chunks setting in JBrowse to visualise ONT reads\nHow do the ONT reads look different, visually, from Illumina data?\n\n\n\n\n\n\n\n\n\nImportantWhen you have finished…\n\n\n\nPlease complete the formative quiz on MyPlace to earn your bioinformatics wings!\n\nBM425 link\nBM932 link",
+    "crumbs": [
+      "Be Your Own Bioinformatician",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Did SARS-CoV-2 Change During the COVID-19 Pandemic?</span>"
     ]
   },
   {
