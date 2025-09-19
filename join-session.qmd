@@ -1,16 +1,14 @@
-# Join the Training Session {#sec-join-session}
+# Log in to Galaxy {#sec-join-session}
 
 ::: { .callout-tip }
-## Use this link to join the training session
+## Use this link to log in to Galaxy
 
-- [https://usegalaxy.eu/join-training/bm425-workshop1-2024](https://usegalaxy.eu/join-training/bm425-workshop1-2024)
-
-We have deployed a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your `usegalaxy.eu` account (instructions to set up this account can be found in @sec-galaxy-registration).
+- [https://usegalaxy.eu/](https://usegalaxy.eu/)
 :::
 
 ## The Galaxy workspace layout
 
-After you join the session, you will see the Galaxy workspace, which should look similar to @fig-galaxy-workspace. There are three sections to the workspace: the `Tools` sidebar, the `History/Workflow` sidebar, and the central `Workspace` area. You will become more familiar with these as you move through the workshop.
+After you log in, you will meet the Galaxy workspace, which should look like @fig-galaxy-workspace.
 
 ![An empty Galaxy workspace. The workspace is divided into three sections. On the left is the `Tools` sidebar, which presents the software tools available on the current Galaxy instance. On the right is the `History` or `Workflow` sidebar, which describes the data and steps being used in the current Galaxy workflow. The largest section, in the centre, shows details of a selected tool including options to set or change parameters, or the contents of the dataset, depending what is selected from the `History` sidebar.](assets/images/galaxy_landing.png){#fig-galaxy-workspace fig-alt="Screen capture of a Galaxy workspace, with the three sections 'Tools,' 'Workspace,' and 'History/Workflow' indicated." width=80%}
 
