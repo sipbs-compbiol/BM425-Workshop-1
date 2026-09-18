@@ -1,16 +1,22 @@
 # Log in to Galaxy {#sec-join-session}
 
 ::: { .callout-tip }
-## Use this link to log in to Galaxy
+## Use this link to join the training session
 
-- [https://usegalaxy.eu/](https://usegalaxy.eu/)
+- [https://usegalaxy.eu/join-training/bm425-bm932-2026-09](https://usegalaxy.eu/join-training/bm425-bm932-2026-09)
+
+Through the generosity of the Galaxy Europe team, we have been able to deploy a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your `usegalaxy.eu` account (instructions to set up this account can be found in @sec-galaxy-registration).
 :::
 
 ## The Galaxy workspace layout
 
-After you log in, you will meet the Galaxy workspace, which should look like @fig-galaxy-workspace.
+After you join the session, you will meet the Galaxy workspace, which should look like @fig-galaxy-workspace.
 
-![An empty Galaxy workspace. The workspace is divided into three sections. On the left is the `Tools` sidebar, which presents the software tools available on the current Galaxy instance. On the right is the `History` or `Workflow` sidebar, which describes the data and steps being used in the current Galaxy workflow. The largest section, in the centre, shows details of a selected tool including options to set or change parameters, or the contents of the dataset, depending what is selected from the `History` sidebar.](assets/images/galaxy_landing.png){#fig-galaxy-workspace fig-alt="Screen capture of a Galaxy workspace, with the three sections 'Tools,' 'Workspace,' and 'History/Workflow' indicated." width=80%}
+::: { .callout-caution title="Galaxy looks slightly different!" }
+The visual presentation of Galaxy looks slightly different to that in the images and videos. This is only a **cosmetic difference**. It does look nicer, but it works in exactly the same way.
+:::
+
+![An empty Galaxy workspace. The workspace is divided into three sections. On the left is the `Tools` sidebar, which presents the software tools available on the current Galaxy instance. On the right is the `History` or `Workflow` sidebar, which describes the data and steps being used in the current Galaxy workflow. The largest section, in the centre, shows details of a selected tool including options to set or change parameters, or the contents of the dataset, depending what is selected from the `History` sidebar.](assets/images/galaxy_landing.png){#fig-galaxy-workspace fig-alt="Screen capture of a Galaxy workspace, with the three sections 'Tools,' 'Workspace,' and 'History/Workflow' indicated." width=80% .lightbox}
 
 ::: { .callout-tip collapse="true" }
 ## The `Tools` sidebar
