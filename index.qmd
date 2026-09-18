@@ -62,8 +62,9 @@ By the end of this workshop, students will be able to:
 ## Assessment
 
 ::: { .callout-important }
-There is a formative assessment on the [workshop MyPlace page](https://classes.myplace.strath.ac.uk/course/view.php?id=21676) that you should complete at the end of the workshop, to demonstrate you've earned your genomics wings (link below).
+There is a formative assessment on the workshop MyPlace page that you should complete at the end of the workshop, to demonstrate you've earned your genomics wings (link below).
 
-- [MyPlace formative quiz](https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456)
+- [BM425 MyPlace formative quiz](https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456)
+- [BM932 MyPlace formative quiz](https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1896407)
 :::
 
