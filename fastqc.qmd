@@ -88,7 +88,7 @@ The output of `FastQC` tells us a lot about the quality of our sequencing data, 
 The `FastQC` summary (@fig-fastqc-summary) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a _pass_ (green, with a tick), a _warning_ (amber, with exclamation mark), or a _fail_ (red, with a cross) mark.
 
 ::: { .column-margin }
-![Example `FastQC` summary showing passes for most sections of the report including "Basic Statistics," warnings for some sections including "Overrepresented sequences," and a fail for "Sequence Duplication Levels"](assets/images/fastqc_summary.png){#fig-fastqc-summary fig-alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section." width="80%"}
+![Example `FastQC` summary showing passes for most sections of the report including "Basic Statistics," warnings for some sections including "Overrepresented sequences," and a fail for "Sequence Duplication Levels"](assets/images/fastqc_summary.png){#fig-fastqc-summary fig-alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section." width="80%" .lightbox}
 :::
 
 ### Per base sequence quality
@@ -99,7 +99,7 @@ The _per base sequence quality_ plot (@fig-fastqc-perbase) presents the ranges o
 For good-quality sequence read data, we are looking for a graph where the mean quality (see @fig-fastqc-perbase) is always in the green area, with a score greater than 29.
 :::
 
-![Per base sequence quality score plot from `FastQC` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot, with the mean drawn as a line connecting each boxplot.](assets/images/fastqc_perbase.png){#fig-fastqc-perbase width=80%}
+![Per base sequence quality score plot from `FastQC` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot, with the mean drawn as a line connecting each boxplot.](assets/images/fastqc_perbase.png){#fig-fastqc-perbase width=80% .lightbox}
 
 ::: { .callout-caution }
 It is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.
@@ -117,7 +117,7 @@ The _per sequence quality_ score (@fig-fastqc-perseq) summarises the distributio
 In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.
 :::
 
-![Per sequence quality score plot from `FastQC` indicating overall high quality sequencing reads.](assets/images/fastqc_perseq.png){#fig-fastqc-perseq width=80%}
+![Per sequence quality score plot from `FastQC` indicating overall high quality sequencing reads.](assets/images/fastqc_perseq.png){#fig-fastqc-perseq width=80% .lightbox}
 
 ::: { .callout-caution }
 If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.
