@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>2&nbsp; Register An Account with Galaxy – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -25,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,15 +61,17 @@ div.csl-indent {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -118,9 +125,7 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -143,7 +148,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -366,10 +371,10 @@ div.csl-indent {
 <section id="workflows" class="level3" data-number="2.1.1">
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="workflows"><span class="header-section-number">2.1.1</span> Workflows</h3>
 <p>The key concept in Galaxy is the <em>workflow</em>. A workflow is a series, or chain, of analysis steps that takes some input data (one or more files or datasets) through a series of actions, to generate one or more result files. Typically, the output of one step will serve as the input to the next step, but more complicated branching workflows can also be created (<a href="#fig-galaxy-rxlr" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>).</p>
-<div id="fig-galaxy-rxlr" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Galaxy workflow editor view of a Galaxy workflow that takes input data and passes it through a series of actions. The links between datasets and actions are shown as noodles on the diagram.">
+<div id="fig-galaxy-rxlr" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="Galaxy workflow editor view of a Galaxy workflow that takes input data and passes it through a series of actions. The links between datasets and actions are shown as noodles on the diagram.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-galaxy-rxlr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/galaxy_workflow_noodles.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Galaxy workflow editor view of a Galaxy workflow that takes input data and passes it through a series of actions. The links between datasets and actions are shown as noodles on the diagram.">
+<a href="assets/images/galaxy_workflow_noodles.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2.1: Galaxy workflow editor view of a Galaxy workflow that runs the same tool (RXLR Motifs) with three different settings, and compares the results using a Venn diagram (reproduced from @Cock2013-nr). The workflow runs from left to right. A single Input dataset is fed into the RXLR Motifs tool three times, applying a different method each time. Each run of the RXLR Motifs tool generates a different set of output sequences, which are passed as input to the Filter tool. The output from all three runs of the Filter tool is passed to the Venn Diagram tool, along with the original input dataset, to generate a Venn Diagram"><img src="assets/images/galaxy_workflow_noodles.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Galaxy workflow editor view of a Galaxy workflow that takes input data and passes it through a series of actions. The links between datasets and actions are shown as noodles on the diagram."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-galaxy-rxlr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2.1: Galaxy workflow editor view of a Galaxy workflow that runs the same tool (<code>RXLR Motifs</code>) with three different settings, and compares the results using a Venn diagram (reproduced from <span class="citation" data-cites="Cock2013-nr">Cock et al. (<a href="references.html#ref-Cock2013-nr" role="doc-biblioref">2013</a>)</span>). The workflow runs from left to right. A single <code>Input dataset</code> is fed into the <code>RXLR Motifs</code> tool three times, applying a different method each time. Each run of the <code>RXLR Motifs</code> tool generates a different set of output sequences, which are passed as input to the <code>Filter</code> tool. The output from all three runs of the <code>Filter</code> tool is passed to the <code>Venn Diagram</code> tool, along with the original input dataset, to generate a Venn Diagram
@@ -418,7 +423,7 @@ Important
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Cock2013-nr" class="csl-entry" role="listitem">
 Cock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton Pritchard. 2013. <span>“Galaxy Tools and Workflows for Sequence Analysis with Applications in Molecular Plant Pathology.”</span> <em>PeerJ</em> 1 (September): e167.
 </div>
@@ -855,6 +860,38 @@ Galaxy Community. 2024. <span>“The Galaxy Platform for Accessible, Reproducibl
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

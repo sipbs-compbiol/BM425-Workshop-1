@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>7&nbsp; Clean Raw Read Data – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -36,15 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -100,9 +105,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -125,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -355,7 +358,7 @@ Tip
 <p>Tools like <code>trimmomatic</code> return two kinds of cleaned read data:</p>
 <ol type="1">
 <li>R1-paired, R2-paired: these are high quality paired-end reads</li>
-<li>R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality</li>
+<li>R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality and discarded</li>
 </ol>
 </div>
 </div>
@@ -386,7 +389,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Cleaning raw sequencing reads with `trimmomatic`"><source src="assets/movies/trimmomatic-1_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Cleaning raw sequencing reads with `trimmomatic`"><source src="assets/movies/trimmomatic-1_full.mp4"></video></div>
 </div>
 </div>
 </section>
@@ -405,7 +408,7 @@ Figure&nbsp;7.1: <code>FastQC</code> output files in Galaxy. From the top: unpai
 </figcaption>
 </figure>
 </div>
-</div></div><p>You can inspect the contents of these files by clicking on the filename in the <code>History</code> sidebar, and also by clicking on the corresponding <code>eye</code> icon to view the trimmed reads in the workspace.</p>
+</div></div><p>You can inspect the contents of these files by clicking on the filename in the <code>History</code> sidebar, and also by clicking on the corresponding <code>eye</code> (<code>View</code>) icon to view the trimmed reads in the workspace.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -416,7 +419,7 @@ Figure&nbsp;7.1: <code>FastQC</code> output files in Galaxy. From the top: unpai
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspeccting reads cleaned with `trimmomatic`"><source src="assets/movies/trimmomatic-2_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspeccting reads cleaned with `trimmomatic`"><source src="assets/movies/trimmomatic-2_full.mp4"></video></div>
 </div>
 </div>
 </section>

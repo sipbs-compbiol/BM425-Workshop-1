@@ -2,19 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Leighton Pritchard">
-<meta name="dcterms.date" content="2025-09-26">
+<meta name="dcterms.date" content="2026-09-25">
 
 <title>BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -26,7 +32,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,15 +61,14 @@ div.csl-indent {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -118,9 +122,7 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -143,7 +145,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -306,7 +308,7 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface-to-bm425-workshop-1" id="toc-preface-to-bm425-workshop-1" class="nav-link active" data-scroll-target="#preface-to-bm425-workshop-1">Preface to 2025-26 BM425 Workshop 1</a>
+  <li><a href="#preface-to-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20766172206179203e7d7d-bm425-workshop-1" id="toc-preface-to-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20766172206179203e7d7d-bm425-workshop-1" class="nav-link active" data-scroll-target="#preface-to-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20766172206179203e7d7d-bm425-workshop-1">Preface to 2026-27 BM425 Workshop 1</a>
   <ul class="collapse">
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#how-to-move-through-these-workshop-materials" id="toc-how-to-move-through-these-workshop-materials" class="nav-link" data-scroll-target="#how-to-move-through-these-workshop-materials">How To Move Through These Workshop Materials</a></li>
@@ -339,7 +341,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 26, 2025</p>
+      <p class="date">September 25, 2026</p>
     </div>
   </div>
   
@@ -352,9 +354,9 @@ div.csl-indent {
 
 
 
-<section id="preface-to-bm425-workshop-1" class="level1 unnumbered">
-<h1 class="unnumbered">Preface to 2025-26 BM425 Workshop 1</h1><p><img src="sipbs_compbio_800.png" title="BM425 Workshop 1: SARS-CoV-2 Genome Analysis" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>Welcome to the BM425 (Advanced Microbiology) workshop on SARS-CoV-2 genome analysis, for 2025-26.</p>
+<section id="preface-to-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20766172206179203e7d7d-bm425-workshop-1" class="level1 unnumbered">
+<h1 class="unnumbered">Preface to 2026-27 BM425 Workshop 1</h1><p><img src="sipbs_compbio_800.png" title="BM425 Workshop 1: SARS-CoV-2 Genome Analysis" class="quarto-cover-image nolightbox img-fluid"></p>
+<p>Welcome to the BM425 (Advanced Microbiology) workshop on SARS-CoV-2 genome analysis, for 2026-27.</p>
 <p>If you have comments for how we could improve this material or presentation, we would be very grateful to hear feedback <a href="mailto:leighton.pritchard@strath.ac.uk">by email</a> or through the <a href="https://github.com/sipbs-compbiol/BM425-Workshop-1/issues">GitHub repository Issues page</a>.</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
@@ -389,15 +391,15 @@ div.csl-indent {
 <li><a href="./join-session.html">Log in to Galaxy</a> at <a href="https://usegalaxy.eu/">https://usegalaxy.eu</a></li>
 <li><a href="./download-data.html">Download the workshop data</a> to your computer</li>
 <li><a href="./upload-data.html">Upload the workshop data</a> to your Galaxy history</li>
-<li>Prepare your sequencing read data for assembly</li>
-<li>Assemble a genome from your sequencing data</li>
+<li><a href="./trimmomatic.html">Prepare your sequencing read data</a> for assembly</li>
+<li><a href="./shovill.html">Assemble a genome</a> from your sequencing data</li>
 <li>Visualise your genome assembly</li>
-<li>Annotate your assembly</li>
-<li>Visualise your annotation</li>
-<li>Map reads from your SARS-CoV-2 isolate to the SARS 2003 genome</li>
+<li><a href="./prokka.html">Annotate</a> your assembly</li>
+<li><a href="./jbrowse.html">Visualise</a> your annotation</li>
+<li><a href="./bwamem.html">Map reads</a> from your SARS-CoV-2 isolate to the SARS 2003 genome</li>
 <li>Visualise the mapped reads using <code>JBrowse2</code></li>
-<li>Identify sequence variants (SNPs, Single Nucleotide Polymorphisms) between SARS-CoV-2 and SARS 2003</li>
-<li>Use what you’ve learned to identify and interpret changes in the SARS-CoV-2 virus during the COVID-19 pandemic</li>
+<li><a href="./snippy.html">Identify sequence variants</a> (SNPs, Single Nucleotide Polymorphisms) between SARS-CoV-2 and SARS 2003</li>
+<li><a href="./instructions.html">Use what you’ve learned</a> to identify and interpret changes in the SARS-CoV-2 virus during the COVID-19 pandemic</li>
 </ol>
 </section>
 <section id="useful-links" class="level2">
@@ -434,15 +436,16 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>There is a formative assessment on the <a href="https://classes.myplace.strath.ac.uk/course/view.php?id=21676">workshop MyPlace page</a> that you should complete at the end of the workshop, to demonstrate you’ve earned your genomics wings (link below).</p>
+<p>There is a formative assessment on the workshop MyPlace page that you should complete at the end of the workshop, to demonstrate you’ve earned your genomics wings (link below).</p>
 <ul>
-<li><a href="https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456">MyPlace formative quiz</a></li>
+<li><a href="https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1295456">BM425 MyPlace formative quiz</a></li>
+<li><a href="https://classes.myplace.strath.ac.uk/mod/quiz/view.php?id=1896407">BM932 MyPlace formative quiz</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Galaxy_Community2024-zi" class="csl-entry" role="listitem">
 Galaxy Community. 2024. <span>“The Galaxy Platform for Accessible, Reproducible, and Collaborative Data Analyses: 2024 Update.”</span> <em>Nucleic Acids Res.</em> 52 (W1): W83–94.
 </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>10&nbsp; Visualise the Annotation – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -25,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,17 +61,19 @@ div.csl-indent {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -120,9 +127,7 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -145,7 +150,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -382,10 +387,10 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Configuring `JBrowse` for visualisation."><source src="assets/movies/jbrowse-1_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Configuring `JBrowse` for visualisation."><source src="assets/movies/jbrowse-1_full.mp4"></video></div>
 </div>
 </div>
-<p>When the <code>JBrowse</code> output in the <code>History</code> sidebar is complete, click on the <code>eye</code> icon to bring the visualisation to the main <code>Workspace</code> area. Watch the video below to see some of the features of the visualisation in action.</p>
+<p>When the <code>JBrowse</code> output in the <code>History</code> sidebar is complete, click on the <code>eye</code> (<code>View</code>) icon to bring the visualisation to the main <code>Workspace</code> area. Watch the video below to see some of the features of the visualisation in action.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -396,14 +401,14 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Exploring the `JBrowse` interface."><source src="assets/movies/jbrowse-2_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Exploring the `JBrowse` interface."><source src="assets/movies/jbrowse-2_full.mp4"></video></div>
 </div>
 </div>
 <p>Using the <code>JBrowse</code> interface, you can select whether to show the reference sequence and/or the annotation (<a href="#fig-jbrowse-1" class="quarto-xref">Figure&nbsp;<span>10.1</span></a>). By clicking on the annotated features, you can bring up a window with more detail about their annotations (<a href="#fig-jbrowse-2" class="quarto-xref">Figure&nbsp;<span>10.2</span></a>). You can zoom into and out of the assembled and annotated genome to see individual bases and amino acids represented on the sequence (<a href="#fig-jbrowse-3" class="quarto-xref">Figure&nbsp;<span>10.3</span></a>).</p>
-<div id="fig-jbrowse-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-jbrowse-1" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-jbrowse-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/jbrowse_zoom-1.png" class="img-fluid figure-img" style="width:80.0%">
+<a href="assets/images/jbrowse_zoom-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;10.1: A zoomed-out JBrowse view of the annotated SARS-CoV-2 assembly. The magnifying glass icons can be used to zoom in and out of the assembly. The check boxes to the left of the window can be used to control whether the reference genome and/or the annotation are visible. Each annotated feature is represented as a bar below the reference genome; clicking on one of these glyphs will open a window with annotation details (Figure&nbsp;fig-jbrowse-2)."><img src="assets/images/jbrowse_zoom-1.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jbrowse-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;10.1: A zoomed-out <code>JBrowse</code> view of the annotated SARS-CoV-2 assembly. The magnifying glass icons can be used to zoom in and out of the assembly. The check boxes to the left of the window can be used to control whether the reference genome and/or the annotation are visible. Each annotated feature is represented as a bar below the reference genome; clicking on one of these glyphs will open a window with annotation details (<a href="#fig-jbrowse-2" class="quarto-xref">Figure&nbsp;<span>10.2</span></a>).
@@ -412,20 +417,20 @@ Figure&nbsp;10.1: A zoomed-out <code>JBrowse</code> view of the annotated SARS-C
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<div id="fig-jbrowse-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-jbrowse-2" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-jbrowse-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/jbrowse_details.png" class="img-fluid figure-img" style="width:80.0%">
+<a href="assets/images/jbrowse_details.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;10.2: Annotation detail pop-up window for the spike (S) protein. The pop-up windows for annotation features include functional annotation detail, the underlying sequence, and other useful information."><img src="assets/images/jbrowse_details.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jbrowse-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;10.2: Annotation detail pop-up window for the spike (S) protein. The pop-up windows for annotation features include functional annotation detail, the underlying sequence, and other useful information.
 </figcaption>
 </figure>
 </div>
-</div></div><div id="fig-jbrowse-3" class="quarto-float quarto-figure quarto-figure-center anchored">
+</div></div><div id="fig-jbrowse-3" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-jbrowse-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/jbrowse_zoom-2.png" class="img-fluid figure-img" style="width:80.0%">
+<a href="assets/images/jbrowse_zoom-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;10.3: A zoomed-in JBrowse view of the annotated SARS-CoV-2 assembly. The forward strand is the topmost of the two nucleotide sequence tracks. The lower nucleotide sequence is the reverse strand (here, because SARS-CoV-2 is a single-strand RNA virus, the reverse strand does not really exist). The three tracks above and below the nucleotide sequences are the conceptual translations of the nucleotide sequence in all three frames. Potential start codons are highlighted in green, and stop codons are highlighted in red."><img src="assets/images/jbrowse_zoom-2.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jbrowse-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;10.3: A zoomed-in <code>JBrowse</code> view of the annotated SARS-CoV-2 assembly. The forward strand is the topmost of the two nucleotide sequence tracks. The lower nucleotide sequence is the reverse strand (here, because SARS-CoV-2 is a single-strand RNA virus, the reverse strand does not really exist). The three tracks above and below the nucleotide sequences are the conceptual translations of the nucleotide sequence in all three frames. Potential start codons are highlighted in green, and stop codons are highlighted in red.
@@ -438,18 +443,18 @@ Figure&nbsp;10.3: A zoomed-in <code>JBrowse</code> view of the annotated SARS-Co
 <p>This kind of interactive genome visualisation is especially powerful when there is additional information and data to interpret in the context of the genome, such as mapped sequence reads. You will explore this in <a href="bwamem.html" class="quarto-xref"><span>Chapter 11</span></a>.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Carver2012-ja" class="csl-entry" role="listitem">
 Carver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and Jacqueline A McQuillan. 2012. <span>“Artemis: An Integrated Platform for Visualization and Analysis of High-Throughput Sequence-Based Experimental Data.”</span> <em>Bioinformatics</em> 28 (4): 464–69.
 </div>
 <div id="ref-Diesh2023-go" class="csl-entry" role="listitem">
-Diesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez, Elliot A Hershberg, Angel Leung, Emma Guo, et al. 2023. <span>“<span>JBrowse</span> 2: A Modular Genome Browser with Views of Synteny and Structural Variation.”</span> <em>Genome Biol.</em> 24 (1): 74.
+Diesh, Colin, Garrett J Stevens, Peter Xie, et al. 2023. <span>“<span>JBrowse</span> 2: A Modular Genome Browser with Views of Synteny and Structural Variation.”</span> <em>Genome Biol.</em> 24 (1): 74.
 </div>
 <div id="ref-Grant2023-zr" class="csl-entry" role="listitem">
-Grant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman, Chih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023. <span>“Proksee: In-Depth Characterization and Visualization of Bacterial Genomes.”</span> <em>Nucleic Acids Res.</em> 51 (W1): W484–92.
+Grant, Jason R, Eric Enns, Eric Marinier, et al. 2023. <span>“Proksee: In-Depth Characterization and Visualization of Bacterial Genomes.”</span> <em>Nucleic Acids Res.</em> 51 (W1): W484–92.
 </div>
 <div id="ref-Milne2013-vp" class="csl-entry" role="listitem">
-Milne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton Pritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013. <span>“Using Tablet for Visual Exploration of Second-Generation Sequencing Data.”</span> <em>Brief. Bioinform.</em> 14 (2): 193–202.
+Milne, Iain, Gordon Stephen, Micha Bayer, et al. 2013. <span>“Using Tablet for Visual Exploration of Second-Generation Sequencing Data.”</span> <em>Brief. Bioinform.</em> 14 (2): 193–202.
 </div>
 </div>
 </section>
@@ -883,6 +888,38 @@ Milne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton Pritchard, Li
 </footer>
 <script>videojs(video_shortcode_videojs_video1);</script>
 <script>videojs(video_shortcode_videojs_video2);</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

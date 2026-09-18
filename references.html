@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>References – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -54,15 +60,14 @@ div.csl-indent {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,9 +121,7 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -141,7 +144,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -324,7 +327,7 @@ div.csl-indent {
 </header>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Carver2012-ja" class="csl-entry" role="listitem">
 Carver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and
 Jacqueline A McQuillan. 2012. <span>“Artemis: An Integrated Platform for
@@ -338,8 +341,7 @@ with Applications in Molecular Plant Pathology.”</span> <em>PeerJ</em> 1
 (September): e167.
 </div>
 <div id="ref-Diesh2023-go" class="csl-entry" role="listitem">
-Diesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez,
-Elliot A Hershberg, Angel Leung, Emma Guo, et al. 2023.
+Diesh, Colin, Garrett J Stevens, Peter Xie, et al. 2023.
 <span>“<span>JBrowse</span> 2: A Modular Genome Browser with Views of
 Synteny and Structural Variation.”</span> <em>Genome Biol.</em> 24 (1):
 74.
@@ -350,9 +352,8 @@ Reproducible, and Collaborative Data Analyses: 2024 Update.”</span>
 <em>Nucleic Acids Res.</em> 52 (W1): W83–94.
 </div>
 <div id="ref-Grant2023-zr" class="csl-entry" role="listitem">
-Grant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman,
-Chih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023.
-<span>“Proksee: In-Depth Characterization and Visualization of Bacterial
+Grant, Jason R, Eric Enns, Eric Marinier, et al. 2023. <span>“Proksee:
+In-Depth Characterization and Visualization of Bacterial
 Genomes.”</span> <em>Nucleic Acids Res.</em> 51 (W1): W484–92.
 </div>
 <div id="ref-Huang2020-uk" class="csl-entry" role="listitem">
@@ -369,28 +370,24 @@ Solution for Large and Complex Metagenomics Assembly via Succinct de
 Bruijn Graph.”</span> <em>Bioinformatics</em> 31 (10): 1674–76.
 </div>
 <div id="ref-owidcoronavirus" class="csl-entry" role="listitem">
-Mathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel,
-Charlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020.
+Mathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, et al. 2020.
 <span>“Coronavirus Pandemic (COVID-19).”</span> <em>Our World in
 Data</em>.
 </div>
 <div id="ref-Milne2013-vp" class="csl-entry" role="listitem">
-Milne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton
-Pritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013.
-<span>“Using Tablet for Visual Exploration of Second-Generation
-Sequencing Data.”</span> <em>Brief. Bioinform.</em> 14 (2): 193–202.
+Milne, Iain, Gordon Stephen, Micha Bayer, et al. 2013. <span>“Using
+Tablet for Visual Exploration of Second-Generation Sequencing
+Data.”</span> <em>Brief. Bioinform.</em> 14 (2): 193–202.
 </div>
 <div id="ref-Oude_Munnink2020-ry" class="csl-entry" role="listitem">
-Oude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole,
-Manon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020.
+Oude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, et al. 2020.
 <span>“Rapid <span>SARS-CoV-2</span> Whole-Genome Sequencing and
 Analysis for Informed Public Health Decision-Making in the
 Netherlands.”</span> <em>Nat. Med.</em> 26 (9): 1405–10.
 </div>
 <div id="ref-Pal2022-tw" class="csl-entry" role="listitem">
 Pal, Aruna. 2022. <span>“Rapid Amplification of <span class="nocase">cDNA</span> Ends (<span>RACE</span>).”</span> In
-<em>Springer Protocols Handbooks</em>, 505–35. New York, NY: Springer
-US.
+<em>Springer Protocols Handbooks</em>. Springer US.
 </div>
 <div id="ref-Prjibelski2020-iq" class="csl-entry" role="listitem">
 Prjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and
@@ -399,8 +396,7 @@ Anton Korobeynikov. 2020. <span>“Using <span>SPAdes</span>
 Bioinformatics</em> 70 (1): e102.
 </div>
 <div id="ref-Rota2003-tu" class="csl-entry" role="listitem">
-Rota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray
-Campagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003.
+Rota, Paul A, M Steven Oberste, Stephan S Monroe, et al. 2003.
 <span>“Characterization of a Novel Coronavirus Associated with Severe
 Acute Respiratory Syndrome.”</span> <em>Science</em> 300 (5624):
 1394–99.
@@ -412,9 +408,9 @@ Annotation.”</span> <em>Bioinformatics</em> 30 (14): 2068–69.
 <div id="ref-Vasimuddin2019-dj" class="csl-entry" role="listitem">
 Vasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019.
 <span>“Efficient Architecture-Aware Acceleration of <span>BWA-MEM</span>
-for Multicore Systems.”</span> In <em>2019 <span>IEEE</span>
-International Parallel and Distributed Processing Symposium
-(<span>IPDPS</span>)</em>. Rio de Janeiro, Brazil: IEEE.
+for Multicore Systems.”</span> <em>2019 <span>IEEE</span> International
+Parallel and Distributed Processing Symposium (<span>IPDPS</span>)</em>
+(Rio de Janeiro, Brazil), May.
 </div>
 <div id="ref-Wang2020-yy" class="csl-entry" role="listitem">
 Wang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.
@@ -425,7 +421,7 @@ Wang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020.
 Watson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan,
 Peter Winskill, and Azra C Ghani. 2022. <span>“Global Impact of the
 First Year of <span>COVID-19</span> Vaccination: A Mathematical
-Modelling Study.”</span> <em>Lancet Infect. Dis.</em> 22 (9): 1293–1302.
+Modelling Study.”</span> <em>Lancet Infect. Dis.</em> 22 (9): 1293–302.
 </div>
 <div id="ref-Wick2015-vm" class="csl-entry" role="listitem">
 Wick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015.
@@ -433,9 +429,9 @@ Wick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015.
 Assemblies.”</span> <em>Bioinformatics</em> 31 (20): 3350–52.
 </div>
 <div id="ref-Wu2020-yx" class="csl-entry" role="listitem">
-Wu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu,
-et al. 2020. <span>“A New Coronavirus Associated with Human Respiratory
-Disease in China.”</span> <em>Nature</em> 579 (7798): 265–69.
+Wu, Fan, Su Zhao, Bin Yu, et al. 2020. <span>“A New Coronavirus
+Associated with Human Respiratory Disease in China.”</span>
+<em>Nature</em> 579 (7798): 265–69.
 </div>
 </div>
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>9&nbsp; Annotate the Genome – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -25,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,15 +61,14 @@ div.csl-indent {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -120,9 +124,7 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -145,7 +147,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -364,7 +366,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When reporting how you annotated your genome in a manuscript or dissertation, you should always state:</p>
+<p>When reporting how you annotated your genome in a manuscript or dissertation, <strong>you should always state</strong>:</p>
 <ol type="1">
 <li>The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)</li>
 <li>The parameters used when running the tool (if default parameters were used, state this)</li>
@@ -396,7 +398,7 @@ Note
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>What is the genus of SARS-CoV-2</li>
-<li>How many SARS-CoV-2 <em>nucleotide sequences</em> can be found at NCBI?</li>
+<li>How many SARS-CoV-2 SRA nucleotide sequence records can be found at NCBI?</li>
 </ol>
 </div>
 </div>
@@ -414,7 +416,7 @@ Note
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>SARS-CoV-2 is a <em>Betacoronovirus</em></li>
-<li>There are 9,158,699 SARS-CoV-2 nucleotide assemblies at NCBI (as of 2025-09-19)</li>
+<li>There are 9,197,015 SARS-CoV-2 nucleotide assemblies at NCBI (as of 2026-09-18)</li>
 </ol>
 </div>
 </div>
@@ -429,7 +431,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Using NCBI Taxonomy to determine the SARS-CoV-2 lineage."><source src="assets/movies/ncbi_taxonomy_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Using NCBI Taxonomy to determine the SARS-CoV-2 lineage."><source src="assets/movies/ncbi_taxonomy_full.mp4"></video></div>
 </div>
 </div>
 </section>
@@ -464,7 +466,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Annotating the virus genome using `Prokka`."><source src="assets/movies/prokka-1_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Annotating the virus genome using `Prokka`."><source src="assets/movies/prokka-1_full.mp4"></video></div>
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -527,7 +529,7 @@ Figure&nbsp;9.1: <code>Prokka</code> output files in Galaxy.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspecting the virus genome `Prokka` annotation."><source src="assets/movies/prokka-2_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspecting the virus genome `Prokka` annotation."><source src="assets/movies/prokka-2_full.mp4"></video></div>
 </div>
 </div>
 </div>
@@ -593,18 +595,18 @@ Figure&nbsp;9.1: <code>Prokka</code> output files in Galaxy.
 <ol type="1">
 <li>Nine (9) genes were annotated</li>
 <li>Nine (9) CDS were annotated</li>
-<li>No genes are identified on the reverse strand (there is no reverse strand to an RNA virus)</li>
+<li>No genes are identified on the reverse strand (<em>there is no reverse strand to an RNA virus</em>)</li>
 <li>Replicase polyprotein 1a is the product of the longest gene (13218 bases)</li>
 <li>The product of the shortest non-hypothetical gene is protein 7a (366 bases)</li>
 <li><code>Prokka</code> v1.14.6</li>
-<li>21568..25389</li>
+<li>21567..25388</li>
 </ol>
 </div>
 </div>
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Seemann2014-uh" class="csl-entry" role="listitem">
 Seemann, Torsten. 2014. <span>“Prokka: Rapid Prokaryotic Genome Annotation.”</span> <em>Bioinformatics</em> 30 (14): 2068–69.
 </div>

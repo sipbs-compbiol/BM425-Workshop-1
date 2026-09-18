@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>11&nbsp; Map Reads to the Genome – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -25,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,17 +61,19 @@ div.csl-indent {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -120,9 +127,7 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -145,7 +150,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -352,7 +357,7 @@ div.csl-indent {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When reporting read mapping in a manuscript or dissertation, you should always state:</p>
+<p>When reporting read mapping in a manuscript or dissertation, <strong>you should always state</strong>:</p>
 <ol type="1">
 <li>The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)</li>
 <li>The parameters used when running the tool (if default parameters were used, state this)</li>
@@ -362,12 +367,26 @@ div.csl-indent {
 </div>
 <section id="using-bwa-mem2" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="using-bwa-mem2"><span class="header-section-number">11.1</span> Using <code>BWA-MEM2</code></h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Galaxy will recommend that you use a tool called <code>Minibwa</code> instead of <code>BWA-MEM2</code>.</p>
+<p>Both tools perform the same task, but <code>Minibwa</code> is faster. The tools do not necessarily give the same output, but you could use <code>Minibwa</code> here if you wanted to.</p>
+</div>
+</div>
 <ol type="1">
-<li>Navigate to the <code>BWA-MEM2</code> tool</li>
-<li>Select the <code>BWA-MEM2</code> tool</li>
+<li>Navigate to the <code>BWA-MEM2 - map</code> tool</li>
+<li>Select the <code>BWA-MEM2 - map</code> tool</li>
 <li>Choose <code>Use a reference from history and build index if necessary</code> under <code>Will you select a reference genome…</code></li>
 <li>Choose the <code>SARS_AY278741.fasta</code> sequence under <code>Use the following dataset as the reference sequence</code></li>
-<li>Choose <code>Paired</code> under <code>Single of Paired-end reads</code></li>
+<li>Choose <code>Paired</code> under <code>Single or Paired-end reads</code></li>
 <li>Select the <code>(R1 paired)</code> and <code>(R2 paired)</code> <code>trimmomatic</code> output reads</li>
 <li>Click <code>Run Tool</code></li>
 </ol>
@@ -381,7 +400,7 @@ div.csl-indent {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Mapping SARS-CoV-2 reads to the 2003 SARS genome using `BWA-MEM2`"><source src="assets/movies/bwamem-1_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Mapping SARS-CoV-2 reads to the 2003 SARS genome using `BWA-MEM2`"><source src="assets/movies/bwamem-1_full.mp4"></video></div>
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -411,7 +430,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising the `BWA-MEM2` `.bam` output as text"><source src="assets/movies/bwamem-2_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising the `BWA-MEM2` `.bam` output as text"><source src="assets/movies/bwamem-2_full.mp4"></video></div>
 </div>
 </div>
 </section>
@@ -446,7 +465,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data"><source src="assets/movies/bwamem-3_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data"><source src="assets/movies/bwamem-3_full.mp4"></video></div>
 </div>
 </div>
 <p>Click on the <code>eye</code> icon for the new <code>JBrowse</code> output, and select the following tracks to be shown:</p>
@@ -456,10 +475,10 @@ Caution
 <li>Mapping (<code>SNPs/Coverage</code>)</li>
 </ol>
 <p>to obtain a visualisation of reads that map to the spike (S) protein of SARS 2003, like that shown in <a href="#fig-bwamem-1" class="quarto-xref">Figure&nbsp;<span>11.1</span></a>.</p>
-<div id="fig-bwamem-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-bwamem-1" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/bwamem_mapping.png" class="img-fluid figure-img" style="width:80.0%">
+<a href="assets/images/bwamem_mapping.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;11.1: JBrowse visualisation of a BWA-MEM2 mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops)."><img src="assets/images/bwamem_mapping.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.1: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).
@@ -467,10 +486,10 @@ Figure&nbsp;11.1: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> 
 </figure>
 </div>
 <p>While the spike (S) protein is being visualised, select the <code>(mapped reads in BAM format track)</code> to obtain a visualisation similar to the one in <a href="#fig-bwamem-2" class="quarto-xref">Figure&nbsp;<span>11.2</span></a>.</p>
-<div id="fig-bwamem-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-bwamem-2" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bwamem-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/bwamem_snps.png" class="img-fluid figure-img" style="width:80.0%">
+<a href="assets/images/bwamem_snps.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;11.2: JBrowse visualisation of a BWA-MEM2 mapping of SARS-CoV-2 reads against a SARS 2003 reference genome in the regions of the spike (S) protein."><img src="assets/images/bwamem_snps.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bwamem-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.2: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> mapping of SARS-CoV-2 reads against a SARS 2003 reference genome in the regions of the spike (S) protein.
@@ -488,7 +507,7 @@ Figure&nbsp;11.2: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> 
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising SNPs in `JBrowse`"><source src="assets/movies/bwamem-4_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising SNPs in `JBrowse`"><source src="assets/movies/bwamem-4_full.mp4"></video></div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -516,9 +535,9 @@ Figure&nbsp;11.2: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> 
 <p>We can find SNPs by visual inspection in a tool like <code>JBrowse</code>, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in <a href="snippy.html" class="quarto-xref"><span>Chapter 12</span></a>.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Vasimuddin2019-dj" class="csl-entry" role="listitem">
-Vasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019. <span>“Efficient Architecture-Aware Acceleration of <span>BWA-MEM</span> for Multicore Systems.”</span> In <em>2019 <span>IEEE</span> International Parallel and Distributed Processing Symposium (<span>IPDPS</span>)</em>. Rio de Janeiro, Brazil: IEEE.
+Vasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019. <span>“Efficient Architecture-Aware Acceleration of <span>BWA-MEM</span> for Multicore Systems.”</span> <em>2019 <span>IEEE</span> International Parallel and Distributed Processing Symposium (<span>IPDPS</span>)</em> (Rio de Janeiro, Brazil), May.
 </div>
 </div>
 </section>
@@ -954,6 +973,38 @@ Vasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019. <span>“Effic
 <script>videojs(video_shortcode_videojs_video2);</script>
 <script>videojs(video_shortcode_videojs_video3);</script>
 <script>videojs(video_shortcode_videojs_video4);</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

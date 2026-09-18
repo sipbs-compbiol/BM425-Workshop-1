@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>6&nbsp; Inspect Read Quality – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -36,17 +42,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -100,9 +108,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -125,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -334,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>It is good practice always to inspect the quality of your sequencing read data, and remove low-quality reads, before assembly.</p>
-<p>When describing your sequencing experiment in a manuscript or dissertation, you should always state:</p>
+<p><strong>When describing your sequencing experiment in a manuscript or dissertation, you should always state</strong>:</p>
 <ol type="1">
 <li>The sequencing technology used, and the sequencing platform</li>
 <li>The number of raw reads obtained, and a measure of average read length</li>
@@ -363,6 +369,20 @@ Tip
 <p>This part of the workshop will cover the use of <code>FastQC</code> to inspect the quality of your sequence reads.</p>
 <section id="using-fastqc" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="using-fastqc"><span class="header-section-number">6.1</span> Using <code>FastQC</code></h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Galaxy will advise that you use <code>Falco</code> instead of <code>FastQC</code>.</p>
+<p>The two tools are essentially identical, but <code>Falco</code> is a more recent and faster implementation. If you choose to use <code>Falco</code> the process is very similar to using <code>FastQC</code>.</p>
+</div>
+</div>
 <ol type="1">
 <li>Navigate to the <code>FastQC</code> tool using the <code>Tools</code> sidebar in <code>Galaxy</code></li>
 </ol>
@@ -379,6 +399,20 @@ Tip
 <li>With the <code>FastQC</code> tool options in the main <code>Workspace</code> window, select the file you want to run <code>FastQC</code> on.</li>
 <li>Click on the <code>Run Tool</code> button.</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You <strong>do not</strong> have to wait for one job to finish before starting a new one.</p>
+<p>Galaxy handles <em>scheduling</em>, and can perform more than one task at a time, so it is safe to queue up multiple jobs and set them running.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -402,7 +436,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Assessing sequencing read quality with `FastQC`"><source src="assets/movies/fastqc-1_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Assessing sequencing read quality with `FastQC`"><source src="assets/movies/fastqc-1_full.mp4"></video></div>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -416,7 +450,7 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <p><code>FastQC</code> takes a few moments to run.</p>
-<p>When the run is complete, click on the <code>eye</code> icon of the <code>Webpage</code> result to inspect the <code>FastQC</code> output.</p>
+<p>When the run is complete, click on the <code>eye</code> (<code>View</code>) icon of the <code>Webpage</code> result to inspect the <code>FastQC</code> output.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -427,7 +461,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can press and hold <strong>CTRL</strong> (on a PC) or <strong>CMD ⌘</strong> (macOS) when clicking the <code>eye</code> icon to open the result in its own window.</p>
+<p>You can press and hold <strong>CTRL</strong> (on a PC) or <strong>CMD ⌘</strong> (macOS) when clicking the <code>eye</code> (<code>View</code>) icon to open the result in its own window.</p>
 </div>
 </div>
 </div>
@@ -450,7 +484,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspecting `FastQC` output in Galaxy"><source src="assets/movies/fastqc-2_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspecting `FastQC` output in Galaxy"><source src="assets/movies/fastqc-2_full.mp4"></video></div>
 </div>
 </div>
 <section id="fastqc-summary" class="level3 page-columns page-full" data-number="6.2.1">
@@ -458,10 +492,10 @@ Tip
 <p>The <code>FastQC</code> summary (<a href="#fig-fastqc-summary" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a <em>pass</em> (green, with a tick), a <em>warning</em> (amber, with exclamation mark), or a <em>fail</em> (red, with a cross) mark.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<div id="fig-fastqc-summary" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section.">
+<div id="fig-fastqc-summary" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fastqc-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/fastqc_summary.png" class="img-fluid figure-img" style="width:80.0%" alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section.">
+<a href="assets/images/fastqc_summary.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;6.1: Example FastQC summary showing passes for most sections of the report including “Basic Statistics,” warnings for some sections including “Overrepresented sequences,” and a fail for “Sequence Duplication Levels”"><img src="assets/images/fastqc_summary.png" class="img-fluid figure-img" style="width:80.0%" alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6.1: Example <code>FastQC</code> summary showing passes for most sections of the report including “Basic Statistics,” warnings for some sections including “Overrepresented sequences,” and a fail for “Sequence Duplication Levels”
@@ -485,10 +519,10 @@ Tip
 <p>For good-quality sequence read data, we are looking for a graph where the mean quality (see <a href="#fig-fastqc-perbase" class="quarto-xref">Figure&nbsp;<span>6.2</span></a>) is always in the green area, with a score greater than 29.</p>
 </div>
 </div>
-<div id="fig-fastqc-perbase" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-fastqc-perbase" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fastqc-perbase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/fastqc_perbase.png" class="img-fluid figure-img" style="width:80.0%">
+<a href="assets/images/fastqc_perbase.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;6.2: Per base sequence quality score plot from FastQC indicating high quality sequencing reads. Quality score ranges are presented as a boxplot, with the mean drawn as a line connecting each boxplot."><img src="assets/images/fastqc_perbase.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-perbase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6.2: Per base sequence quality score plot from <code>FastQC</code> indicating high quality sequencing reads. Quality score ranges are presented as a boxplot, with the mean drawn as a line connecting each boxplot.
@@ -527,10 +561,10 @@ Tip
 <p>In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.</p>
 </div>
 </div>
-<div id="fig-fastqc-perseq" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-fastqc-perseq" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fastqc-perseq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/fastqc_perseq.png" class="img-fluid figure-img" style="width:80.0%">
+<a href="assets/images/fastqc_perseq.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;6.3: Per sequence quality score plot from FastQC indicating overall high quality sequencing reads."><img src="assets/images/fastqc_perseq.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-perseq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6.3: Per sequence quality score plot from <code>FastQC</code> indicating overall high quality sequencing reads.
@@ -566,7 +600,7 @@ Caution
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -575,7 +609,7 @@ Caution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>Read the description of the Sequence Duplication Levels result section in the <a href="https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx">MSU Tutorial</a>.</li>
@@ -585,7 +619,7 @@ Caution
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -594,7 +628,7 @@ Caution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Your sequence reads were obtained using RNA sequencing, and very deeply sequenced the virus genome. The high abundance of virus sequence reads (and the low abundance of any reads that do not derive from the virus) looks unusual compared to the results of a standard DNA genome sequencing experiment, so is marked as “fail” by <code>FastQC</code>.</p>
 </div>
@@ -1040,6 +1074,38 @@ Caution
 </footer>
 <script>videojs(video_shortcode_videojs_video1);</script>
 <script>videojs(video_shortcode_videojs_video2);</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

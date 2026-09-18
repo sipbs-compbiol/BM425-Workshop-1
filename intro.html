@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>1&nbsp; Introduction – BM425 Workshop 1: SARS-CoV-2 Genome Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -25,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -56,15 +61,17 @@ div.csl-indent {
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed7344add5f1663e434276306a2aa159.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -118,9 +125,7 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">BM425 Workshop 1: SARS-CoV-2 Genome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -143,7 +148,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to 2025-26 BM425 Workshop 1</span></a>
+ <span class="menu-text">Preface to 2026-27 BM425 Workshop 1</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -354,10 +359,10 @@ div.csl-indent {
 <section id="covid-19" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="covid-19"><span class="header-section-number">1.2</span> COVID-19</h2>
 <p>The first cases of a pneumonia of unknown causes began to emerge in Wuhan, China, in December 2019. The novel coronavirus SARS-CoV-2 was isolated by early January, and by the end of January 2020 human-to-human transmission had been confirmed, and cases had been reported in Thailand, Japan, the USA, and several other countries (<a href="#fig-timeline" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>, <span class="citation" data-cites="Wang2020-yy">Wang et al. (<a href="references.html#ref-Wang2020-yy" role="doc-biblioref">2020</a>)</span>).</p>
-<div id="fig-timeline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea.">
+<div id="fig-timeline" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/early-covid-timeline.jpg" class="img-fluid figure-img" style="width:80.0%" alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea.">
+<a href="assets/images/early-covid-timeline.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1.1: Early COVID-19 timeline (reproduced from @Wang2020-yy)"><img src="assets/images/early-covid-timeline.jpg" class="img-fluid figure-img" style="width:80.0%" alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.1: Early COVID-19 timeline (reproduced from <span class="citation" data-cites="Wang2020-yy">Wang et al. (<a href="references.html#ref-Wang2020-yy" role="doc-biblioref">2020</a>)</span>)
@@ -365,10 +370,10 @@ Figure&nbsp;1.1: Early COVID-19 timeline (reproduced from <span class="citation"
 </figure>
 </div>
 <p>By the end of February, cases had been identified across the Northern hemisphere, and a new hotspot was emerging in Italy (<a href="instructions.html#fig-spread" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>).</p>
-<div id="fig-spread" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020.">
+<div id="fig-spread" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-spread-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/COVID-19-outbreak-timeline-2.gif" class="img-fluid figure-img" style="width:80.0%" alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020.">
+<a href="assets/images/COVID-19-outbreak-timeline-2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1.2: Early COVID-19 global spread"><img src="assets/images/COVID-19-outbreak-timeline-2.gif" class="img-fluid figure-img" style="width:80.0%" alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spread-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.2: Early COVID-19 global spread
@@ -387,10 +392,10 @@ Figure&nbsp;1.2: Early COVID-19 global spread
 <li>S2: a domain that mediates membrane fusion between the virus and the cell by forming a structural bundle</li>
 </ul>
 <p>These interact with the host cell as illustrated in <a href="#fig-spike" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>.</p>
-<div id="fig-spike" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry.">
+<div id="fig-spike" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-spike-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/spike_protein_cell.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry.">
+<a href="assets/images/spike_protein_cell.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;1.3: (a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells (reproduced from @Huang2020-uk)"><img src="assets/images/spike_protein_cell.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spike-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.3: (a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells (reproduced from <span class="citation" data-cites="Huang2020-uk">Huang et al. (<a href="references.html#ref-Huang2020-uk" role="doc-biblioref">2020</a>)</span>)
@@ -398,10 +403,10 @@ Figure&nbsp;1.3: (a) The schematic structure of the S protein. (b) The S protein
 </figure>
 </div>
 <p>When you assemble, annotate, and visualise the SARS-CoV-2 genome in this workshop you will find the spike protein annotated as in <a href="jbrowse.html#fig-jbrowse-1" class="quarto-xref">Figure&nbsp;<span>10.1</span></a>.</p>
-<div id="fig-jbrowse-1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome.">
+<div id="fig-jbrowse-1" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-jbrowse-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/spike_vis_jbrowse.png" class="img-fluid figure-img" alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome.">
+<a href="assets/images/spike_vis_jbrowse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;1.4: JBrowse rendering of an annotated SARS-CoV-2 genome"><img src="assets/images/spike_vis_jbrowse.png" class="img-fluid figure-img" alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jbrowse-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.4: JBrowse rendering of an annotated SARS-CoV-2 genome
@@ -409,10 +414,10 @@ Figure&nbsp;1.4: JBrowse rendering of an annotated SARS-CoV-2 genome
 </figure>
 </div>
 <p>The spike protein is not the only important surface protein for SARS-CoV-2. The envelope (E), membrane (M) and nucleocapsid proteins are also essential for the virus to interact with the host, as shown in <a href="#fig-palma" class="quarto-xref">Figure&nbsp;<span>1.5</span></a>, and you will identify these in your analysis today, too.</p>
-<div id="fig-palma" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host.">
+<div id="fig-palma" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-palma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/sars-ace2tmprs2-martapalma.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host.">
+<a href="assets/images/sars-ace2tmprs2-martapalma.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;1.5: How SARS-CoV-2 interacts with the surface proteins of the target cell (Marta Palma Rodríguez)"><img src="assets/images/sars-ace2tmprs2-martapalma.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-palma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.5: How SARS-CoV-2 interacts with the surface proteins of the target cell <a href="https://pdb101.rcsb.org/news/5ed7c17cdab5c9354c274f56">(Marta Palma Rodríguez)</a>
@@ -454,10 +459,10 @@ Figure&nbsp;1.5: How SARS-CoV-2 interacts with the surface proteins of the targe
 <li>The longest assembled contig was identified as a coronavirus, and used to design primers for PCR-RACE (Rapid Amplification of cDNA Ends, <span class="citation" data-cites="Pal2022-tw">Pal (<a href="references.html#ref-Pal2022-tw" role="doc-biblioref">2022</a>)</span>, <a href="#fig-race" class="quarto-xref">Figure&nbsp;<span>1.6</span></a>) which allowed researchers to sequence the ends of the virus genome</li>
 <li>The cleaned reads were remapped against the full virus sequence</li>
 </ol>
-<div id="fig-race" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome.">
+<div id="fig-race" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-race-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/race.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome.">
+<a href="assets/images/race.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;1.6: PCR-RACE generates long amplicons from the viral genome, which can be sequenced with long-read sequencing. This results in a “crenellated” assembly of overlapping long genomic sections."><img src="assets/images/race.png" class="img-fluid figure-img" style="width:80.0%" alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome."></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-race-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.6: PCR-RACE generates long amplicons from the viral genome, which can be sequenced with long-read sequencing. This results in a “crenellated” assembly of overlapping long genomic sections.
@@ -563,7 +568,7 @@ Figure&nbsp;1.6: PCR-RACE generates long amplicons from the viral genome, which 
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Huang2020-uk" class="csl-entry" role="listitem">
 Huang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020. <span>“Structural and Functional Properties of <span>SARS-CoV-2</span> Spike Protein: Potential Antivirus Drug Development for <span>COVID-19</span>.”</span> <em>Acta Pharmacol. Sin.</em> 41 (9): 1141–49.
 </div>
@@ -571,25 +576,25 @@ Huang, Yuan, Chan Yang, Xin-Feng Xu, Wei Xu, and Shu-Wen Liu. 2020. <span>“Str
 Li, Dinghua, Chi-Man Liu, Ruibang Luo, Kunihiko Sadakane, and Tak-Wah Lam. 2015. <span>“<span>MEGAHIT</span>: An Ultra-Fast Single-Node Solution for Large and Complex Metagenomics Assembly via Succinct de Bruijn Graph.”</span> <em>Bioinformatics</em> 31 (10): 1674–76.
 </div>
 <div id="ref-owidcoronavirus" class="csl-entry" role="listitem">
-Mathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel, Charlie Giattino, Joe Hasell, Bobbie Macdonald, et al. 2020. <span>“Coronavirus Pandemic (COVID-19).”</span> <em>Our World in Data</em>.
+Mathieu, Edouard, Hannah Ritchie, Lucas Rodés-Guirao, et al. 2020. <span>“Coronavirus Pandemic (COVID-19).”</span> <em>Our World in Data</em>.
 </div>
 <div id="ref-Oude_Munnink2020-ry" class="csl-entry" role="listitem">
-Oude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, Áine O’Toole, Manon Haverkate, Madelief Mollers, Sandra K Kamga, et al. 2020. <span>“Rapid <span>SARS-CoV-2</span> Whole-Genome Sequencing and Analysis for Informed Public Health Decision-Making in the Netherlands.”</span> <em>Nat. Med.</em> 26 (9): 1405–10.
+Oude Munnink, Bas B, David F Nieuwenhuijse, Mart Stein, et al. 2020. <span>“Rapid <span>SARS-CoV-2</span> Whole-Genome Sequencing and Analysis for Informed Public Health Decision-Making in the Netherlands.”</span> <em>Nat. Med.</em> 26 (9): 1405–10.
 </div>
 <div id="ref-Pal2022-tw" class="csl-entry" role="listitem">
-Pal, Aruna. 2022. <span>“Rapid Amplification of <span class="nocase">cDNA</span> Ends (<span>RACE</span>).”</span> In <em>Springer Protocols Handbooks</em>, 505–35. New York, NY: Springer US.
+Pal, Aruna. 2022. <span>“Rapid Amplification of <span class="nocase">cDNA</span> Ends (<span>RACE</span>).”</span> In <em>Springer Protocols Handbooks</em>. Springer US.
 </div>
 <div id="ref-Rota2003-tu" class="csl-entry" role="listitem">
-Rota, Paul A, M Steven Oberste, Stephan S Monroe, W Allan Nix, Ray Campagnoli, Joseph P Icenogle, Silvia Peñaranda, et al. 2003. <span>“Characterization of a Novel Coronavirus Associated with Severe Acute Respiratory Syndrome.”</span> <em>Science</em> 300 (5624): 1394–99.
+Rota, Paul A, M Steven Oberste, Stephan S Monroe, et al. 2003. <span>“Characterization of a Novel Coronavirus Associated with Severe Acute Respiratory Syndrome.”</span> <em>Science</em> 300 (5624): 1394–99.
 </div>
 <div id="ref-Wang2020-yy" class="csl-entry" role="listitem">
 Wang, Chen, Peter W Horby, Frederick G Hayden, and George F Gao. 2020. <span>“A Novel Coronavirus Outbreak of Global Health Concern.”</span> <em>Lancet</em> 395 (10223): 470–73.
 </div>
 <div id="ref-Watson2022-ec" class="csl-entry" role="listitem">
-Watson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan, Peter Winskill, and Azra C Ghani. 2022. <span>“Global Impact of the First Year of <span>COVID-19</span> Vaccination: A Mathematical Modelling Study.”</span> <em>Lancet Infect. Dis.</em> 22 (9): 1293–1302.
+Watson, Oliver J, Gregory Barnsley, Jaspreet Toor, Alexandra B Hogan, Peter Winskill, and Azra C Ghani. 2022. <span>“Global Impact of the First Year of <span>COVID-19</span> Vaccination: A Mathematical Modelling Study.”</span> <em>Lancet Infect. Dis.</em> 22 (9): 1293–302.
 </div>
 <div id="ref-Wu2020-yx" class="csl-entry" role="listitem">
-Wu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu, et al. 2020. <span>“A New Coronavirus Associated with Human Respiratory Disease in China.”</span> <em>Nature</em> 579 (7798): 265–69.
+Wu, Fan, Su Zhao, Bin Yu, et al. 2020. <span>“A New Coronavirus Associated with Human Respiratory Disease in China.”</span> <em>Nature</em> 579 (7798): 265–69.
 </div>
 </div>
 </section>
@@ -999,7 +1004,7 @@ Wu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu, et al. 2
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link" aria-label="Preface to {{< var ay >}} BM425 Workshop 1">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface to 2025-26 BM425 Workshop 1</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface to 2026-27 BM425 Workshop 1</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1022,6 +1027,38 @@ Wu, Fan, Su Zhao, Bin Yu, Yan-Mei Chen, Wen Wang, Zhi-Gang Song, Yi Hu, et al. 2
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
