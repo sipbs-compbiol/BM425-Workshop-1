@@ -37,7 +37,7 @@ If you follow the instructions below, and watch the video, you should find that 
 {{< video assets/movies/jbrowse-1_full.mp4 title="Configuring `JBrowse` for visualisation." >}}
 :::
 
-When the `JBrowse` output in the `History` sidebar is complete, click on the `eye` icon to bring the visualisation to the main `Workspace` area. Watch the video below to see some of the features of the visualisation in action.
+When the `JBrowse` output in the `History` sidebar is complete, click on the `eye` (`View`) icon to bring the visualisation to the main `Workspace` area. Watch the video below to see some of the features of the visualisation in action.
 
 ::: { .callout-note }
 ## Video: Exploring the `JBrowse` interface
@@ -47,13 +47,13 @@ When the `JBrowse` output in the `History` sidebar is complete, click on the `ey
 
 Using the `JBrowse` interface, you can select whether to show the reference sequence and/or the annotation (@fig-jbrowse-1). By clicking on the annotated features, you can bring up a window with more detail about their annotations (@fig-jbrowse-2). You can zoom into and out of the assembled and annotated genome to see individual bases and amino acids represented on the sequence (@fig-jbrowse-3). 
 
-![A zoomed-out `JBrowse` view of the annotated SARS-CoV-2 assembly. The magnifying glass icons can be used to zoom in and out of the assembly. The check boxes to the left of the window can be used to control whether the reference genome and/or the annotation are visible. Each annotated feature is represented as a bar below the reference genome; clicking on one of these glyphs will open a window with annotation details (@fig-jbrowse-2).](assets/images/jbrowse_zoom-1.png){#fig-jbrowse-1 width="80%"}
+![A zoomed-out `JBrowse` view of the annotated SARS-CoV-2 assembly. The magnifying glass icons can be used to zoom in and out of the assembly. The check boxes to the left of the window can be used to control whether the reference genome and/or the annotation are visible. Each annotated feature is represented as a bar below the reference genome; clicking on one of these glyphs will open a window with annotation details (@fig-jbrowse-2).](assets/images/jbrowse_zoom-1.png){#fig-jbrowse-1 width="80%" .lightbox}
 
 ::: { .column-margin }
-![Annotation detail pop-up window for the spike (S) protein. The pop-up windows for annotation features include functional annotation detail, the underlying sequence, and other useful information.](assets/images/jbrowse_details.png){#fig-jbrowse-2 width="80%"}
+![Annotation detail pop-up window for the spike (S) protein. The pop-up windows for annotation features include functional annotation detail, the underlying sequence, and other useful information.](assets/images/jbrowse_details.png){#fig-jbrowse-2 width="80%" .lightbox}
 :::
 
-![A zoomed-in `JBrowse` view of the annotated SARS-CoV-2 assembly. The forward strand is the topmost of the two nucleotide sequence tracks. The lower nucleotide sequence is the reverse strand (here, because SARS-CoV-2 is a single-strand RNA virus, the reverse strand does not really exist). The three tracks above and below the nucleotide sequences are the conceptual translations of the nucleotide sequence in all three frames. Potential start codons are highlighted in green, and stop codons are highlighted in red.](assets/images/jbrowse_zoom-2.png){#fig-jbrowse-3 width="80%"}
+![A zoomed-in `JBrowse` view of the annotated SARS-CoV-2 assembly. The forward strand is the topmost of the two nucleotide sequence tracks. The lower nucleotide sequence is the reverse strand (here, because SARS-CoV-2 is a single-strand RNA virus, the reverse strand does not really exist). The three tracks above and below the nucleotide sequences are the conceptual translations of the nucleotide sequence in all three frames. Potential start codons are highlighted in green, and stop codons are highlighted in red.](assets/images/jbrowse_zoom-2.png){#fig-jbrowse-3 width="80%" .lightbox}
 
 ## Next Steps
 
