@@ -13,6 +13,7 @@ README_files/
 # Local Quarto output
 _book/
 _freeze/
+**/*.quarto_ipynb
 
 # macOS cruft
 .DS_Store
