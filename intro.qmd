@@ -13,11 +13,11 @@ Today you will be:
 
 The first cases of a pneumonia of unknown causes began to emerge in Wuhan, China, in December 2019. The novel coronavirus SARS-CoV-2 was isolated by early January, and by the end of January 2020 human-to-human transmission had been confirmed, and cases had been reported in Thailand, Japan, the USA, and several other countries (@fig-timeline, @Wang2020-yy).
 
-![Early COVID-19 timeline (reproduced from @Wang2020-yy)](assets/images/early-covid-timeline.jpg){#fig-timeline fig-alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea." width=80%}
+![Early COVID-19 timeline (reproduced from @Wang2020-yy)](assets/images/early-covid-timeline.jpg){#fig-timeline fig-alt="A timeline from December 30th 2019 to January 24th 2020, detailing the successive identification of a cluster of pneumonia cases, identification of a novel coronavirus, and first cases in Thailand and Korea." width=80% .lightbox}
 
 By the end of February, cases had been identified across the Northern hemisphere, and a new hotspot was emerging in Italy (@fig-spread).
 
-![Early COVID-19 global spread](assets/images/COVID-19-outbreak-timeline-2.gif){#fig-spread fig-alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020." width=80%}
+![Early COVID-19 global spread](assets/images/COVID-19-outbreak-timeline-2.gif){#fig-spread fig-alt="Animated .gif showing the global spread of COVID-19 from China in early January 2020, to most of the Northern hemisphere by the end of February 2020." width=80% .lightbox}
 
 By October 2021, it was estimated that COVID-19 had [caused over 5mn deaths](https://www.reuters.com/world/global-covid-19-deaths-hit-5-million-delta-variant-sweeps-world-2021-10-02/) worldwide, as well as severe social and economic disruption, including the [largest global recession in almost a century](https://www.imf.org/en/Blogs/Articles/2020/04/14/blog-weo-the-great-lockdown-worst-economic-downturn-since-the-great-depression).
 
@@ -34,15 +34,15 @@ The spike (S) protein of SARS-CoV-2 plays a key role in host cell receptor recog
 
 These interact with the host cell as illustrated in @fig-spike.
 
-![(a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells (reproduced from @Huang2020-uk)](assets/images/spike_protein_cell.png){#fig-spike fig-alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry." width=80%}
+![(a) The schematic structure of the S protein. (b) The S protein binds to the receptor ACE2. (c) The binding and virus–cell fusion process mediated by the S protein. (d) The life cycle of SARS-CoV-2 in host cells (reproduced from @Huang2020-uk)](assets/images/spike_protein_cell.png){#fig-spike fig-alt="Schematic of SARS-CoV-2 interaction with the host cell, mediated by the spike (S) protein. The S protein attaches to the ACE receptor _via_ the S1 subunit, and the S2 subunit then forms a structural bundle, interacting with the host cell to permit virus entry." width=80% .lightbox}
 
 When you assemble, annotate, and visualise the SARS-CoV-2 genome in this workshop you will find the spike protein annotated as in @fig-jbrowse-1.
 
-![JBrowse rendering of an annotated SARS-CoV-2 genome](assets/images/spike_vis_jbrowse.png){#fig-jbrowse-1 fig-alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome."}
+![JBrowse rendering of an annotated SARS-CoV-2 genome](assets/images/spike_vis_jbrowse.png){#fig-jbrowse-1 fig-alt="JBrowse view of an annotated SARS-CoV-2 assembly, showing the location of the spike (S) protein on the genome." .lightbox}
 
 The spike protein is not the only important surface protein for SARS-CoV-2. The envelope (E), membrane (M) and nucleocapsid proteins are also essential for the virus to interact with the host, as shown in @fig-palma, and you will identify these in your analysis today, too.
 
-![How SARS-CoV-2 interacts with the surface proteins of the target cell [(Marta Palma Rodríguez)](https://pdb101.rcsb.org/news/5ed7c17cdab5c9354c274f56)](assets/images/sars-ace2tmprs2-martapalma.png){#fig-palma fig-alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host." width=80%}
+![How SARS-CoV-2 interacts with the surface proteins of the target cell [(Marta Palma Rodríguez)](https://pdb101.rcsb.org/news/5ed7c17cdab5c9354c274f56)](assets/images/sars-ace2tmprs2-martapalma.png){#fig-palma fig-alt="Schematic representation of SARS-CoV-2 surface proteins and their interactions with the host." width=80% .lightbox}
 
 ::: { .callout-tip collapse="true" }
 ## SARS-CoV-2 Molecular Structures
@@ -70,7 +70,7 @@ The first SARS-CoV-2 genome was obtained from a sample of human lung in January 
 6. The cleaned reads were remapped against the full virus sequence
 
 
-![PCR-RACE generates long amplicons from the viral genome, which can be sequenced with long-read sequencing. This results in a "crenellated" assembly of overlapping long genomic sections.](assets/images/race.png){#fig-race fig-alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome." width=80%}
+![PCR-RACE generates long amplicons from the viral genome, which can be sequenced with long-read sequencing. This results in a "crenellated" assembly of overlapping long genomic sections.](assets/images/race.png){#fig-race fig-alt="Schematic of how PCR-RACE leads to a crenellated assembly, with long reads spanning the virus genome." width=80% .lightbox}
 
 ::: { .callout-tip }
 ## Questions

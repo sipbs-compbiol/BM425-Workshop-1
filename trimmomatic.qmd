@@ -24,7 +24,7 @@ When reporting how you cleaned your sequence data in a manuscript or dissertatio
 Tools like `trimmomatic` return two kinds of cleaned read data:
 
 1. R1-paired, R2-paired: these are high quality paired-end reads
-2. R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality
+2. R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality and discarded
 :::
 
 This part of the workshop will guide you through using `trimmomatic` to clear your sequence read data.
@@ -54,7 +54,7 @@ Cleaning your data with `trimmomatic` generates four output files (@fig-trimmoma
 ![`FastQC` output files in Galaxy. From the top: unpaired reverse (R2) reads, unpaired forward (R1) reads, paired reverse (R2) reads, and paired forward (R1) reads.](assets/images/trimmomatic_output_list.png){#fig-trimmomatic-output-list}
 :::
 
-You can inspect the contents of these files by clicking on the filename in the `History` sidebar, and also by clicking on the corresponding `eye` icon to view the trimmed reads in the workspace.
+You can inspect the contents of these files by clicking on the filename in the `History` sidebar, and also by clicking on the corresponding `eye` (`View`) icon to view the trimmed reads in the workspace.
 
 ::: { .callout-note }
 ## Video: Inspecting `trimmomatic` output files

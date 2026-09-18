@@ -9,7 +9,7 @@ Today, you will use the same approach to compare the Wuhan 1 strain of SARS-CoV-
 ::: { .callout-important }
 ## Good practice
 
-When reporting read mapping in a manuscript or dissertation, you should always state:
+When reporting read mapping in a manuscript or dissertation, **you should always state**:
 
 1. The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)
 2. The parameters used when running the tool (if default parameters were used, state this)
@@ -18,11 +18,17 @@ When reporting read mapping in a manuscript or dissertation, you should always s
 
 ## Using `BWA-MEM2`
 
-1. Navigate to the `BWA-MEM2` tool
-2. Select the `BWA-MEM2` tool
+::: { .callout-note }
+Galaxy will recommend that you use a tool called `Minibwa` instead of `BWA-MEM2`.
+
+Both tools perform the same task, but `Minibwa` is faster. The tools do not necessarily give the same output, but you could use `Minibwa` here if you wanted to.
+:::
+
+1. Navigate to the `BWA-MEM2 - map` tool
+2. Select the `BWA-MEM2 - map` tool
 3. Choose `Use a reference from history and build index if necessary` under `Will you select a reference genome…`
 4. Choose the `SARS_AY278741.fasta` sequence under `Use the following dataset as the reference sequence`
-5. Choose `Paired` under `Single of Paired-end reads`
+5. Choose `Paired` under `Single or Paired-end reads`
 6. Select the `(R1 paired)` and `(R2 paired)` `trimmomatic` output reads
 7. Click `Run Tool`
 
@@ -81,12 +87,12 @@ Click on the `eye` icon for the new `JBrowse` output, and select the following t
 
 to obtain a visualisation of reads that map to the spike (S) protein of SARS 2003, like that shown in @fig-bwamem-1.
 
-![`JBrowse` visualisation of a `BWA-MEM2` mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).](assets/images/bwamem_mapping.png){#fig-bwamem-1 width="80%"}
+![`JBrowse` visualisation of a `BWA-MEM2` mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).](assets/images/bwamem_mapping.png){#fig-bwamem-1 width="80%" .lightbox}
 
 
 While the spike (S) protein is being visualised, select the `(mapped reads in BAM format track)` to obtain a visualisation similar to the one in @fig-bwamem-2.
 
-![`JBrowse` visualisation of a `BWA-MEM2` mapping of SARS-CoV-2 reads against a SARS 2003 reference genome in the regions of the spike (S) protein.](assets/images/bwamem_snps.png){#fig-bwamem-2 width="80%"}
+![`JBrowse` visualisation of a `BWA-MEM2` mapping of SARS-CoV-2 reads against a SARS 2003 reference genome in the regions of the spike (S) protein.](assets/images/bwamem_snps.png){#fig-bwamem-2 width="80%" .lightbox}
 
 You can click on the header of the SNP track in `JBrowse` and select `Pin to top`, so that you can zoom in and see individual SNPs, as in the video below.
 

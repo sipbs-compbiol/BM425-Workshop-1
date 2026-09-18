@@ -9,7 +9,7 @@ We call the set of sequenced reads we obtain from the sequencer the _raw reads_.
 
 It is good practice always to inspect the quality of your sequencing read data, and remove low-quality reads, before assembly.
 
-When describing your sequencing experiment in a manuscript or dissertation, you should always state:
+**When describing your sequencing experiment in a manuscript or dissertation, you should always state**:
 
 1. The sequencing technology used, and the sequencing platform
 2. The number of raw reads obtained, and a measure of average read length
@@ -28,6 +28,12 @@ This part of the workshop will cover the use of `FastQC` to inspect the quality 
 
 ## Using `FastQC`
 
+::: { .callout-note }
+Galaxy will advise that you use `Falco` instead of `FastQC`.
+
+The two tools are essentially identical, but `Falco` is a more recent and faster implementation. If you choose to use `Falco` the process is very similar to using `FastQC`.
+:::
+
 1. Navigate to the `FastQC` tool using the `Tools` sidebar in `Galaxy`
   - You can use the `search tools` field to find `FastQC`
   - Alternatively, you will find it under `GENOMIC FILE MANIPULATION`/`FASTA/FASTQ` in the sidebar
@@ -36,6 +42,12 @@ This part of the workshop will cover the use of `FastQC` to inspect the quality 
   - These are the `trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz` and `trimmed_pe_aln.qsorted.mapped.fixed.2.fastq.gz` files.
   - With the `FastQC` tool options in the main `Workspace` window, select the file you want to run `FastQC` on.
   - Click on the `Run Tool` button.
+
+::: { .callout-tip }
+You **do not** have to wait for one job to finish before starting a new one.
+
+Galaxy handles _scheduling_, and can perform more than one task at a time, so it is safe to queue up multiple jobs and set them running.
+:::
 
 ::: { .callout-important }
 **Make sure you run `FastQC` on both the forward and reverse read sets.**
@@ -50,10 +62,10 @@ This part of the workshop will cover the use of `FastQC` to inspect the quality 
 ::: { .callout-important }
 `FastQC` takes a few moments to run.
 
-When the run is complete, click on the `eye` icon of the `Webpage` result to inspect the `FastQC` output.
+When the run is complete, click on the `eye` (`View`) icon of the `Webpage` result to inspect the `FastQC` output.
 
 ::: { .callout-tip }
-You can press and hold **CTRL** (on a PC) or **CMD ⌘** (macOS) when clicking the `eye` icon to open the result in its own window.
+You can press and hold **CTRL** (on a PC) or **CMD ⌘** (macOS) when clicking the `eye` (`View`) icon to open the result in its own window.
 :::
 :::
 
@@ -76,7 +88,7 @@ The output of `FastQC` tells us a lot about the quality of our sequencing data, 
 The `FastQC` summary (@fig-fastqc-summary) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a _pass_ (green, with a tick), a _warning_ (amber, with exclamation mark), or a _fail_ (red, with a cross) mark.
 
 ::: { .column-margin }
-![Example `FastQC` summary showing passes for most sections of the report including "Basic Statistics," warnings for some sections including "Overrepresented sequences," and a fail for "Sequence Duplication Levels"](assets/images/fastqc_summary.png){#fig-fastqc-summary fig-alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section." width="80%"}
+![Example `FastQC` summary showing passes for most sections of the report including "Basic Statistics," warnings for some sections including "Overrepresented sequences," and a fail for "Sequence Duplication Levels"](assets/images/fastqc_summary.png){#fig-fastqc-summary fig-alt="Summary section of a FastQC report showing passes for most sections, warnings for some sections, and failure for a single section." width="80%" .lightbox}
 :::
 
 ### Per base sequence quality
@@ -87,7 +99,7 @@ The _per base sequence quality_ plot (@fig-fastqc-perbase) presents the ranges o
 For good-quality sequence read data, we are looking for a graph where the mean quality (see @fig-fastqc-perbase) is always in the green area, with a score greater than 29.
 :::
 
-![Per base sequence quality score plot from `FastQC` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot, with the mean drawn as a line connecting each boxplot.](assets/images/fastqc_perbase.png){#fig-fastqc-perbase width=80%}
+![Per base sequence quality score plot from `FastQC` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot, with the mean drawn as a line connecting each boxplot.](assets/images/fastqc_perbase.png){#fig-fastqc-perbase width=80% .lightbox}
 
 ::: { .callout-caution }
 It is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.
@@ -105,7 +117,7 @@ The _per sequence quality_ score (@fig-fastqc-perseq) summarises the distributio
 In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.
 :::
 
-![Per sequence quality score plot from `FastQC` indicating overall high quality sequencing reads.](assets/images/fastqc_perseq.png){#fig-fastqc-perseq width=80%}
+![Per sequence quality score plot from `FastQC` indicating overall high quality sequencing reads.](assets/images/fastqc_perseq.png){#fig-fastqc-perseq width=80% .lightbox}
 
 ::: { .callout-caution }
 If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.

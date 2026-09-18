@@ -100,9 +100,9 @@ To view the contents of an uploaded data file in the `History`.
 
 ### In the `Workspace`
 
-You can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the `eye` icon in the file descriptor.
+You can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the `eye` ('`View`) icon in the file descriptor.
 
-1. Click on the `eye` icon of one of the file descriptors (e.g. `SARS_AY278741.gff3`). A representation of the data in the file will be shown in the workspace window.
+1. Click on the `eye` (`View`) icon of one of the file descriptors (e.g. `SARS_AY278741.gff3`). A representation of the data in the file will be shown in the workspace window.
 
 ::: { .callout-note }
 ## Video: Inspecting a data file in the `History` and the `Workspace`

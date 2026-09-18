@@ -38,9 +38,9 @@ When reporting how you identified variants for your manuscript or dissertation, 
 
 ## `snippy` Output
 
-`snippy` provides output in `.vcf` format, which is designed to be processed by bioinformatics software and is not the most understandable form for humans. To see the `snippy` output in a more human-readable form, click on the `eye` icon for the `snps table` output (@fig-snippy-output).
+`snippy` provides output in `.vcf` format, which is designed to be processed by bioinformatics software and is not the most understandable form for humans. To see the `snippy` output in a more human-readable form, click on the `eye` (`View`) icon for the `snps table` output (@fig-snippy-output).
 
-![The `snippy` `snps table` output. Key columns in the output are: column 2, indicating the position of the variant; column 3, indicating the variant type; column 7, indicating the feature affected by the variant; and column 11, summarising the effect of the variation](assets/images/snippy_table.png){#fig-snippy-output width="80%"}
+![The `snippy` `snps table` output. Key columns in the output are: column 2, indicating the position of the variant; column 3, indicating the variant type; column 7, indicating the feature affected by the variant; and column 11, summarising the effect of the variation](assets/images/snippy_table.png){#fig-snippy-output width="80%" .lightbox}
 
 ::: { .callout-note }
 ## Video: Inspecting `snippy` output

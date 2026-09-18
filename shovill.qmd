@@ -23,7 +23,7 @@ The generality of `SPAdes` is an advantage, but this also means that, to get the
 
 1. Estimate genome size and read length from reads (unless --gsize provided)
 2. Reduce FASTQ files to a sensible depth (default --depth 100)
-  - _These two steps are needed because there is an optimal read coverage level for accurate assembly_
+  - _These two steps are needed because there is an optimal read coverage level for accurate assembly; see today's genome assembly lecture for an explanation_
 3. Trim adapters from reads (with --trim only)
   - _We have already done this with `trimmomatic` (@sec-trimmomatic) so will skip the step_
 4. Conservatively correct sequencing errors in reads
@@ -39,7 +39,7 @@ The generality of `SPAdes` is an advantage, but this also means that, to get the
 ::: { .callout-important }
 ## Good practice
 
-When reporting how you assembled your sequence data in a manuscript or dissertation, you should always state:
+When reporting how you assembled your sequence data in a manuscript or dissertation, **you should always state**:
 
 1. The software tool you used, with its version number and a citation of the paper describing it (if available; provide a URL to the software if there is no paper)
 2. The parameters used when running the tool (if default parameters were used, state this)
@@ -79,7 +79,7 @@ When reporting how you assembled your sequence data in a manuscript or dissertat
 ![`Shovill` output files in Galaxy. From the top: the contig graph file, contig file, and the log file.](assets/images/shovill_output_list.png){#fig-shovill-output-list}
 :::
 
-As with other Galaxy tools, you can inspect the contents of these files by clicking on the filename in the `History` sidebar, and also by clicking on the corresponding `eye` icon to view the trimmed reads in the workspace.
+As with other Galaxy tools, you can inspect the contents of these files by clicking on the filename in the `History` sidebar, and also by clicking on the corresponding `eye` (`View`) icon to view the trimmed reads in the workspace.
 
 ::: { .callout-tip }
 ## Questions
@@ -118,7 +118,7 @@ To use `Bandage` to visualise your genome assembly
 :::
 
 ::: { .callout-tip }
-**Inspect the assembly graph by clicking on the `eye` icon for the Assembly Graph Image output.**
+**Inspect the assembly graph by clicking on the `eye` (`View`) icon for the Assembly Graph Image output.**
 :::
 
 ## Next steps

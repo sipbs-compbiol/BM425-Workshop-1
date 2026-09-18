@@ -22,6 +22,12 @@ We need you to:
 4. Report on the SNPs you find
 5. Map the ONT reads to your Wuhan 1 assembly and visualise them
 
+::: { .callout-warning }
+You will need to clean the `ERR4164769` read set with a tool called `fastq groomer`. This will transform the read file into the correct format for use with the tools you have learned about today.
+
+**If you do not use `fastq groomer` you will meet with errors in the workflow**
+:::
+
 ::: { .callout-caution }
 ## Hints
 

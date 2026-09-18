@@ -7,6 +7,12 @@
 2. Download the files from the sections below into this new folder.
 :::
 
+::: { .callout-caution }
+Some links may begin a download if you simply click on them.
+
+Other links may require you to **right-click** on the link, or use **CTRL-click** (e.g. macOS) to bring up a context menu that will allow you to download the link.
+:::
+
 ## Sequencing reads for SARS-CoV-2 assembly
 
 - [Illumina paired-end reads, forward direction](assets/data/trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz) (`trimmed_pe_aln.qsorted.mapped.fixed.1.fastq.gz`)
