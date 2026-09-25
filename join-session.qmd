@@ -3,7 +3,7 @@
 ::: { .callout-tip }
 ## Use this link to join the training session
 
-- [https://usegalaxy.eu/join-training/bm425-bm932-2026-09](https://usegalaxy.eu/join-training/bm425-bm932-2026-09)
+- [https://usegalaxy.org/join-training/bm425-bm932-2026-09/](https://usegalaxy.org/join-training/bm425-bm932-2026-09/)
 
 Through the generosity of the Galaxy Europe team, we have been able to deploy a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your `usegalaxy.eu` account (instructions to set up this account can be found in @sec-galaxy-registration).
 :::
