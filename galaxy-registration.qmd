@@ -31,14 +31,14 @@ Using Galaxy, you will build up a powerful bioinformatic analysis workflow to an
 ## Registering with Galaxy
 
 ::: { .callout-tip }
-## Register with `usegalaxy.eu`
+## Register with `usegalaxy.org`
 
-The first action you should take in this workshop, if you do not already have an account at [https://usegalaxy.eu/](https://usegalaxy.eu/), is to **create an account at [https://usegalaxy.eu/](https://usegalaxy.eu/)**.
+The first action you should take in this workshop, if you do not already have an account at [https://usegalaxy.org/](https://usegalaxy.org/), is to **create an account at [https://usegalaxy.org/](https://usegalaxy.org/)**.
 :::
 
-1. Go to the Galaxy [login/registration page](https://usegalaxy.eu/login/start?redirect=None)
-2. If you have a `usegalaxy.eu` account already, then log in using your details and move on to the workshop proper.
-3. If you do not already have a `usegalaxy.eu` account, then **click on the `Register here` link**.
+1. Go to the Galaxy [login/registration page](https://usegalaxy.org/login/start?redirect=None)
+2. If you have a `usegalaxy.org` account already, then log in using your details and move on to the workshop proper.
+3. If you do not already have a `usegalaxy.org` account, then **click on the `Register here` link**.
 4. Enter your **university email address** in the `Email address` field.
 5. Choose a [secure password](https://passwordsgenerator.net/) and enter it into the `Password` and `Confirm password` fields.
 6. Choose a public name to show (other people will be able to see this) and enter it in the `Public name` field.
